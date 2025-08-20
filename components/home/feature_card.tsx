@@ -23,11 +23,11 @@ export function FeatureCard({ title, desc, delay, imgSrc }: FeatureCardProps) {
         <img
           src={imgSrc}
           alt={`${title} icon`}
-          className="w-12 h-12 mb-4 object-contain"
+          className="w-12 h-12 mb-4 object-contain dark:invert"
         />
       )}
-    <h3 className="text-xl font-semibold mb-2 pt-5">{title}</h3>
-    <p className="text-white/70 text-sm">{desc}</p>
+    <h3 className="text-xl font-semibold mb-2 pt-5 dark:invert">{title}</h3>
+    <p className="text-sm font-light mb-4 dark:invert">{desc}</p>
     </motion.div>
   )
 }

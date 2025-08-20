@@ -35,7 +35,7 @@ export function Hero() {
        
       </motion.h1>
       <motion.p
-        className="max-h-xl text-3xl font-extrabold font-bold"
+        className="max-h-xl text-3xl font-extrabold font-bold dark:invert"
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2 }}
@@ -52,9 +52,9 @@ export function Hero() {
         <input
             type="email"
             placeholder="Enter your email"
-            className="flex-1 bg-transparent border-none outline-none text-sm"
+            className="flex-1 bg-transparent border-none outline-none text-sm dark:invert"
         />
-        <button className="text-sm font-semibold hover:underline">Get Started</button>
+        <button className="text-sm font-semibold hover:underline dark:invert">Get Started</button>
        </div>
       </motion.div>
     </section>

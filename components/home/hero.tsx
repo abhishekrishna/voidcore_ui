@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 
 export function Hero() {
   return (
-    <section className="relative z-10 flex flex-col items-center justify-center text-center pt-46 pb-42 px-6">
+    <section className="relative z-10 flex flex-col items-center justify-center text-center pt-50 pb-20 px-6">
  {/* <motion.div
         className="mb-10"
         initial={{ opacity: 0, y: 20 }}
@@ -35,14 +35,23 @@ export function Hero() {
        
       </motion.h1>
       <motion.p
-        className="max-h-xl text-3xl font-extrabold font-bold dark:invert"
+        className="max-h-xl text-5xl font-bold dark:invert pb-10"
+        style={{ wordSpacing: "0.3rem" }}
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2 }}
       >
-        We build custom AI-powered software for mobile, web, infrastructure, and analytics.
+         Scaffold production-ready backend in minutes.
       </motion.p>
-      <motion.div
+       <motion.p
+        className="max-h-xl text-2xl font-extrabold font-light dark:invert"
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.2 }}
+      >
+        Write simple YAML, get production-ready models, keys,    <br /> default database functions — in minutes. </motion.p> 
+      
+      {/* <motion.div
         className="mt-6"
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
@@ -56,7 +65,7 @@ export function Hero() {
         />
         <button className="text-sm font-semibold hover:underline dark:invert">Get Started</button>
        </div>
-      </motion.div>
+      </motion.div> */}
     </section>
   )
 }

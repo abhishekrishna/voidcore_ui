@@ -48,7 +48,7 @@ export default function Header() {
           <a>
             +91 9572200808
           </a>
-          <ThemeToggle />
+          {/* <ThemeToggle /> */}
         </div>
       </div>
     </header>

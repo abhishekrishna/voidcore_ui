@@ -67,7 +67,7 @@ export default function ProjectTypeSelector() {
                   opacity: 0,
                   scale: 0.8,
                   filter: "blur(6px)",
-                  transition: { duration: 0.4, ease: "easeInOut" },
+                  transition: { duration: 0.4, ease: "easeInOut"},
                 }}
                 transition={{
                   layout: { duration: 0.4, ease: "easeInOut" },

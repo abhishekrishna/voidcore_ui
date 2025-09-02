@@ -41,7 +41,7 @@ export function Hero() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2 }}
       >
-         Scaffold production-ready backend in minutes.
+        Custom Software Development
       </motion.p>
        <motion.p
         className="max-h-xl text-2xl font-extrabold font-light dark:invert"
@@ -49,23 +49,19 @@ export function Hero() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2 }}
       >
-        Write simple YAML, get production-ready models, keys,    <br /> default database functions — in minutes. </motion.p> 
+        We build custom AI-powered software for mobile, web, infrastructure, and analytics. </motion.p> 
       
-      {/* <motion.div
+      <motion.div
         className="mt-6"
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.4 }}
       >
        <div className="flex items-center gap-2 backdrop-blur-sm border rounded-full px-4 py-2 max-w-md">
-        <input
-            type="email"
-            placeholder="Enter your email"
-            className="flex-1 bg-transparent border-none outline-none text-sm dark:invert"
-        />
-        <button className="text-sm font-semibold hover:underline dark:invert">Get Started</button>
+        
+        <button className="text-sm font-semibold dark:invert">Get Started</button>
        </div>
-      </motion.div> */}
+      </motion.div>
     </section>
   )
 }

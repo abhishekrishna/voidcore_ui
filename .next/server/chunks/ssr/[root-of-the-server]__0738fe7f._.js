@@ -264,7 +264,7 @@ function Hero() {
                 transition: {
                     delay: 0.2
                 },
-                children: "Scaffold production-ready backend in minutes."
+                children: "Build production-ready backend in minutes."
             }, void 0, false, {
                 fileName: "[project]/Desktop/prod_voidcore/components/home/hero.tsx",
                 lineNumber: 37,

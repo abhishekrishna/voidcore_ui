@@ -1,0 +1,9 @@
+const CHUNK_PUBLIC_PATH = "server/pages/company_page.js";
+const runtime = require("../chunks/ssr/[turbopack]_runtime.js");
+runtime.loadChunk("server/chunks/ssr/b9844__pnpm_7fbbeb1c._.js");
+runtime.loadChunk("server/chunks/ssr/[root-of-the-server]__c75c51b7._.js");
+runtime.loadChunk("server/chunks/ssr/e4037_next_3444b220._.js");
+runtime.loadChunk("server/chunks/ssr/b9844__pnpm_13352c7e._.js");
+runtime.loadChunk("server/chunks/ssr/[root-of-the-server]__298d24ac._.js");
+runtime.getOrInstantiateRuntimeModule("[project]/Desktop/prod_voidcore/node_modules/.pnpm/next@15.4.5_react-dom@19.1.0_react@19.1.0__react@19.1.0/node_modules/next/dist/esm/build/templates/pages.js { INNER_PAGE => \"[project]/Desktop/prod_voidcore/pages/company_page.tsx [ssr] (ecmascript)\", INNER_DOCUMENT => \"[project]/Desktop/prod_voidcore/node_modules/.pnpm/next@15.4.5_react-dom@19.1.0_react@19.1.0__react@19.1.0/node_modules/next/document.js [ssr] (ecmascript)\", INNER_APP => \"[project]/Desktop/prod_voidcore/node_modules/.pnpm/next@15.4.5_react-dom@19.1.0_react@19.1.0__react@19.1.0/node_modules/next/app.js [ssr] (ecmascript)\" } [ssr] (ecmascript)", CHUNK_PUBLIC_PATH);
+module.exports = runtime.getOrInstantiateRuntimeModule("[project]/Desktop/prod_voidcore/node_modules/.pnpm/next@15.4.5_react-dom@19.1.0_react@19.1.0__react@19.1.0/node_modules/next/dist/esm/build/templates/pages.js { INNER_PAGE => \"[project]/Desktop/prod_voidcore/pages/company_page.tsx [ssr] (ecmascript)\", INNER_DOCUMENT => \"[project]/Desktop/prod_voidcore/node_modules/.pnpm/next@15.4.5_react-dom@19.1.0_react@19.1.0__react@19.1.0/node_modules/next/document.js [ssr] (ecmascript)\", INNER_APP => \"[project]/Desktop/prod_voidcore/node_modules/.pnpm/next@15.4.5_react-dom@19.1.0_react@19.1.0__react@19.1.0/node_modules/next/app.js [ssr] (ecmascript)\" } [ssr] (ecmascript)", CHUNK_PUBLIC_PATH).exports;

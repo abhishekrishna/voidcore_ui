@@ -1,7 +1,7 @@
 'use client'
 import { use, useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, Sparkles, Download, Play } from "lucide-react";
+import { ArrowRight, Sparkles, Download, Play, SplinePointer } from "lucide-react";
 
 const variants = [
   {
@@ -95,9 +95,9 @@ export default function HeroShowcase() {
       <nav className="mx-auto max-w-7xl px-6 py-6 flex items-center justify-between">
         <div className="flex items-center gap-2">
           <div className="h-8 w-8 rounded-xl bg-white/10 backdrop-blur-sm flex items-center justify-center">
-            <Sparkles className="h-4 w-4" />
+            <SplinePointer className="h-4 w-4" />
           </div>
-          <span className="font-semibold tracking-tight">Void Core</span>
+          <span className="font-semibold tracking-tight">voidcore</span>
         </div>
         <div className="hidden md:flex items-center gap-6 text-white/70">
           <a href="#work" className="hover:text-white">Work</a>
@@ -174,7 +174,7 @@ export default function HeroShowcase() {
 
           {/* Social proof */}
           <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-4 text-white/60 text-xs">
-            <div className="rounded-xl border border-white/10 p-3 text-center">Trusted by founders in BLR · DEL · SF</div>
+            <div className="rounded-xl border border-white/10 p-3 text-center">Trusted by founders in BOM · DEL · SF</div>
             <div className="rounded-xl border border-white/10 p-3 text-center">MVPs in 2–4 weeks</div>
             <div className="rounded-xl border border-white/10 p-3 text-center">Ownership-friendly contracts</div>
             <div className="rounded-xl border border-white/10 p-3 text-center">Security & observability built‑in</div>

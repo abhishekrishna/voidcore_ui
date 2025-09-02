@@ -26,7 +26,7 @@ export default function Header() {
         {/* Navigation - centered */}
         <nav className="hidden md:flex gap-5 text-sm flex-grow justify-center items-center mx-8">
           {[
-            { href: "#projects", label: "voidcore-cli" },
+            { href: "/company_page", label: "voidcore-cli" },
             { href: "#projects", label: "Docs" },
             { href: "#tech", label: "CreatorLY[Upcoming]" },
             { href: "#tech", label: "Templates" },

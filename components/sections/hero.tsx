@@ -1,10 +1,8 @@
-'use client'
-import { use, useEffect, useState } from "react";
-import { motion } from "framer-motion";
-import { ArrowRight, Sparkles, Download, Play, SplinePointer, Contact } from "lucide-react";
-import Pricing from "@/components/sections/pricing";
-import Services from "@/components/sections/services";
-import Work from "@/components/sections/work";
+"use client"
+
+import { useState } from "react"
+import { motion } from "framer-motion"
+import { ArrowRight, Sparkles, Download, Play } from "lucide-react"
 
 const variants = [
   {
@@ -48,12 +46,12 @@ const variants = [
     eyebrow: "RAG + Agents",
     title: (
       <>
-        AI‑native builds for <span className="text-white/90">real users.</span>
+        AI-native builds for <span className="text-white/90">real users.</span>
       </>
     ),
     subtitle:
       "RAG workflows, evaluators, and automations that move product metrics — not demos.",
-    bullets: ["Eval‑driven", "Secure by design", "Analytics included"],
+    bullets: ["Eval-driven", "Secure by design", "Analytics included"],
   },
   {
     key: "minimal-maximal",
@@ -72,57 +70,37 @@ const variants = [
     eyebrow: "For founders",
     title: (
       <>
-        Your startup’s <span className="text-white/90">on‑demand dev team.</span>
+        Your startup’s <span className="text-white/90">on-demand dev team.</span>
       </>
     ),
     subtitle:
       "Fixed-scope packs: Landing Page in 10 days, AI MVP in 30 — clear pricing, weekly demos.",
-    bullets: ["Fixed scope", "Code ownership", "Post‑launch support"],
+    bullets: ["Fixed scope", "Code ownership", "Post-launch support"],
   },
-];
+]
 
-export default function HeroShowcase() {
-  const [active, setActive] = useState(variants[0].key);
-  // const v = variants.find((x) => x.key === active)!;
-
-  useEffect(() => {
-    const idx = variants.findIndex((x) => x.key === active);
-    const interval = setInterval(() => {
-      const nextIdx = (idx + 1) % variants.length;
-      setActive(variants[nextIdx].key);
-    }, 4000);
-    return () => clearInterval(interval);
-  }, [active]);
-
-  const v = variants.find((x) => x.key === active)!;
+export default function Hero() {
+  const [active, setActive] = useState(variants[0].key)
+  const v = variants.find((x) => x.key === active)!
 
   return (
-    <div className="min-h-screen w-full bg-[#0B0B0F] text-white relative overflow-hidden">
+    <div className="relative min-h-screen w-full bg-[#0B0B0F] text-white overflow-hidden">
       {/* Gradient / noise background */}
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute -top-40 -left-40 h-96 w-96 rounded-full blur-3xl opacity-30 bg-gradient-to-tr from-fuchsia-500 via-cyan-400 to-indigo-500" />
         <div className="absolute -bottom-40 -right-20 h-[28rem] w-[28rem] rounded-full blur-3xl opacity-25 bg-gradient-to-br from-emerald-400 via-sky-400 to-violet-500" />
-        <div className="absolute inset-0 mix-blend-soft-light" style={{ backgroundImage: "radial-gradient(transparent 0, rgba(255,255,255,0.05) 1px)", backgroundSize: "24px 24px" }} />
+        <div
+          className="absolute inset-0 mix-blend-soft-light"
+          style={{
+            backgroundImage:
+              "radial-gradient(transparent 0, rgba(255,255,255,0.05) 1px)",
+            backgroundSize: "24px 24px",
+          }}
+        />
       </div>
 
-      {/* Top nav stub */}
-      <nav className="mx-auto max-w-7xl px-6 py-6 flex items-center justify-between">
-        <div className="flex items-center gap-2">
-          <div className="h-8 w-8 rounded-xl bg-white/10 backdrop-blur-sm flex items-center justify-center">
-            <SplinePointer className="h-4 w-4" />
-          </div>
-          <span className="font-semibold tracking-tight">voidcore</span>
-        </div>
-        <div className="hidden md:flex items-center gap-6 text-white/70">
-          <a href="#work" className="hover:text-white">Work</a>
-          <a href="#services" className="hover:text-white">Services</a>
-          <a href="#pricing" className="hover:text-white">Pricing</a>
-          <a href="#contact" className="hover:text-white">Contact</a>
-        </div>
-      </nav>
-
       {/* Variant switcher */}
-      <div className="mx-auto max-w-7xl px-6">
+      <div className="mx-auto max-w-7xl px-6 pt-24">
         <div className="mb-6 flex flex-wrap gap-2">
           {variants.map((opt) => (
             <button
@@ -141,7 +119,7 @@ export default function HeroShowcase() {
       </div>
 
       {/* Hero card */}
-      <section className="mx-auto max-w-7xl px-6 pb-24 pt-6 relative">
+      <section className="mx-auto max-w-7xl px-6 pb-24 relative">
         <motion.div
           key={active}
           initial={{ opacity: 0, y: 8 }}
@@ -149,16 +127,23 @@ export default function HeroShowcase() {
           transition={{ duration: 0.35, ease: "easeOut" }}
           className="rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl p-8 md:p-12 shadow-2xl"
         >
-          <p className="text-sm uppercase tracking-[0.2em] text-white/70 mb-3">{v.eyebrow}</p>
+          <p className="text-sm uppercase tracking-[0.2em] text-white/70 mb-3">
+            {v.eyebrow}
+          </p>
           <h1 className="text-4xl md:text-6xl font-semibold leading-tight mb-4">
             {v.title}
           </h1>
-          <p className="text-lg md:text-xl text-white/80 max-w-3xl mb-8">{v.subtitle}</p>
+          <p className="text-lg md:text-xl text-white/80 max-w-3xl mb-8">
+            {v.subtitle}
+          </p>
 
           {/* Bullets */}
           <ul className="flex flex-wrap gap-3 mb-8">
             {v.bullets.map((b) => (
-              <li key={b} className="text-sm text-white/80 rounded-full border border-white/15 bg-white/5 px-3 py-1.5">
+              <li
+                key={b}
+                className="text-sm text-white/80 rounded-full border border-white/15 bg-white/5 px-3 py-1.5"
+              >
                 {b}
               </li>
             ))}
@@ -188,22 +173,21 @@ export default function HeroShowcase() {
 
           {/* Social proof */}
           <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-4 text-white/60 text-xs">
-            <div className="rounded-xl border border-white/10 p-3 text-center">Trusted by founders in BOM · DEL · SF</div>
-            <div className="rounded-xl border border-white/10 p-3 text-center">MVPs in 2–4 weeks</div>
-            <div className="rounded-xl border border-white/10 p-3 text-center">Ownership-friendly contracts</div>
-            <div className="rounded-xl border border-white/10 p-3 text-center">Security & observability built‑in</div>
+            <div className="rounded-xl border border-white/10 p-3 text-center">
+              Trusted by founders in BLR · DEL · SF
+            </div>
+            <div className="rounded-xl border border-white/10 p-3 text-center">
+              MVPs in 2–4 weeks
+            </div>
+            <div className="rounded-xl border border-white/10 p-3 text-center">
+              Ownership-friendly contracts
+            </div>
+            <div className="rounded-xl border border-white/10 p-3 text-center">
+              Security & observability built-in
+            </div>
           </div>
         </motion.div>
       </section>
-      <Work/>
-      <Services/>
-      <Pricing/>
-      <Contact/>
-      {/* Sections */}
-      {/* Footer stub */}
-      <footer className="mx-auto max-w-7xl px-6 pb-10 text-white/50 text-sm">
-        © {new Date().getFullYear()} void core Technologies — Minimal builds, maximal outcomes.
-      </footer>
     </div>
-  );
+  )
 }

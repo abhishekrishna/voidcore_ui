@@ -3,46 +3,53 @@ import React from "react";
 const projects = [
 	{
 		id: 1,
-		title: "📚 Education Analytics Dashboard (Confidential Client) ",
+		title: "📚 Education Analytics Dashboard (Confidential Client)",
 		description:
 			"📌 AI tool to extract strategic priorities from U.S. school district plans.",
+		image: "/screens/education-dashboard.png",
 	},
 	{
 		id: 2,
 		title: "🤖 GPT-Powered Document Chatbot",
 		description:
 			"📌 Built a Retrieval-Augmented AI chatbot to answer user queries using document context.",
+		image: "/screens/gpt-chatbot.png",
 	},
 	{
 		id: 3,
 		title: "🎬 Apan Theater – Streaming Platform",
 		description:
 			"📌 Built a subscription-based mobile streaming platform with secure video delivery and scalable backend.",
+		image: "/screens/apan-theater.png",
 	},
 	{
 		id: 4,
 		title: "⏰ TimeBloc - Focus & Task Manager",
 		description:
 			"📌 Built a cross-platform app that boosts focus using the Pomodoro Technique with integrated music playback from jiosaavn, YouTube music and smart task tracking.",
+		image: "/screens/timebloc.png",
 	},
-    {
-        id: 5,
-        title: "🎭 CareConnect - Student Performance Tracker",
-        description:
-            "📌 Built a mobile app to track student performance with real-time WhatsApp alerts for parents.",
-    },
-    {
-        id: 6,
-        title: "💰 Pay All Day – Payments App",
-        description:
-            "📌 Developed an end-to-end payments platform supporting mobile recharges, money transfers, and wallet-based transactions.",
-    },
-    {
-        id: 7,
-        title: "Day✌️Day Grocery - E-commerce App",
-        description:
-            "📌 Built a full-stack eCommerce platform for daily essentials, enabling users to shop online for groceries and household products with seamless order and delivery flows.",
-    }
+	{
+		id: 5,
+		title: "🎭 CareConnect - Student Performance Tracker",
+		description:
+			"📌 Built a mobile app to track student performance with real-time WhatsApp alerts for parents.",
+		image: "/screens/careconnect.png",
+	},
+	{
+		id: 6,
+		title: "💰 Pay All Day – Payments App",
+		description:
+			"📌 Developed an end-to-end payments platform supporting mobile recharges, money transfers, and wallet-based transactions.",
+		image: "/screens/payallday.png",
+	},
+	{
+		id: 7,
+		title: "Day✌️Day Grocery - E-commerce App",
+		description:
+			"📌 Built a full-stack eCommerce platform for daily essentials, enabling users to shop online for groceries and household products with seamless order and delivery flows.",
+		image: "/screens/day2day-grocery.png",
+	},
 ];
 
 export default function WorkSection() {
@@ -59,8 +66,13 @@ export default function WorkSection() {
 				{projects.map((project) => (
 					<div
 						key={project.id}
-						className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl p-6 hover:bg-white/10 transition"
+						className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl p-6 hover:bg-white/10 transition flex flex-col"
 					>
+						<img
+							src={project.image}
+							alt={project.title}
+							className="rounded-xl mb-4 w-full h-48 object-cover bg-black/10"
+						/>
 						<h3 className="text-xl font-medium mb-2">{project.title}</h3>
 						<p className="text-white/70 mb-4">{project.description}</p>
 						<a

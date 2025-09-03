@@ -4,8 +4,8 @@ import { Sparkles, SplinePointer } from "lucide-react"
 
 export default function Navbar() {
   return (
-    <header className="fixed top-0 left-20 right-20 z-50">
-      <div className="mx-auto max-w-7xl px-6 pl-10 pr-10">
+    <header className="fixed top-0 left-0 right-0 z-50">
+      <div className="mx-auto max-w-7xl px-6">
         <div className="flex items-center justify-between py-4 
                         backdrop-blur-xl bg-[#0B0B0F]/30 
                         border border-white/10 rounded-2xl mt-4 shadow-lg">

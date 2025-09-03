@@ -1,7 +1,7 @@
 'use client'
-import { use, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, Sparkles, Download, Play, SplinePointer, Contact, Github, GitBranch } from "lucide-react";
+import { ArrowRight, Play, GitBranch } from "lucide-react";
 import Pricing from "@/components/sections/pricing";
 import Services from "@/components/sections/services";
 import Work from "@/components/sections/work";

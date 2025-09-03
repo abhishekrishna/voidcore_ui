@@ -1,7 +1,7 @@
 'use client'
 import { use, useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, Sparkles, Download, Play, SplinePointer, Contact } from "lucide-react";
+import { ArrowRight, Sparkles, Download, Play, SplinePointer, Contact, Github, GitBranch } from "lucide-react";
 import Pricing from "@/components/sections/pricing";
 import Services from "@/components/sections/services";
 import Work from "@/components/sections/work";
@@ -184,10 +184,10 @@ export default function HeroShowcase() {
               See work <Play className="h-4 w-4" />
             </a>
             <a
-              href="#profile"
+              href="https://github.com/abhishekrishna/voidcore_cli"
               className="inline-flex items-center gap-2 rounded-2xl px-4 py-2.5 bg-transparent border border-white/15 text-white/80 hover:text-white hover:border-white/25"
             >
-              Download profile <Download className="h-4 w-4" />
+              voidcore-cli <GitBranch className="h-4 w-4" />
             </a>
           </div>
 

@@ -692,8 +692,8 @@
     right: calc(var(--spacing) * -20);
   }
 
-  .right-20 {
-    right: calc(var(--spacing) * 20);
+  .right-0 {
+    right: calc(var(--spacing) * 0);
   }
 
   .-bottom-40 {
@@ -704,8 +704,8 @@
     left: calc(var(--spacing) * -40);
   }
 
-  .left-20 {
-    left: calc(var(--spacing) * 20);
+  .left-0 {
+    left: calc(var(--spacing) * 0);
   }
 
   .z-50 {
@@ -779,6 +779,10 @@
 
   .h-8 {
     height: calc(var(--spacing) * 8);
+  }
+
+  .h-48 {
+    height: calc(var(--spacing) * 48);
   }
 
   .h-96 {
@@ -930,10 +934,14 @@
     background-color: lab(3.10124% .488743 -1.79299 / .3);
   }
 
-  .bg-\[\#0B0BFF\]\/30 {
-    background-color: rgba(11, 11, 255, .3);
-    background-color: color(display-p3 .0431372 .0431373 .959727 / .3);
-    background-color: lab(30.3428% 66.6332 -110.727 / .3);
+  .bg-black\/10 {
+    background-color: rgba(0, 0, 0, .1);
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .bg-black\/10 {
+      background-color: color-mix(in oklab, var(--color-black) 10%, transparent);
+    }
   }
 
   .bg-green-500 {
@@ -1008,6 +1016,10 @@
   .to-violet-500 {
     --tw-gradient-to: var(--color-violet-500);
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+  }
+
+  .object-cover {
+    object-fit: cover;
   }
 
   .p-3 {

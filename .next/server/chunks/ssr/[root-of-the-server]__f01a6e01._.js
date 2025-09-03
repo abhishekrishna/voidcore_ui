@@ -122,7 +122,33 @@ __turbopack_context__.s({
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$prod_voidcore$2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$4$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Desktop/prod_voidcore/node_modules/.pnpm/next@15.4.5_react-dom@19.1.0_react@19.1.0__react@19.1.0/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
 ;
-{}function ServicesSection() {
+const services = [
+    {
+        name: "MVP Development",
+        description: "Rapid prototyping and launch of your Minimum Viable Product using modern stacks and best practices."
+    },
+    {
+        name: "AI Agents & RAG",
+        description: "Custom AI agents and Retrieval-Augmented Generation workflows for automation and intelligent data handling."
+    },
+    {
+        name: "Web & SaaS Apps",
+        description: "Full-stack web and SaaS application development with scalable architecture and secure authentication."
+    },
+    {
+        name: "Mobile Apps",
+        description: "Cross-platform mobile app development for iOS and Android with seamless user experience."
+    },
+    {
+        name: "DevOps & Infra",
+        description: "Cloud infrastructure setup, CI/CD pipelines, and DevOps automation for reliable deployments."
+    },
+    {
+        name: "Design Systems",
+        description: "Design system creation for consistent UI/UX, reusable components, and brand alignment."
+    }
+];
+function ServicesSection() {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$prod_voidcore$2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$4$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
         id: "services",
         className: "mx-auto max-w-7xl px-6 py-24",
@@ -132,65 +158,54 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$prod_voidcore$2f$
                 children: "Services"
             }, void 0, false, {
                 fileName: "[project]/Desktop/prod_voidcore/components/sections/services.tsx",
-                lineNumber: 6,
-                columnNumber: 9
+                lineNumber: 35,
+                columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$prod_voidcore$2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$4$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                 className: "text-white/70 max-w-2xl mb-12",
                 children: "From MVPs to AI-native platforms — tailored packs designed for founders and teams."
             }, void 0, false, {
                 fileName: "[project]/Desktop/prod_voidcore/components/sections/services.tsx",
-                lineNumber: 7,
-                columnNumber: 9
+                lineNumber: 36,
+                columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$prod_voidcore$2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$4$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "grid gap-6 md:grid-cols-3",
-                children: [
-                    "MVP Development",
-                    "AI Agents & RAG",
-                    "Web & SaaS Apps",
-                    "Mobile Apps",
-                    "DevOps & Infra",
-                    "Design Systems"
-                ].map((srv)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$prod_voidcore$2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$4$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                children: services.map((srv)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$prod_voidcore$2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$4$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl p-6 hover:bg-white/10 transition",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$prod_voidcore$2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$4$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
                                 className: "text-xl font-medium mb-2",
-                                children: srv
+                                children: srv.name
                             }, void 0, false, {
                                 fileName: "[project]/Desktop/prod_voidcore/components/sections/services.tsx",
-                                lineNumber: 11,
-                                columnNumber: 15
+                                lineNumber: 42,
+                                columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$prod_voidcore$2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$4$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                 className: "text-white/70 text-sm",
-                                children: [
-                                    "Concise description of how we deliver ",
-                                    srv.toLowerCase(),
-                                    " with speed and reliability."
-                                ]
-                            }, void 0, true, {
+                                children: srv.description
+                            }, void 0, false, {
                                 fileName: "[project]/Desktop/prod_voidcore/components/sections/services.tsx",
-                                lineNumber: 12,
-                                columnNumber: 15
+                                lineNumber: 43,
+                                columnNumber: 13
                             }, this)
                         ]
-                    }, srv, true, {
+                    }, srv.name, true, {
                         fileName: "[project]/Desktop/prod_voidcore/components/sections/services.tsx",
-                        lineNumber: 10,
-                        columnNumber: 13
+                        lineNumber: 41,
+                        columnNumber: 11
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/Desktop/prod_voidcore/components/sections/services.tsx",
-                lineNumber: 8,
-                columnNumber: 9
+                lineNumber: 39,
+                columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/Desktop/prod_voidcore/components/sections/services.tsx",
-        lineNumber: 5,
-        columnNumber: 6
+        lineNumber: 34,
+        columnNumber: 5
     }, this);
 }
 }),
@@ -205,38 +220,45 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$prod_voidcore$2f$
 const projects = [
     {
         id: 1,
-        title: "📚 Education Analytics Dashboard (Confidential Client) ",
-        description: "📌 AI tool to extract strategic priorities from U.S. school district plans."
+        title: "📚 Education Analytics Dashboard (Confidential Client)",
+        description: "📌 AI tool to extract strategic priorities from U.S. school district plans.",
+        image: "/screens/education-dashboard.png"
     },
     {
         id: 2,
         title: "🤖 GPT-Powered Document Chatbot",
-        description: "📌 Built a Retrieval-Augmented AI chatbot to answer user queries using document context."
+        description: "📌 Built a Retrieval-Augmented AI chatbot to answer user queries using document context.",
+        image: "/screens/gpt-chatbot.png"
     },
     {
         id: 3,
         title: "🎬 Apan Theater – Streaming Platform",
-        description: "📌 Built a subscription-based mobile streaming platform with secure video delivery and scalable backend."
+        description: "📌 Built a subscription-based mobile streaming platform with secure video delivery and scalable backend.",
+        image: "/screens/apan-theater.png"
     },
     {
         id: 4,
         title: "⏰ TimeBloc - Focus & Task Manager",
-        description: "📌 Built a cross-platform app that boosts focus using the Pomodoro Technique with integrated music playback from jiosaavn, YouTube music and smart task tracking."
+        description: "📌 Built a cross-platform app that boosts focus using the Pomodoro Technique with integrated music playback from jiosaavn, YouTube music and smart task tracking.",
+        image: "/screens/timebloc.png"
     },
     {
         id: 5,
         title: "🎭 CareConnect - Student Performance Tracker",
-        description: "📌 Built a mobile app to track student performance with real-time WhatsApp alerts for parents."
+        description: "📌 Built a mobile app to track student performance with real-time WhatsApp alerts for parents.",
+        image: "/screens/careconnect.png"
     },
     {
         id: 6,
         title: "💰 Pay All Day – Payments App",
-        description: "📌 Developed an end-to-end payments platform supporting mobile recharges, money transfers, and wallet-based transactions."
+        description: "📌 Developed an end-to-end payments platform supporting mobile recharges, money transfers, and wallet-based transactions.",
+        image: "/screens/payallday.png"
     },
     {
         id: 7,
         title: "Day✌️Day Grocery - E-commerce App",
-        description: "📌 Built a full-stack eCommerce platform for daily essentials, enabling users to shop online for groceries and household products with seamless order and delivery flows."
+        description: "📌 Built a full-stack eCommerce platform for daily essentials, enabling users to shop online for groceries and household products with seamless order and delivery flows.",
+        image: "/screens/day2day-grocery.png"
     }
 ];
 function WorkSection() {
@@ -249,7 +271,7 @@ function WorkSection() {
                 children: "Selected Work"
             }, void 0, false, {
                 fileName: "[project]/Desktop/prod_voidcore/components/sections/work.tsx",
-                lineNumber: 51,
+                lineNumber: 58,
                 columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$prod_voidcore$2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$4$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -257,20 +279,29 @@ function WorkSection() {
                 children: "Projects we’ve built with clarity, speed, and reliability for startups and teams worldwide."
             }, void 0, false, {
                 fileName: "[project]/Desktop/prod_voidcore/components/sections/work.tsx",
-                lineNumber: 54,
+                lineNumber: 61,
                 columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$prod_voidcore$2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$4$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "grid gap-6 md:grid-cols-2",
                 children: projects.map((project)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$prod_voidcore$2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$4$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl p-6 hover:bg-white/10 transition",
+                        className: "rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl p-6 hover:bg-white/10 transition flex flex-col",
                         children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$prod_voidcore$2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$4$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                                src: project.image,
+                                alt: project.title,
+                                className: "rounded-xl mb-4 w-full h-48 object-cover bg-black/10"
+                            }, void 0, false, {
+                                fileName: "[project]/Desktop/prod_voidcore/components/sections/work.tsx",
+                                lineNumber: 71,
+                                columnNumber: 7
+                            }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$prod_voidcore$2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$4$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
                                 className: "text-xl font-medium mb-2",
                                 children: project.title
                             }, void 0, false, {
                                 fileName: "[project]/Desktop/prod_voidcore/components/sections/work.tsx",
-                                lineNumber: 64,
+                                lineNumber: 76,
                                 columnNumber: 7
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$prod_voidcore$2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$4$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -278,7 +309,7 @@ function WorkSection() {
                                 children: project.description
                             }, void 0, false, {
                                 fileName: "[project]/Desktop/prod_voidcore/components/sections/work.tsx",
-                                lineNumber: 65,
+                                lineNumber: 77,
                                 columnNumber: 7
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$prod_voidcore$2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$4$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -287,24 +318,24 @@ function WorkSection() {
                                 children: "View case study →"
                             }, void 0, false, {
                                 fileName: "[project]/Desktop/prod_voidcore/components/sections/work.tsx",
-                                lineNumber: 66,
+                                lineNumber: 78,
                                 columnNumber: 7
                             }, this)
                         ]
                     }, project.id, true, {
                         fileName: "[project]/Desktop/prod_voidcore/components/sections/work.tsx",
-                        lineNumber: 60,
+                        lineNumber: 67,
                         columnNumber: 6
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/Desktop/prod_voidcore/components/sections/work.tsx",
-                lineNumber: 58,
+                lineNumber: 65,
                 columnNumber: 4
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/Desktop/prod_voidcore/components/sections/work.tsx",
-        lineNumber: 50,
+        lineNumber: 57,
         columnNumber: 3
     }, this);
 }
@@ -433,9 +464,9 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$prod_voidcore$2f$
 ;
 function Navbar() {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$prod_voidcore$2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$4$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("header", {
-        className: "fixed top-0 left-20 right-20 z-50",
+        className: "fixed top-0 left-0 right-0 z-50",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$prod_voidcore$2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$4$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "mx-auto max-w-7xl px-6 pl-10 pr-10",
+            className: "mx-auto max-w-7xl px-6",
             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$prod_voidcore$2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$4$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "flex items-center justify-between py-4  backdrop-blur-xl bg-[#0B0B0F]/30  border border-white/10 rounded-2xl mt-4 shadow-lg",
                 children: [
@@ -574,8 +605,8 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$prod_voidcore$2f$
 var __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$prod_voidcore$2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$4$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Desktop/prod_voidcore/node_modules/.pnpm/next@15.4.5_react-dom@19.1.0_react@19.1.0__react@19.1.0/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$prod_voidcore$2f$node_modules$2f2e$pnpm$2f$framer$2d$motion$40$12$2e$23$2e$12_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Desktop/prod_voidcore/node_modules/.pnpm/framer-motion@12.23.12_react-dom@19.1.0_react@19.1.0__react@19.1.0/node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$prod_voidcore$2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$536$2e$0_react$40$19$2e$1$2e$0$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$arrow$2d$right$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ArrowRight$3e$__ = __turbopack_context__.i("[project]/Desktop/prod_voidcore/node_modules/.pnpm/lucide-react@0.536.0_react@19.1.0/node_modules/lucide-react/dist/esm/icons/arrow-right.js [app-ssr] (ecmascript) <export default as ArrowRight>");
-var __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$prod_voidcore$2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$536$2e$0_react$40$19$2e$1$2e$0$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$download$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Download$3e$__ = __turbopack_context__.i("[project]/Desktop/prod_voidcore/node_modules/.pnpm/lucide-react@0.536.0_react@19.1.0/node_modules/lucide-react/dist/esm/icons/download.js [app-ssr] (ecmascript) <export default as Download>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$prod_voidcore$2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$536$2e$0_react$40$19$2e$1$2e$0$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$play$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Play$3e$__ = __turbopack_context__.i("[project]/Desktop/prod_voidcore/node_modules/.pnpm/lucide-react@0.536.0_react@19.1.0/node_modules/lucide-react/dist/esm/icons/play.js [app-ssr] (ecmascript) <export default as Play>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$prod_voidcore$2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$536$2e$0_react$40$19$2e$1$2e$0$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$git$2d$branch$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__GitBranch$3e$__ = __turbopack_context__.i("[project]/Desktop/prod_voidcore/node_modules/.pnpm/lucide-react@0.536.0_react@19.1.0/node_modules/lucide-react/dist/esm/icons/git-branch.js [app-ssr] (ecmascript) <export default as GitBranch>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$prod_voidcore$2f$components$2f$sections$2f$pricing$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Desktop/prod_voidcore/components/sections/pricing.tsx [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$prod_voidcore$2f$components$2f$sections$2f$services$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Desktop/prod_voidcore/components/sections/services.tsx [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$prod_voidcore$2f$components$2f$sections$2f$work$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Desktop/prod_voidcore/components/sections/work.tsx [app-ssr] (ecmascript)");
@@ -909,16 +940,16 @@ function HeroShowcase() {
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$prod_voidcore$2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$4$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                    href: "#profile",
+                                    href: "https://github.com/abhishekrishna/voidcore_cli",
                                     className: "inline-flex items-center gap-2 rounded-2xl px-4 py-2.5 bg-transparent border border-white/15 text-white/80 hover:text-white hover:border-white/25",
                                     children: [
-                                        "Download profile ",
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$prod_voidcore$2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$4$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$prod_voidcore$2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$536$2e$0_react$40$19$2e$1$2e$0$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$download$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Download$3e$__["Download"], {
+                                        "voidcore-cli ",
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$prod_voidcore$2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$4$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$prod_voidcore$2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$536$2e$0_react$40$19$2e$1$2e$0$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$git$2d$branch$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__GitBranch$3e$__["GitBranch"], {
                                             className: "h-4 w-4"
                                         }, void 0, false, {
                                             fileName: "[project]/Desktop/prod_voidcore/app/page.tsx",
                                             lineNumber: 190,
-                                            columnNumber: 32
+                                            columnNumber: 28
                                         }, this)
                                     ]
                                 }, void 0, true, {

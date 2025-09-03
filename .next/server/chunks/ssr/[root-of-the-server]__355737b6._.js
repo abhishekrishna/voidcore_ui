@@ -69,8 +69,8 @@ var __TURBOPACK__imported__module__$5b$next$5d2f$internal$2f$font$2f$google$2f$g
 ;
 ;
 const metadata = {
-    title: "VoidCore Technologies",
-    description: "Solving Human Problems with Machines and Electricity"
+    title: "voidcore technologies",
+    description: ""
 };
 function RootLayout({ children }) {
     // This script will sync the dark class on first paint

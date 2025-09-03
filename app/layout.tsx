@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "VoidCore Technologies",
-  description: "Solving Human Problems with Machines and Electricity",
+  title: "voidcore technologies",
+  description: "",
 };
 
 export default function RootLayout({

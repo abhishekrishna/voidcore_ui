@@ -5,6 +5,10 @@ import { ArrowRight, Sparkles, Download, Play, SplinePointer, Contact } from "lu
 import Pricing from "@/components/sections/pricing";
 import Services from "@/components/sections/services";
 import Work from "@/components/sections/work";
+import ContactSection from '../components/sections/contact';
+import Navbar from "@/components/layout/navbar";
+import Footer from "@/components/layout/footer";
+
 
 const variants = [
   {
@@ -97,7 +101,7 @@ export default function HeroShowcase() {
   const v = variants.find((x) => x.key === active)!;
 
   return (
-    <div className="min-h-screen w-full bg-[#0B0B0F] text-white relative overflow-hidden">
+    <div className="min-h-screen w-full bg-[#0B0B0F] text-white relative overflow-hidden pt-30">
       {/* Gradient / noise background */}
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute -top-40 -left-40 h-96 w-96 rounded-full blur-3xl opacity-30 bg-gradient-to-tr from-fuchsia-500 via-cyan-400 to-indigo-500" />
@@ -106,7 +110,8 @@ export default function HeroShowcase() {
       </div>
 
       {/* Top nav stub */}
-      <nav className="mx-auto max-w-7xl px-6 py-6 flex items-center justify-between">
+      <Navbar/>
+      {/* <nav className="mx-auto max-w-7xl px-6 py-6 flex items-center justify-between">
         <div className="flex items-center gap-2">
           <div className="h-8 w-8 rounded-xl bg-white/10 backdrop-blur-sm flex items-center justify-center">
             <SplinePointer className="h-4 w-4" />
@@ -119,7 +124,7 @@ export default function HeroShowcase() {
           <a href="#pricing" className="hover:text-white">Pricing</a>
           <a href="#contact" className="hover:text-white">Contact</a>
         </div>
-      </nav>
+      </nav> */}
 
       {/* Variant switcher */}
       <div className="mx-auto max-w-7xl px-6">
@@ -198,12 +203,8 @@ export default function HeroShowcase() {
       <Work/>
       <Services/>
       <Pricing/>
-      <Contact/>
-      {/* Sections */}
-      {/* Footer stub */}
-      <footer className="mx-auto max-w-7xl px-6 pb-10 text-white/50 text-sm">
-        © {new Date().getFullYear()} void core Technologies — Minimal builds, maximal outcomes.
-      </footer>
+      <ContactSection/>
+      <Footer/>
     </div>
   );
 }

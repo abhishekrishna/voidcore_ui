@@ -3,40 +3,46 @@ import React from "react";
 const projects = [
 	{
 		id: 1,
-		title: "Education Analytics Dashboard (Confidential Client) ",
+		title: "📚 Education Analytics Dashboard (Confidential Client) ",
 		description:
 			"📌 AI tool to extract strategic priorities from U.S. school district plans.",
 	},
 	{
 		id: 2,
-		title: "GPT-Powered Document Chatbot",
+		title: "🤖 GPT-Powered Document Chatbot",
 		description:
 			"📌 Built a Retrieval-Augmented AI chatbot to answer user queries using document context.",
 	},
 	{
 		id: 3,
-		title: "Apan Theater – Streaming Platform",
+		title: "🎬 Apan Theater – Streaming Platform",
 		description:
 			"📌 Built a subscription-based mobile streaming platform with secure video delivery and scalable backend.",
 	},
 	{
 		id: 4,
-		title: "TimeBloc - Focus & Task Manager",
+		title: "⏰ TimeBloc - Focus & Task Manager",
 		description:
 			"📌 Built a cross-platform app that boosts focus using the Pomodoro Technique with integrated music playback from jiosaavn, YouTube music and smart task tracking.",
 	},
     {
         id: 5,
-        title: "CareConnect - Student Performance Tracker",
+        title: "🎭 CareConnect - Student Performance Tracker",
         description:
             "📌 Built a mobile app to track student performance with real-time WhatsApp alerts for parents.",
     },
     {
         id: 6,
-        title: "Pay All Day – Payments App",
+        title: "💰 Pay All Day – Payments App",
         description:
             "📌 Developed an end-to-end payments platform supporting mobile recharges, money transfers, and wallet-based transactions.",
     },
+    {
+        id: 7,
+        title: "Day✌️Day Grocery - E-commerce App",
+        description:
+            "📌 Built a full-stack eCommerce platform for daily essentials, enabling users to shop online for groceries and household products with seamless order and delivery flows.",
+    }
 ];
 
 export default function WorkSection() {

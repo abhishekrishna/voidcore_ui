@@ -76,14 +76,13 @@ export default function Navbar() {
             <a href="#pricing" className="hover:text-white transition">Pricing</a>
             <a href="#contact" className="hover:text-white transition">Contact</a>
             <div className="flex flex-wrap items-center gap-2 md:flex-row">
-              <a
+              <Link
                 href="https://calendly.com/krishna_abhishek/30min"
                 target="_blank"
-                rel="noopener noreferrer"
                 className="w-32 h-10 flex items-center justify-center bg-white text-black font-semibold text-base rounded-lg ml-2 shadow"
               >
                 Get Started
-              </a>
+              </Link>
             </div>
           </nav>
         </div>

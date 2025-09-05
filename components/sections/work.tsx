@@ -6,50 +6,56 @@ const projects = [
 		title: "📚 Education Analytics Dashboard (Confidential Client)",
 		description:
 			"📌 AI tool to extract strategic priorities from U.S. school district plans.",
-		image: "/screens/education-dashboard.png",
+		image: "edu_proj.webp",
 	},
 	{
 		id: 2,
 		title: "🤖 GPT-Powered Document Chatbot",
 		description:
 			"📌 Built a Retrieval-Augmented AI chatbot to answer user queries using document context.",
-		image: "/screens/gpt-chatbot.png",
+		image: "aichat_proj.webp",
 	},
 	{
 		id: 3,
 		title: "🎬 Apan Theater – Streaming Platform",
 		description:
 			"📌 Built a subscription-based mobile streaming platform with secure video delivery and scalable backend.",
-		image: "/screens/apan-theater.png",
+		image: "apan_theater.png",
 	},
 	{
 		id: 4,
 		title: "⏰ TimeBloc - Focus & Task Manager",
 		description:
 			"📌 Built a cross-platform app that boosts focus using the Pomodoro Technique with integrated music playback from jiosaavn, YouTube music and smart task tracking.",
-		image: "/screens/timebloc.png",
+		image: "timeblock.webp",
 	},
 	{
 		id: 5,
 		title: "🎭 CareConnect - Student Performance Tracker",
 		description:
 			"📌 Built a mobile app to track student performance with real-time WhatsApp alerts for parents.",
-		image: "/screens/careconnect.png",
+		image: "care_con.webp",
 	},
 	{
 		id: 6,
 		title: "💰 Pay All Day – Payments App",
 		description:
 			"📌 Developed an end-to-end payments platform supporting mobile recharges, money transfers, and wallet-based transactions.",
-		image: "/screens/payallday.png",
+		image: "payallday_proj.png",
 	},
 	{
 		id: 7,
 		title: "Day✌️Day Grocery - E-commerce App",
 		description:
 			"📌 Built a full-stack eCommerce platform for daily essentials, enabling users to shop online for groceries and household products with seamless order and delivery flows.",
-		image: "/screens/day2day-grocery.png",
+		image: "grocery_proj.webp",
 	},
+	{
+		id: 8,
+		title: "🧺 Laundry Day - On-Demand Laundry Service",
+		description:  "📌 Developed an on-demand laundry service app with real-time order tracking and secure payments.",
+		image: "laundry_proj.webp"
+	}
 ];
 
 export default function WorkSection() {

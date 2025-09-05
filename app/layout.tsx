@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "voidcore technologies",
-  description: "",
+  description: "Minimal builds, maximal outcomes.",
 };
 
 export default function RootLayout({

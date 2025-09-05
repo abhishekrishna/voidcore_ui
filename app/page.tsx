@@ -101,7 +101,7 @@ export default function HeroShowcase() {
   const v = variants.find((x) => x.key === active)!;
 
   return (
-    <div className="min-h-screen w-full bg-[#0B0B0F] text-white relative overflow-hidden pt-30">
+    <div className="min-h-screen w-full bg-[#0B0B0F] text-white relative overflow-hidden pt-[96px]">
       {/* Gradient / noise background */}
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute -top-40 -left-40 h-96 w-96 rounded-full blur-3xl opacity-30 bg-gradient-to-tr from-fuchsia-500 via-cyan-400 to-indigo-500" />
@@ -111,23 +111,10 @@ export default function HeroShowcase() {
 
       {/* Top nav stub */}
       <Navbar/>
-      {/* <nav className="mx-auto max-w-7xl px-6 py-6 flex items-center justify-between">
-        <div className="flex items-center gap-2">
-          <div className="h-8 w-8 rounded-xl bg-white/10 backdrop-blur-sm flex items-center justify-center">
-            <SplinePointer className="h-4 w-4" />
-          </div>
-          <span className="font-semibold tracking-tight">voidcore</span>
-        </div>
-        <div className="hidden md:flex items-center gap-6 text-white/70">
-          <a href="#work" className="hover:text-white">Work</a>
-          <a href="#services" className="hover:text-white">Services</a>
-          <a href="#pricing" className="hover:text-white">Pricing</a>
-          <a href="#contact" className="hover:text-white">Contact</a>
-        </div>
-      </nav> */}
+     
 
       {/* Variant switcher */}
-      <div className="mx-auto max-w-7xl px-6">
+      <div className="mx-auto max-w-7xl px-6 pt-10">
         <div className="mb-6 flex flex-wrap gap-2">
           {variants.map((opt) => (
             <button
@@ -146,7 +133,7 @@ export default function HeroShowcase() {
       </div>
 
       {/* Hero card */}
-      <section className="mx-auto max-w-7xl px-6 pb-24 pt-6 relative">
+      <section className="mx-auto max-w-7xl px-6 pb-24 pt-6">
         <motion.div
           key={active}
           initial={{ opacity: 0, y: 8 }}

@@ -232,43 +232,49 @@ const projects = [
         id: 1,
         title: "📚 Education Analytics Dashboard (Confidential Client)",
         description: "📌 AI tool to extract strategic priorities from U.S. school district plans.",
-        image: "/screens/education-dashboard.png"
+        image: "edu_proj.webp"
     },
     {
         id: 2,
         title: "🤖 GPT-Powered Document Chatbot",
         description: "📌 Built a Retrieval-Augmented AI chatbot to answer user queries using document context.",
-        image: "/screens/gpt-chatbot.png"
+        image: "aichat_proj.webp"
     },
     {
         id: 3,
         title: "🎬 Apan Theater – Streaming Platform",
         description: "📌 Built a subscription-based mobile streaming platform with secure video delivery and scalable backend.",
-        image: "/screens/apan-theater.png"
+        image: "apan_theater.png"
     },
     {
         id: 4,
         title: "⏰ TimeBloc - Focus & Task Manager",
         description: "📌 Built a cross-platform app that boosts focus using the Pomodoro Technique with integrated music playback from jiosaavn, YouTube music and smart task tracking.",
-        image: "/screens/timebloc.png"
+        image: "timeblock.webp"
     },
     {
         id: 5,
         title: "🎭 CareConnect - Student Performance Tracker",
         description: "📌 Built a mobile app to track student performance with real-time WhatsApp alerts for parents.",
-        image: "/screens/careconnect.png"
+        image: "care_con.webp"
     },
     {
         id: 6,
         title: "💰 Pay All Day – Payments App",
         description: "📌 Developed an end-to-end payments platform supporting mobile recharges, money transfers, and wallet-based transactions.",
-        image: "/screens/payallday.png"
+        image: "payallday_proj.png"
     },
     {
         id: 7,
         title: "Day✌️Day Grocery - E-commerce App",
         description: "📌 Built a full-stack eCommerce platform for daily essentials, enabling users to shop online for groceries and household products with seamless order and delivery flows.",
-        image: "/screens/day2day-grocery.png"
+        image: "grocery_proj.webp"
+    },
+    {
+        id: 8,
+        title: "🧺 Laundry Day - On-Demand Laundry Service",
+        description: "📌 Developed an on-demand laundry service app with real-time order tracking and secure payments.",
+        image: "laundry_proj.webp"
     }
 ];
 function WorkSection() {
@@ -281,7 +287,7 @@ function WorkSection() {
                 children: "Selected Work"
             }, void 0, false, {
                 fileName: "[project]/Desktop/prod_voidcore/components/sections/work.tsx",
-                lineNumber: 58,
+                lineNumber: 64,
                 columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$prod_voidcore$2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$4$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -289,7 +295,7 @@ function WorkSection() {
                 children: "Projects we’ve built with clarity, speed, and reliability for startups and teams worldwide."
             }, void 0, false, {
                 fileName: "[project]/Desktop/prod_voidcore/components/sections/work.tsx",
-                lineNumber: 61,
+                lineNumber: 67,
                 columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$prod_voidcore$2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$4$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -303,7 +309,7 @@ function WorkSection() {
                                 className: "rounded-xl mb-4 w-full h-48 object-cover bg-black/10"
                             }, void 0, false, {
                                 fileName: "[project]/Desktop/prod_voidcore/components/sections/work.tsx",
-                                lineNumber: 71,
+                                lineNumber: 77,
                                 columnNumber: 7
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$prod_voidcore$2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$4$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -311,7 +317,7 @@ function WorkSection() {
                                 children: project.title
                             }, void 0, false, {
                                 fileName: "[project]/Desktop/prod_voidcore/components/sections/work.tsx",
-                                lineNumber: 76,
+                                lineNumber: 82,
                                 columnNumber: 7
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$prod_voidcore$2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$4$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -319,7 +325,7 @@ function WorkSection() {
                                 children: project.description
                             }, void 0, false, {
                                 fileName: "[project]/Desktop/prod_voidcore/components/sections/work.tsx",
-                                lineNumber: 77,
+                                lineNumber: 83,
                                 columnNumber: 7
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$prod_voidcore$2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$4$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -328,24 +334,24 @@ function WorkSection() {
                                 children: "View case study →"
                             }, void 0, false, {
                                 fileName: "[project]/Desktop/prod_voidcore/components/sections/work.tsx",
-                                lineNumber: 78,
+                                lineNumber: 84,
                                 columnNumber: 7
                             }, this)
                         ]
                     }, project.id, true, {
                         fileName: "[project]/Desktop/prod_voidcore/components/sections/work.tsx",
-                        lineNumber: 67,
+                        lineNumber: 73,
                         columnNumber: 6
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/Desktop/prod_voidcore/components/sections/work.tsx",
-                lineNumber: 65,
+                lineNumber: 71,
                 columnNumber: 4
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/Desktop/prod_voidcore/components/sections/work.tsx",
-        lineNumber: 57,
+        lineNumber: 63,
         columnNumber: 3
     }, this);
 }
@@ -480,6 +486,50 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
 
 var { k: __turbopack_refresh__, m: module } = __turbopack_context__;
 {
+// "use client"
+// import { motion } from "framer-motion"
+// import { Space } from "lucide-react"
+// import Link from "next/link"
+// export default function Navbar() {
+//   return (
+//     <>
+//       <motion.header className="fixed top-0 left-0 right-0 z-50">
+//         <div className="mx-auto max-w-7xl px-6">
+//           <div className="flex items-center justify-between py-4 
+//                     bg-[#0B0B0F]/80 backdrop-blur-xl
+//                     border border-white/10 rounded-2xl mt-4 shadow-lg
+//                     transition-colors duration-300">
+//             {/* Logo / Brand */}
+//             <div className="flex items-center gap-2 pl-10">
+//               <Link href="/" className="flex items-center gap-2">
+//                 <div className="h-8 w-8 rounded-xl bg-white/10 flex items-center justify-center">
+//                   <Space className="h-4 w-4 text-white" />
+//                 </div>
+//                 <span className="font-semibold tracking-tight text-white">voidcore</span>
+//               </Link>
+//             </div>
+//             {/* Links */}
+//             <nav className="hidden md:flex items-center gap-6 text-white/70 text-sm pr-10">
+//               <Link href="#work" className="hover:text-white transition">Work</Link>
+//               <Link href="#services" className="hover:text-white transition">Services</Link>
+//               <Link href="#pricing" className="hover:text-white transition">Pricing</Link>
+//               <Link href="#contact" className="hover:text-white transition">Contact</Link>
+//               <div className="flex flex-wrap items-center gap-2 md:flex-row">
+//                 <Link
+//                   href="https://calendly.com/krishna_abhishek/30min"
+//                   className="rounded-xl bg-white text-black font-semibold px-5 py-2 ml-2 hover:bg-white/80 transition"
+//                 >
+//                   Get Started
+//                 </Link>
+//               </div>
+//             </nav>
+//           </div>
+//         </div>
+//       </motion.header>
+//       {/* Add this button where you want users to set up a meeting (e.g., in your contact section) */}
+//     </>
+//   )
+// }
 __turbopack_context__.s({
     "default": ()=>Navbar
 });
@@ -508,12 +558,12 @@ function Navbar() {
                                         className: "h-4 w-4 text-white"
                                     }, void 0, false, {
                                         fileName: "[project]/Desktop/prod_voidcore/components/layout/navbar.tsx",
-                                        lineNumber: 16,
+                                        lineNumber: 66,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/Desktop/prod_voidcore/components/layout/navbar.tsx",
-                                    lineNumber: 15,
+                                    lineNumber: 65,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$prod_voidcore$2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$4$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -521,18 +571,18 @@ function Navbar() {
                                     children: "voidcore"
                                 }, void 0, false, {
                                     fileName: "[project]/Desktop/prod_voidcore/components/layout/navbar.tsx",
-                                    lineNumber: 18,
+                                    lineNumber: 68,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/Desktop/prod_voidcore/components/layout/navbar.tsx",
-                            lineNumber: 14,
+                            lineNumber: 64,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/Desktop/prod_voidcore/components/layout/navbar.tsx",
-                        lineNumber: 13,
+                        lineNumber: 63,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$prod_voidcore$2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$4$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
@@ -544,7 +594,7 @@ function Navbar() {
                                 children: "Work"
                             }, void 0, false, {
                                 fileName: "[project]/Desktop/prod_voidcore/components/layout/navbar.tsx",
-                                lineNumber: 24,
+                                lineNumber: 74,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$prod_voidcore$2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$4$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -553,7 +603,7 @@ function Navbar() {
                                 children: "Services"
                             }, void 0, false, {
                                 fileName: "[project]/Desktop/prod_voidcore/components/layout/navbar.tsx",
-                                lineNumber: 25,
+                                lineNumber: 75,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$prod_voidcore$2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$4$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -562,7 +612,7 @@ function Navbar() {
                                 children: "Pricing"
                             }, void 0, false, {
                                 fileName: "[project]/Desktop/prod_voidcore/components/layout/navbar.tsx",
-                                lineNumber: 26,
+                                lineNumber: 76,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$prod_voidcore$2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$4$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -571,29 +621,47 @@ function Navbar() {
                                 children: "Contact"
                             }, void 0, false, {
                                 fileName: "[project]/Desktop/prod_voidcore/components/layout/navbar.tsx",
-                                lineNumber: 27,
+                                lineNumber: 77,
+                                columnNumber: 13
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$prod_voidcore$2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$4$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "flex flex-wrap items-center gap-2 md:flex-row",
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$prod_voidcore$2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$4$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                    href: "https://calendly.com/krishna_abhishek/30min",
+                                    target: "_blank",
+                                    rel: "noopener noreferrer",
+                                    className: "w-32 h-10 flex items-center justify-center bg-white text-black font-semibold text-base rounded-lg ml-2 shadow",
+                                    children: "Get Started"
+                                }, void 0, false, {
+                                    fileName: "[project]/Desktop/prod_voidcore/components/layout/navbar.tsx",
+                                    lineNumber: 79,
+                                    columnNumber: 15
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "[project]/Desktop/prod_voidcore/components/layout/navbar.tsx",
+                                lineNumber: 78,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Desktop/prod_voidcore/components/layout/navbar.tsx",
-                        lineNumber: 23,
+                        lineNumber: 73,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/Desktop/prod_voidcore/components/layout/navbar.tsx",
-                lineNumber: 9,
+                lineNumber: 59,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "[project]/Desktop/prod_voidcore/components/layout/navbar.tsx",
-            lineNumber: 8,
+            lineNumber: 58,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/Desktop/prod_voidcore/components/layout/navbar.tsx",
-        lineNumber: 7,
+        lineNumber: 57,
         columnNumber: 5
     }, this);
 }
@@ -832,7 +900,7 @@ function HeroShowcase() {
     ]);
     const v = variants.find((x)=>x.key === active);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$prod_voidcore$2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$4$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "min-h-screen w-full bg-[#0B0B0F] text-white relative overflow-hidden pt-30",
+        className: "min-h-screen w-full bg-[#0B0B0F] text-white relative overflow-hidden pt-[96px]",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$prod_voidcore$2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$4$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "pointer-events-none absolute inset-0",
@@ -874,7 +942,7 @@ function HeroShowcase() {
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$prod_voidcore$2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$4$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "mx-auto max-w-7xl px-6",
+                className: "mx-auto max-w-7xl px-6 pt-10",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$prod_voidcore$2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$4$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "mb-6 flex flex-wrap gap-2",
                     children: variants.map((opt)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$prod_voidcore$2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$4$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -883,21 +951,21 @@ function HeroShowcase() {
                             children: opt.eyebrow
                         }, opt.key, false, {
                             fileName: "[project]/Desktop/prod_voidcore/app/page.tsx",
-                            lineNumber: 133,
+                            lineNumber: 120,
                             columnNumber: 13
                         }, this))
                 }, void 0, false, {
                     fileName: "[project]/Desktop/prod_voidcore/app/page.tsx",
-                    lineNumber: 131,
+                    lineNumber: 118,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/Desktop/prod_voidcore/app/page.tsx",
-                lineNumber: 130,
+                lineNumber: 117,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$prod_voidcore$2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$4$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
-                className: "mx-auto max-w-7xl px-6 pb-24 pt-6 relative",
+                className: "mx-auto max-w-7xl px-6 pb-24 pt-6",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$prod_voidcore$2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$4$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$prod_voidcore$2f$node_modules$2f2e$pnpm$2f$framer$2d$motion$40$12$2e$23$2e$12_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
                     initial: {
                         opacity: 0,
@@ -918,7 +986,7 @@ function HeroShowcase() {
                             children: v.eyebrow
                         }, void 0, false, {
                             fileName: "[project]/Desktop/prod_voidcore/app/page.tsx",
-                            lineNumber: 157,
+                            lineNumber: 144,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$prod_voidcore$2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$4$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
@@ -926,7 +994,7 @@ function HeroShowcase() {
                             children: v.title
                         }, void 0, false, {
                             fileName: "[project]/Desktop/prod_voidcore/app/page.tsx",
-                            lineNumber: 158,
+                            lineNumber: 145,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$prod_voidcore$2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$4$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -934,7 +1002,7 @@ function HeroShowcase() {
                             children: v.subtitle
                         }, void 0, false, {
                             fileName: "[project]/Desktop/prod_voidcore/app/page.tsx",
-                            lineNumber: 161,
+                            lineNumber: 148,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$prod_voidcore$2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$4$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -944,12 +1012,12 @@ function HeroShowcase() {
                                     children: b
                                 }, b, false, {
                                     fileName: "[project]/Desktop/prod_voidcore/app/page.tsx",
-                                    lineNumber: 166,
+                                    lineNumber: 153,
                                     columnNumber: 15
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/Desktop/prod_voidcore/app/page.tsx",
-                            lineNumber: 164,
+                            lineNumber: 151,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$prod_voidcore$2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$4$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -964,13 +1032,13 @@ function HeroShowcase() {
                                             className: "h-4 w-4"
                                         }, void 0, false, {
                                             fileName: "[project]/Desktop/prod_voidcore/app/page.tsx",
-                                            lineNumber: 178,
+                                            lineNumber: 165,
                                             columnNumber: 31
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/Desktop/prod_voidcore/app/page.tsx",
-                                    lineNumber: 174,
+                                    lineNumber: 161,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$prod_voidcore$2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$4$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -982,13 +1050,13 @@ function HeroShowcase() {
                                             className: "h-4 w-4"
                                         }, void 0, false, {
                                             fileName: "[project]/Desktop/prod_voidcore/app/page.tsx",
-                                            lineNumber: 184,
+                                            lineNumber: 171,
                                             columnNumber: 24
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/Desktop/prod_voidcore/app/page.tsx",
-                                    lineNumber: 180,
+                                    lineNumber: 167,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$prod_voidcore$2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$4$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -1000,19 +1068,19 @@ function HeroShowcase() {
                                             className: "h-4 w-4"
                                         }, void 0, false, {
                                             fileName: "[project]/Desktop/prod_voidcore/app/page.tsx",
-                                            lineNumber: 190,
+                                            lineNumber: 177,
                                             columnNumber: 28
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/Desktop/prod_voidcore/app/page.tsx",
-                                    lineNumber: 186,
+                                    lineNumber: 173,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/Desktop/prod_voidcore/app/page.tsx",
-                            lineNumber: 173,
+                            lineNumber: 160,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$prod_voidcore$2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$4$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1023,7 +1091,7 @@ function HeroShowcase() {
                                     children: "Trusted by founders in BOM · DEL · SF"
                                 }, void 0, false, {
                                     fileName: "[project]/Desktop/prod_voidcore/app/page.tsx",
-                                    lineNumber: 196,
+                                    lineNumber: 183,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$prod_voidcore$2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$4$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1031,7 +1099,7 @@ function HeroShowcase() {
                                     children: "MVPs in 2–4 weeks"
                                 }, void 0, false, {
                                     fileName: "[project]/Desktop/prod_voidcore/app/page.tsx",
-                                    lineNumber: 197,
+                                    lineNumber: 184,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$prod_voidcore$2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$4$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1039,7 +1107,7 @@ function HeroShowcase() {
                                     children: "Ownership-friendly contracts"
                                 }, void 0, false, {
                                     fileName: "[project]/Desktop/prod_voidcore/app/page.tsx",
-                                    lineNumber: 198,
+                                    lineNumber: 185,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$prod_voidcore$2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$4$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1047,49 +1115,49 @@ function HeroShowcase() {
                                     children: "Security & observability built‑in"
                                 }, void 0, false, {
                                     fileName: "[project]/Desktop/prod_voidcore/app/page.tsx",
-                                    lineNumber: 199,
+                                    lineNumber: 186,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/Desktop/prod_voidcore/app/page.tsx",
-                            lineNumber: 195,
+                            lineNumber: 182,
                             columnNumber: 11
                         }, this)
                     ]
                 }, active, true, {
                     fileName: "[project]/Desktop/prod_voidcore/app/page.tsx",
-                    lineNumber: 150,
+                    lineNumber: 137,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/Desktop/prod_voidcore/app/page.tsx",
-                lineNumber: 149,
+                lineNumber: 136,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$prod_voidcore$2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$4$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$prod_voidcore$2f$components$2f$sections$2f$work$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "[project]/Desktop/prod_voidcore/app/page.tsx",
-                lineNumber: 203,
+                lineNumber: 190,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$prod_voidcore$2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$4$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$prod_voidcore$2f$components$2f$sections$2f$services$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "[project]/Desktop/prod_voidcore/app/page.tsx",
-                lineNumber: 204,
+                lineNumber: 191,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$prod_voidcore$2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$4$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$prod_voidcore$2f$components$2f$sections$2f$pricing$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "[project]/Desktop/prod_voidcore/app/page.tsx",
-                lineNumber: 205,
+                lineNumber: 192,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$prod_voidcore$2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$4$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$prod_voidcore$2f$components$2f$sections$2f$contact$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "[project]/Desktop/prod_voidcore/app/page.tsx",
-                lineNumber: 206,
+                lineNumber: 193,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$prod_voidcore$2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$4$2e$5_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$prod_voidcore$2f$components$2f$layout$2f$footer$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "[project]/Desktop/prod_voidcore/app/page.tsx",
-                lineNumber: 207,
+                lineNumber: 194,
                 columnNumber: 7
             }, this)
         ]

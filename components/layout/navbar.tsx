@@ -61,12 +61,12 @@ export default function Navbar() {
                         border border-white/10 rounded-2xl mt-4 shadow-lg">
           {/* Logo / Brand */}
           <div className="flex items-center gap-2 pl-10">
-            <a href="/" className="flex items-center gap-2">
+            <Link href="/" className="flex items-center gap-2">
               <div className="h-8 w-8 rounded-xl bg-white/10 flex items-center justify-center">
                 <SplinePointer className="h-4 w-4 text-white" />
               </div>
               <span className="font-semibold tracking-tight text-white">voidcore</span>
-            </a>
+            </Link>
           </div>
 
           {/* Links */}

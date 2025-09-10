@@ -1,7 +1,7 @@
 'use client'
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, Play, GitBranch, Contact, Blinds } from "lucide-react";
+import { GitBranch} from "lucide-react";
 import Pricing from "@/components/sections/pricing";
 import Services from "@/components/sections/services";
 import Work from "@/components/sections/work";
@@ -9,6 +9,7 @@ import ContactSection from '../components/sections/contact';
 import Navbar from "@/components/layout/navbar";
 import Footer from "@/components/layout/footer";
 import BlogsSection from "@/components/sections/blogs";
+
 
 
 const variants = [
@@ -230,7 +231,7 @@ export default function HeroShowcase() {
         </motion.div>
       </section>
       <Work/>
-      {/* <BlogsSection/> */}
+      <BlogsSection/>
       <Services/>
       <Pricing/>
       <ContactSection/>

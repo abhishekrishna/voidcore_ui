@@ -73,6 +73,7 @@ export default function Navbar() {
           {/* Links */}
           <nav className="hidden md:flex items-center gap-6 text-white/70 text-sm pr-10">
             <a href="#work" className="hover:text-white transition">Work</a>
+            <a href="#blog" className="hover:text-white transition">Blog</a>
             <a href="#services" className="hover:text-white transition">Services</a>
             <a href="#pricing" className="hover:text-white transition">Pricing</a>
             <a href="#contact" className="hover:text-white transition">Contact</a>

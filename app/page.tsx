@@ -1,13 +1,14 @@
 'use client'
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, Play, GitBranch } from "lucide-react";
+import { ArrowRight, Play, GitBranch, Contact, Blinds } from "lucide-react";
 import Pricing from "@/components/sections/pricing";
 import Services from "@/components/sections/services";
 import Work from "@/components/sections/work";
 import ContactSection from '../components/sections/contact';
 import Navbar from "@/components/layout/navbar";
 import Footer from "@/components/layout/footer";
+import BlogsSection from "@/components/sections/blogs";
 
 
 const variants = [
@@ -21,7 +22,14 @@ const variants = [
     ),
     subtitle:
       "Developer-led studio for SaaS, AI agents, and web apps. Clean code, fast delivery, zero fluff.",
-    bullets: ["MVPs in weeks", "AI-native workflows", "Production from day one"],
+    bullets: ["MVPs in weeks", "AI-native workflows", "Production from day one"],ctas: [
+      {
+        label: "Get Started",
+        href: "#contact",
+        variant: "ghost",
+        icon: "",
+      },
+    ],
   },
   {
     key: "clarity-velocity",
@@ -32,8 +40,15 @@ const variants = [
       </>
     ),
     subtitle:
-      "Next.js · NestJS · FastAPI · Postgres · Docker — opinionated stack, boringly reliable.",
-    bullets: ["Scalable architecture", "Transparent sprints", "No vendor lock-in"],
+      "Next.js · Nest.js · FastAPI · Postgres · Docker — opinionated stack, boringly reliable.",
+    bullets: ["Scalable architecture", "Transparent sprints", "No vendor lock-in"],ctas: [
+      {
+        label: "Try voidcore-cli",
+        href: "https://github.com/abhishekrishna/voidcore_cli",
+        variant: "ghost",
+        icon: GitBranch,
+      },
+    ],
   },
   {
     key: "yaml-to-api",
@@ -45,7 +60,14 @@ const variants = [
     ),
     subtitle:
       "Define your data once → get CRUD, auth, and docs auto-generated across stacks.",
-    bullets: ["Any DB", "Any framework", "Typed SDKs"],
+    bullets: ["Any DB", "Any framework", "Typed SDKs"],ctas: [
+      {
+        label: "Try voidcore-cli",
+        href: "https://github.com/abhishekrishna/voidcore_cli",
+        variant: "ghost",
+        icon: GitBranch,
+      },
+    ],
   },
   {
     key: "ai-native",
@@ -58,19 +80,27 @@ const variants = [
     subtitle:
       "RAG workflows, evaluators, and automations that move product metrics — not demos.",
     bullets: ["Eval‑driven", "Secure by design", "Analytics included"],
+    ctas: [
+      // {
+      //   label: "Try voidcore-cli",
+      //   href: "https://github.com/abhishekrishna/voidcore_cli",
+      //   variant: "ghost",
+      //   icon: GitBranch,
+      // },
+    ],
   },
-  {
-    key: "minimal-maximal",
-    eyebrow: "Design x Engineering",
-    title: (
-      <>
-        Minimal design. <span className="text-white/90">Maximal impact.</span>
-      </>
-    ),
-    subtitle:
-      "Glassmorphic, gradient-rich UI with a performance budget and lighthouse >95.",
-    bullets: ["Next.js + Tailwind", "Motion polish", "CDN + edge cache"],
-  },
+  // {
+  //   key: "minimal-maximal",
+  //   eyebrow: "Design x Engineering",
+  //   title: (
+  //     <>
+  //       Minimal design. <span className="text-white/90">Maximal impact.</span>
+  //     </>
+  //   ),
+  //   subtitle:
+  //     "Glassmorphic, gradient-rich UI with a performance budget and lighthouse >95.",
+  //   bullets: ["Next.js + Tailwind", "Motion polish", "CDN + edge cache"],
+  // },
   {
     key: "on-demand-team",
     eyebrow: "For founders",
@@ -81,8 +111,16 @@ const variants = [
     ),
     subtitle:
       "Fixed-scope packs: Landing Page in 10 days, AI MVP in 30 — clear pricing, weekly demos.",
-    bullets: ["Fixed scope", "Code ownership", "Post‑launch support"],
+    bullets: ["Fixed scope", "Code ownership", "Post‑launch support"],ctas: [
+      // {
+      //   label: "Try voidcore-cli",
+      //   href: "https://github.com/abhishekrishna/voidcore_cli",
+      //   variant: "ghost",
+      //   icon: GitBranch,
+      // },
+    ],
   },
+  
 ];
 
 export default function HeroShowcase() {
@@ -94,7 +132,7 @@ export default function HeroShowcase() {
     const interval = setInterval(() => {
       const nextIdx = (idx + 1) % variants.length;
       setActive(variants[nextIdx].key);
-    }, 4000);
+    }, 6000);
     return () => clearInterval(interval);
   }, [active]);
 
@@ -156,28 +194,32 @@ export default function HeroShowcase() {
             ))}
           </ul>
 
-          {/* CTAs */}
-          <div className="flex flex-wrap items-center gap-3">
-            <a
-              href="#contact"
-              className="inline-flex items-center gap-2 rounded-2xl px-4 py-2.5 bg-white text-black font-medium shadow hover:opacity-90"
-            >
-              Start a project <ArrowRight className="h-4 w-4" />
-            </a>
-            <a
-              href="#work"
-              className="inline-flex items-center gap-2 rounded-2xl px-4 py-2.5 bg-white/10 border border-white/15 text-white hover:bg-white/15"
-            >
-              See work <Play className="h-4 w-4" />
-            </a>
-            <a
-              href="https://github.com/abhishekrishna/voidcore_cli"
-              className="inline-flex items-center gap-2 rounded-2xl px-4 py-2.5 bg-transparent border border-white/15 text-white/80 hover:text-white hover:border-white/25"
-            >
-              voidcore-cli <GitBranch className="h-4 w-4" />
-            </a>
-          </div>
+       {/* CTAs */}
+        <div className="flex flex-wrap items-center gap-3">
+          {v.ctas.map(({ label, href, variant, icon: Icon }) => {
+            let styles = "";
+            if (variant === "primary") {
+              styles =
+                "bg-white text-black font-medium shadow hover:opacity-90";
+            } else if (variant === "secondary") {
+              styles =
+                "bg-white/10 border border-white/15 text-white hover:bg-white/15";
+            } else if (variant === "ghost") {
+              styles =
+                "bg-transparent border border-white/15 text-white/80 hover:text-white hover:border-white/25";
+            }
 
+            return (
+              <a
+                key={label}
+                href={href}
+                className={`inline-flex items-center gap-2 rounded-2xl px-4 py-2.5 ${styles}`}
+              >
+                {label} {Icon && <Icon className="h-4 w-4" />}
+              </a>
+            );
+          })}
+        </div>
           {/* Social proof */}
           <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-4 text-white/60 text-xs">
             <div className="rounded-xl border border-white/10 p-3 text-center">Trusted by founders in BOM · DEL · SF</div>
@@ -188,6 +230,7 @@ export default function HeroShowcase() {
         </motion.div>
       </section>
       <Work/>
+      {/* <BlogsSection/> */}
       <Services/>
       <Pricing/>
       <ContactSection/>

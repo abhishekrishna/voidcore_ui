@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import BlogModal from "./blogmodal";
+import Image from "next/image";
 // import BlogModal from "./BlogModal";
 
 const blogs = [
@@ -84,7 +85,8 @@ export default function BlogsSection() {
 						key={blog.id}
 						className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl p-6 hover:bg-white/10 transition flex flex-col"
 					>
-						<img
+						<Image
+              fill
 							src={blog.image}
 							alt={blog.title}
 							className="rounded-xl mb-4 w-full h-40 object-cover bg-black/10"

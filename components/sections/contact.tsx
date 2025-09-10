@@ -12,8 +12,15 @@ import { useState } from "react";
       setForm({ ...form, [e.target.name]: e.target.value });
 };
 
- const handleSubmit = async (e: React.FormEvent) => {
+const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    // ✅ Check if all fields are filled
+    if (!form.name.trim() || !form.email.trim() || !form.message.trim()) {
+      setStatus("⚠️ Please fill in all fields before submitting.");
+      return;
+    }
+
     setStatus("Sending...");
 
     try {
@@ -27,7 +34,7 @@ import { useState } from "react";
 
       if (data.success) {
         setStatus("✅ Sent!");
-        setForm({ name: "", email: "", message: "" }); // ✅ clear form
+        setForm({ name: "", email: "", message: "" }); // clear form
       } else {
         setStatus("❌ Failed, try again.");
       }

@@ -1,5 +1,9 @@
 {
-  "/api/lead/route": "app/api/lead/route.js",
+  "/_not-found/page": "app/_not-found/page.js",
   "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/robots.txt/route": "app/robots.txt/route.js",
+  "/sitemap.xml/route": "app/sitemap.xml/route.js",
+  "/api/lead/route": "app/api/lead/route.js",
+  "/blog/[slug]/page": "app/blog/[slug]/page.js",
   "/page": "app/page.js"
 }

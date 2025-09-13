@@ -8,7 +8,7 @@ import Work from "@/components/sections/work";
 import ContactSection from '../components/sections/contact';
 import Navbar from "@/components/layout/navbar";
 import Footer from "@/components/layout/footer";
-// import BlogsSection from "@/components/sections/blogs";
+import BlogsSection from "@/components/sections/blogs";
 
 
 
@@ -231,7 +231,7 @@ export default function HeroShowcase() {
         </motion.div>
       </section>
       <Work/>
-      {/* <BlogsSection/> */}
+      <BlogsSection/>
       <Services/>
       <Pricing/>
       <ContactSection/>

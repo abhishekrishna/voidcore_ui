@@ -31,6 +31,7 @@ const handleSubmit = async (e: React.FormEvent) => {
       });
 
       const data = await res.json();
+      console.log(data.message);
 
       if (data.success) {
         setStatus("✅ Sent!");
@@ -49,9 +50,9 @@ const handleSubmit = async (e: React.FormEvent) => {
         <h2 className="text-3xl md:text-5xl font-semibold mb-6">Contact</h2>
         <p className="text-white/70 max-w-2xl mb-12">Tell us about your idea — we’ll get back within 24h with next steps.</p>
         <form onSubmit={handleSubmit} className="grid gap-6 max-w-2xl">
-          <input name="name"  onChange={handleChange} placeholder="Your Name" className="rounded-xl bg-white/5 border border-white/10 px-4 py-3 text-white placeholder:text-white/40" />
-          <input name="email" type="email"  onChange={handleChange} placeholder="Email" className="rounded-xl bg-white/5 border border-white/10 px-4 py-3 text-white placeholder:text-white/40" />
-          <textarea name="message" onChange={handleChange} placeholder="Tell us about your project..." rows={5} className="rounded-xl bg-white/5 border border-white/10 px-4 py-3 text-white placeholder:text-white/40" />
+          <input name="name" value={form.name} onChange={handleChange} placeholder="Your Name" className="rounded-xl bg-white/5 border border-white/10 px-4 py-3 text-white placeholder:text-white/40" />
+          <input name="email" value={form.email} type="email"  onChange={handleChange} placeholder="Email" className="rounded-xl bg-white/5 border border-white/10 px-4 py-3 text-white placeholder:text-white/40" />
+          <textarea name="message" value={form.message} onChange={handleChange} placeholder="Tell us about your project..." rows={5} className="rounded-xl bg-white/5 border border-white/10 px-4 py-3 text-white placeholder:text-white/40" />
           <button type="submit" className="rounded-xl bg-white text-black font-medium px-6 py-3 hover:opacity-90">Send Message</button>
           {status && <p className="text-white/70">{status}</p>}
         </form>

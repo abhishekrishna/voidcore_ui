@@ -10,8 +10,12 @@ export async function POST(req: Request) {
   try {
     await sendLeadEmail(name, email, message);
     return Response.json({ success: true }, { status: 200 });
-  } catch (err: any) {
-    console.error("Error sending mail:", err);
+  } catch (err: unknown) {
+    // Optional: type narrowing to get message
+    const errorMessage =
+      err instanceof Error ? err.message : "Unknown error";
+    console.error("Error sending mail:", errorMessage);
+
     return Response.json({ success: false, error: "Failed to send" }, { status: 500 });
   }
 }

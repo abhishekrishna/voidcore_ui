@@ -1,37 +1,17 @@
-import { NextResponse } from "next/server";
-
-const SLACK_WEBHOOK = process.env.SLACK_WEBHOOK_URL;
-const DISCORD_WEBHOOK = process.env.DISCORD_WEBHOOK_URL;
+import { sendLeadEmail } from "@/lib/mailer";
 
 export async function POST(req: Request) {
+  const { name, email, message } = await req.json();
+
+  if (!name || !email || !message) {
+    return Response.json({ success: false, error: "Missing fields" }, { status: 400 });
+  }
+
   try {
-    const { name, email, message } = await req.json();
-
-    const payload = {
-      text: `🚀 New Lead!\n\n👤 Name: ${name}\n📧 Email: ${email}\n💬 Message: ${message}`,
-    };
-
-    // Send to Slack
-    if (SLACK_WEBHOOK) {
-      await fetch(SLACK_WEBHOOK, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
-      });
-    }
-
-    // Send to Discord
-    if (DISCORD_WEBHOOK) {
-      await fetch(DISCORD_WEBHOOK, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ content: payload.text }),
-      });
-    }
-
-    return NextResponse.json({ success: true });
-  } catch (error) {
-    console.error("Lead submission error:", error);
-    return NextResponse.json({ success: false }, { status: 500 });
+    await sendLeadEmail(name, email, message);
+    return Response.json({ success: true }, { status: 200 });
+  } catch (err: any) {
+    console.error("Error sending mail:", err);
+    return Response.json({ success: false, error: "Failed to send" }, { status: 500 });
   }
 }

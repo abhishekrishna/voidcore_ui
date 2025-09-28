@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Void Core Technologies | Software Solutions",
-  description: "Custom SaaS, mobile, and web apps — Void Core Technologies helps startups and enterprises build secure, scalable software fast.",
+  title: "VoidCore Technologies | Software Solutions",
+  description: "Custom SaaS, mobile, and web apps — VoidCore Technologies helps startups and enterprises build secure, scalable software fast.",
 };
 
 export default function RootLayout({

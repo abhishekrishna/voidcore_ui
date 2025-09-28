@@ -69,8 +69,8 @@ var __TURBOPACK__imported__module__$5b$next$5d2f$internal$2f$font$2f$google$2f$g
 ;
 ;
 const metadata = {
-    title: "Void Core Technologies | Software Solutions",
-    description: "Custom SaaS, mobile, and web apps — Void Core Technologies helps startups and enterprises build secure, scalable software fast."
+    title: "VoidCore Technologies | Software Solutions",
+    description: "Custom SaaS, mobile, and web apps — VoidCore Technologies helps startups and enterprises build secure, scalable software fast."
 };
 function RootLayout({ children }) {
     // This script will sync the dark class on first paint

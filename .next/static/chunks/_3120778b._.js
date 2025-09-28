@@ -945,7 +945,7 @@ const blogs = [
         id: 1,
         title: "Building AI Agents with FastAPI & LangChain",
         date: "2025-08-15",
-        image: "/blog/ai-agents-nextjs.png",
+        image: "/blog/fastapi_langchain.png",
         stack: [
             "Next.js",
             "LangChain",
@@ -1021,22 +1021,30 @@ function BlogsSection() {
                 children: blogs.map((blog)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl p-6 hover:bg-white/10 transition flex flex-col",
                         children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                fill: true,
-                                src: blog.image,
-                                alt: blog.title,
-                                className: "rounded-xl mb-4 w-full h-40 object-cover bg-black/10"
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "relative w-full h-40 mb-4",
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                    src: blog.image,
+                                    alt: blog.title,
+                                    layout: "fill",
+                                    objectFit: "cover",
+                                    className: "rounded-xl bg-black/10"
+                                }, void 0, false, {
+                                    fileName: "[project]/components/sections/blogs.tsx",
+                                    lineNumber: 89,
+                                    columnNumber: 11
+                                }, this)
                             }, void 0, false, {
                                 fileName: "[project]/components/sections/blogs.tsx",
                                 lineNumber: 88,
-                                columnNumber: 7
+                                columnNumber: 10
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
                                 className: "text-xl font-semibold mb-2 text-white",
                                 children: blog.title
                             }, void 0, false, {
                                 fileName: "[project]/components/sections/blogs.tsx",
-                                lineNumber: 94,
+                                lineNumber: 97,
                                 columnNumber: 7
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1044,7 +1052,7 @@ function BlogsSection() {
                                 children: blog.date
                             }, void 0, false, {
                                 fileName: "[project]/components/sections/blogs.tsx",
-                                lineNumber: 97,
+                                lineNumber: 100,
                                 columnNumber: 7
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1054,12 +1062,12 @@ function BlogsSection() {
                                         children: tech
                                     }, tech, false, {
                                         fileName: "[project]/components/sections/blogs.tsx",
-                                        lineNumber: 100,
+                                        lineNumber: 103,
                                         columnNumber: 9
                                     }, this))
                             }, void 0, false, {
                                 fileName: "[project]/components/sections/blogs.tsx",
-                                lineNumber: 98,
+                                lineNumber: 101,
                                 columnNumber: 7
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1071,7 +1079,7 @@ function BlogsSection() {
                                         children: "Quick Preview"
                                     }, void 0, false, {
                                         fileName: "[project]/components/sections/blogs.tsx",
-                                        lineNumber: 109,
+                                        lineNumber: 112,
                                         columnNumber: 8
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -1080,13 +1088,13 @@ function BlogsSection() {
                                         children: "Read Full →"
                                     }, void 0, false, {
                                         fileName: "[project]/components/sections/blogs.tsx",
-                                        lineNumber: 115,
+                                        lineNumber: 118,
                                         columnNumber: 8
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/sections/blogs.tsx",
-                                lineNumber: 108,
+                                lineNumber: 111,
                                 columnNumber: 7
                             }, this)
                         ]
@@ -1106,7 +1114,7 @@ function BlogsSection() {
                 blog: selectedBlog
             }, void 0, false, {
                 fileName: "[project]/components/sections/blogs.tsx",
-                lineNumber: 125,
+                lineNumber: 128,
                 columnNumber: 4
             }, this)
         ]

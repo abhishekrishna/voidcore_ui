@@ -9,7 +9,7 @@ const blogs = [
 		id: 1,
 		title: "Building AI Agents with FastAPI & LangChain",
 		date: "2025-08-15",
-		image: "/blog/ai-agents-nextjs.png",
+		image: "/blog/fastapi_langchain.png",
 		stack: ["Next.js", "LangChain", "OpenAI"],
 		content: `
       <p>Discover how to build powerful AI agents using FastAPI and LangChain. This guide covers architecture, deployment, and integration with OpenAI for real-world automation.</p>
@@ -85,12 +85,15 @@ export default function BlogsSection() {
 						key={blog.id}
 						className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl p-6 hover:bg-white/10 transition flex flex-col"
 					>
-						<Image
-              fill
-							src={blog.image}
-							alt={blog.title}
-							className="rounded-xl mb-4 w-full h-40 object-cover bg-black/10"
-						/>
+									<div className="relative w-full h-40 mb-4">
+										<Image
+											src={blog.image}
+											alt={blog.title}
+											layout="fill"
+											objectFit="cover"
+											className="rounded-xl bg-black/10"
+										/>
+									</div>
 						<h3 className="text-xl font-semibold mb-2 text-white">
 							{blog.title}
 						</h3>

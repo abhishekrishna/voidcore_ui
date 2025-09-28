@@ -1,5 +1,38 @@
 (globalThis.TURBOPACK = globalThis.TURBOPACK || []).push([typeof document === "object" ? document.currentScript : undefined, {
 
+"[project]/app/blog/[slug]/BlogContent.tsx [app-client] (ecmascript)": ((__turbopack_context__) => {
+"use strict";
+
+var { k: __turbopack_refresh__, m: module } = __turbopack_context__;
+{
+__turbopack_context__.s({
+    "default": ()=>BlogContent
+});
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
+;
+function BlogContent(param) {
+    let { html } = param;
+    // Replace h2/h3 with extra emojis for fun
+    let enhanced = html.replace(/<h2>/g, '<h2>✨ ').replace(/<h3>/g, '<h3>📚 ').replace(/<ul>/g, '<ul>').replace(/<li>/g, '<li>👉 ');
+    // Make code blocks scrollable
+    enhanced = enhanced.replace(/<pre><code class="([^"]*)">([\s\S]*?)<\/code><\/pre>/g, (match, lang, code)=>'<div style="overflow-x:auto;max-width:100%;margin-bottom:1em;"><pre class="scrollable"><code class="'.concat(lang, '">').concat(code, "</code></pre></div>"));
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+        dangerouslySetInnerHTML: {
+            __html: enhanced
+        }
+    }, void 0, false, {
+        fileName: "[project]/app/blog/[slug]/BlogContent.tsx",
+        lineNumber: 18,
+        columnNumber: 10
+    }, this);
+}
+_c = BlogContent;
+var _c;
+__turbopack_context__.k.register(_c, "BlogContent");
+if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
+    __turbopack_context__.k.registerExports(module, globalThis.$RefreshHelpers$);
+}
+}}),
 "[project]/app/blog/[slug]/page.tsx [app-client] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
 
@@ -9,10 +42,12 @@ __turbopack_context__.s({
     "default": ()=>BlogPage
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$blog$2f5b$slug$5d2f$BlogContent$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/app/blog/[slug]/BlogContent.tsx [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/navigation.js [app-client] (ecmascript)");
 ;
 var _s = __turbopack_context__.k.signature();
 "use client";
+;
 ;
 const blogs = [
     {
@@ -59,14 +94,14 @@ function BlogPage() {
     const blog = blogs.find((b)=>b.slug === slug);
     if (!blog) {
         return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
-            className: "mx-auto max-w-3xl px-6 py-32 text-white flex flex-col items-center justify-center min-h-[60vh]",
+            className: "mx-auto max-w-3xl px-6 py-32 text-white flex flex-col items-center justify-center min-h-[80vh]",
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
                     className: "text-3xl font-bold mb-6",
                     children: "Article not found"
                 }, void 0, false, {
                     fileName: "[project]/app/blog/[slug]/page.tsx",
-                    lineNumber: 150,
+                    lineNumber: 151,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -75,18 +110,18 @@ function BlogPage() {
                     children: "← Back"
                 }, void 0, false, {
                     fileName: "[project]/app/blog/[slug]/page.tsx",
-                    lineNumber: 151,
+                    lineNumber: 152,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/app/blog/[slug]/page.tsx",
-            lineNumber: 149,
+            lineNumber: 150,
             columnNumber: 7
         }, this);
     }
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
-        className: "mx-auto max-w-3xl px-6 py-32",
+        className: "mx-auto max-w-7xl px-8 py-32",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "mb-10 flex items-center gap-4",
@@ -97,7 +132,7 @@ function BlogPage() {
                         children: "← Back"
                     }, void 0, false, {
                         fileName: "[project]/app/blog/[slug]/page.tsx",
-                        lineNumber: 164,
+                        lineNumber: 165,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -105,17 +140,17 @@ function BlogPage() {
                         children: "Back to all blogs"
                     }, void 0, false, {
                         fileName: "[project]/app/blog/[slug]/page.tsx",
-                        lineNumber: 170,
+                        lineNumber: 171,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/blog/[slug]/page.tsx",
-                lineNumber: 163,
+                lineNumber: 164,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl shadow-xl p-8",
+                className: "rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl shadow-xl p-12",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "relative w-full h-64 mb-8",
@@ -125,12 +160,12 @@ function BlogPage() {
                             className: "rounded-xl w-full h-64 object-cover bg-black/10 shadow-lg"
                         }, void 0, false, {
                             fileName: "[project]/app/blog/[slug]/page.tsx",
-                            lineNumber: 174,
+                            lineNumber: 175,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/app/blog/[slug]/page.tsx",
-                        lineNumber: 173,
+                        lineNumber: 174,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
@@ -138,7 +173,7 @@ function BlogPage() {
                         children: blog.title
                     }, void 0, false, {
                         fileName: "[project]/app/blog/[slug]/page.tsx",
-                        lineNumber: 180,
+                        lineNumber: 181,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -149,7 +184,7 @@ function BlogPage() {
                                 children: blog.date
                             }, void 0, false, {
                                 fileName: "[project]/app/blog/[slug]/page.tsx",
-                                lineNumber: 182,
+                                lineNumber: 183,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -159,52 +194,57 @@ function BlogPage() {
                                         children: tech
                                     }, tech, false, {
                                         fileName: "[project]/app/blog/[slug]/page.tsx",
-                                        lineNumber: 185,
+                                        lineNumber: 186,
                                         columnNumber: 15
                                     }, this))
                             }, void 0, false, {
                                 fileName: "[project]/app/blog/[slug]/page.tsx",
-                                lineNumber: 183,
+                                lineNumber: 184,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/blog/[slug]/page.tsx",
-                        lineNumber: 181,
+                        lineNumber: 182,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("hr", {
                         className: "border-white/10 mb-8"
                     }, void 0, false, {
                         fileName: "[project]/app/blog/[slug]/page.tsx",
-                        lineNumber: 194,
+                        lineNumber: 195,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "prose prose-invert text-white max-w-none text-lg",
-                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(BlogContent, {
+                        style: {
+                            '--tw-prose-li-margin': '1.2em',
+                            '--tw-prose-li-padding': '0.7em 0',
+                            '--tw-prose-ul-margin': '1.5em'
+                        },
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$blog$2f5b$slug$5d2f$BlogContent$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                             html: blog.content
                         }, void 0, false, {
                             fileName: "[project]/app/blog/[slug]/page.tsx",
-                            lineNumber: 199,
+                            lineNumber: 205,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/app/blog/[slug]/page.tsx",
-                        lineNumber: 195,
+                        lineNumber: 196,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/blog/[slug]/page.tsx",
-                lineNumber: 172,
-                columnNumber: 7
+                lineNumber: 173,
+                columnNumber: 3
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/app/blog/[slug]/page.tsx",
-        lineNumber: 162,
-        columnNumber: 5
+        lineNumber: 163,
+        columnNumber: 3
     }, this);
 }
 _s(BlogPage, "r0SrtedYVNL+HMwodFukIS6siQQ=", false, function() {
@@ -448,4 +488,4 @@ module.exports = __turbopack_context__.r("[project]/node_modules/next/dist/clien
 }}),
 }]);
 
-//# sourceMappingURL=_b64d298b._.js.map
+//# sourceMappingURL=_94de485d._.js.map

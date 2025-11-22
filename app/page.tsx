@@ -1,234 +1,366 @@
-'use client'
+// 'use client'
+// import { useEffect, useState } from "react";
+// import { motion } from "framer-motion";
+// import { GitBranch} from "lucide-react";
+// import Pricing from "@/components/sections/pricing";
+// import Services from "@/components/sections/services";
+// import Work from "@/components/sections/work";
+// import ContactSection from '../components/sections/contact';
+// import Navbar from "@/components/layout/navbar";
+// import Footer from "@/components/layout/footer";
+// import BlogsSection from "@/components/sections/blogs";
+
+
+
+// const variants = [
+//   {
+//     key: "build-ship-scale",
+//     eyebrow: "Void Core Technologies",
+//     title: (
+//       <>
+//         Build. Ship. <span className="text-white/90">Scale.</span>
+//       </>
+//     ),
+//     subtitle:
+//       "Developer-led studio for SaaS, AI agents, and web apps. Clean code, fast delivery, zero fluff.",
+//     bullets: ["MVPs in weeks", "AI-native workflows", "Production from day one"],ctas: [
+//       {
+//         label: "Get Started",
+//         href: "#contact",
+//         variant: "ghost",
+//         icon: "",
+//       },
+//     ],
+//   },
+//   {
+//     key: "clarity-velocity",
+//     eyebrow: "Developer-first studio",
+//     title: (
+//       <>
+//         Engineering clarity. <span className="text-white/90">Shipping velocity.</span>
+//       </>
+//     ),
+//     subtitle:
+//       "Next.js · Nest.js · FastAPI · Postgres · Docker — opinionated stack, boringly reliable.",
+//     bullets: ["Scalable architecture", "Transparent sprints", "No vendor lock-in"],ctas: [
+//       {
+//         label: "Try voidcore-cli",
+//         href: "https://github.com/abhishekrishna/voidcore_cli",
+//         variant: "ghost",
+//         icon: GitBranch,
+//       },
+//     ],
+//   },
+//   {
+//     key: "yaml-to-api",
+//     eyebrow: "Automation inside",
+//     title: (
+//       <>
+//         From <span className="text-white/90">YAML</span> to live APIs.
+//       </>
+//     ),
+//     subtitle:
+//       "Define your data once → get CRUD, auth, and docs auto-generated across stacks.",
+//     bullets: ["Any DB", "Any framework", "Typed SDKs"],ctas: [
+//       {
+//         label: "Try voidcore-cli",
+//         href: "https://github.com/abhishekrishna/voidcore_cli",
+//         variant: "ghost",
+//         icon: GitBranch,
+//       },
+//     ],
+//   },
+//   {
+//     key: "ai-native",
+//     eyebrow: "RAG + Agents",
+//     title: (
+//       <>
+//         AI‑native builds for <span className="text-white/90">real users.</span>
+//       </>
+//     ),
+//     subtitle:
+//       "RAG workflows, evaluators, and automations that move product metrics — not demos.",
+//     bullets: ["Eval‑driven", "Secure by design", "Analytics included"],
+//     ctas: [
+//       // {
+//       //   label: "Try voidcore-cli",
+//       //   href: "https://github.com/abhishekrishna/voidcore_cli",
+//       //   variant: "ghost",
+//       //   icon: GitBranch,
+//       // },
+//     ],
+//   },
+//   // {
+//   //   key: "minimal-maximal",
+//   //   eyebrow: "Design x Engineering",
+//   //   title: (
+//   //     <>
+//   //       Minimal design. <span className="text-white/90">Maximal impact.</span>
+//   //     </>
+//   //   ),
+//   //   subtitle:
+//   //     "Glassmorphic, gradient-rich UI with a performance budget and lighthouse >95.",
+//   //   bullets: ["Next.js + Tailwind", "Motion polish", "CDN + edge cache"],
+//   // },
+//   {
+//     key: "on-demand-team",
+//     eyebrow: "For founders",
+//     title: (
+//       <>
+//         Your startup’s <span className="text-white/90">on‑demand dev team.</span>
+//       </>
+//     ),
+//     subtitle:
+//       "Fixed-scope packs: Landing Page in 10 days, AI MVP in 30 — clear pricing, weekly demos.",
+//     bullets: ["Fixed scope", "Code ownership", "Post‑launch support"],ctas: [
+//       // {
+//       //   label: "Try voidcore-cli",
+//       //   href: "https://github.com/abhishekrishna/voidcore_cli",
+//       //   variant: "ghost",
+//       //   icon: GitBranch,
+//       // },
+//     ],
+//   },
+  
+// ];
+
+// export default function HeroShowcase() {
+//   const [active, setActive] = useState(variants[0].key);
+//   // const v = variants.find((x) => x.key === active)!;
+
+//   useEffect(() => {
+//     const idx = variants.findIndex((x) => x.key === active);
+//     const interval = setInterval(() => {
+//       const nextIdx = (idx + 1) % variants.length;
+//       setActive(variants[nextIdx].key);
+//     }, 6000);
+//     return () => clearInterval(interval);
+//   }, [active]);
+
+//   const v = variants.find((x) => x.key === active)!;
+
+//   return (
+//     <div className="min-h-screen w-full bg-[#0B0B0F] text-white relative overflow-hidden pt-[96px]">
+//       {/* Gradient / noise background */}
+//       <div className="pointer-events-none absolute inset-0">
+//         <div className="absolute -top-40 -left-40 h-96 w-96 rounded-full blur-3xl opacity-30 bg-gradient-to-tr from-fuchsia-500 via-cyan-400 to-indigo-500" />
+//         <div className="absolute -bottom-40 -right-20 h-[28rem] w-[28rem] rounded-full blur-3xl opacity-25 bg-gradient-to-br from-emerald-400 via-sky-400 to-violet-500" />
+//         <div className="absolute inset-0 mix-blend-soft-light" style={{ backgroundImage: "radial-gradient(transparent 0, rgba(255,255,255,0.05) 1px)", backgroundSize: "24px 24px" }} />
+//       </div>
+
+//       {/* Top nav stub */}
+//       <Navbar/>
+     
+
+//       {/* Variant switcher */}
+//       <div className="mx-auto max-w-7xl px-6 pt-10">
+//         <div className="mb-6 flex flex-wrap gap-2">
+//           {variants.map((opt) => (
+//             <button
+//               key={opt.key}
+//               onClick={() => setActive(opt.key)}
+//               className={`rounded-2xl px-3 py-1.5 text-sm transition border ${
+//                 active === opt.key
+//                   ? "bg-white/10 border-white/20"
+//                   : "bg-white/5 border-white/10 hover:bg-white/10"
+//               }`}
+//             >
+//               {opt.eyebrow}
+//             </button>
+//           ))}
+//         </div>
+//       </div>
+
+//       {/* Hero card */}
+//       <section className="mx-auto max-w-7xl px-6 pb-24 pt-6">
+//         <motion.div
+//           key={active}
+//           initial={{ opacity: 0, y: 8 }}
+//           animate={{ opacity: 1, y: 0 }}
+//           transition={{ duration: 0.35, ease: "easeOut" }}
+//           className="rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl p-8 md:p-12 shadow-2xl"
+//         >
+//           <p className="text-sm uppercase tracking-[0.2em] text-white/70 mb-3">{v.eyebrow}</p>
+//           <h1 className="text-4xl md:text-6xl font-semibold leading-tight mb-4">
+//             {v.title}
+//           </h1>
+//           <p className="text-lg md:text-xl text-white/80 max-w-3xl mb-8">{v.subtitle}</p>
+
+//           {/* Bullets */}
+//           <ul className="flex flex-wrap gap-3 mb-8">
+//             {v.bullets.map((b) => (
+//               <li key={b} className="text-sm text-white/80 rounded-full border border-white/15 bg-white/5 px-3 py-1.5">
+//                 {b}
+//               </li>
+//             ))}
+//           </ul>
+
+//        {/* CTAs */}
+//         <div className="flex flex-wrap items-center gap-3">
+//           {v.ctas.map(({ label, href, variant, icon: Icon }) => {
+//             let styles = "";
+//             if (variant === "primary") {
+//               styles =
+//                 "bg-white text-black font-medium shadow hover:opacity-90";
+//             } else if (variant === "secondary") {
+//               styles =
+//                 "bg-white/10 border border-white/15 text-white hover:bg-white/15";
+//             } else if (variant === "ghost") {
+//               styles =
+//                 "bg-transparent border border-white/15 text-white/80 hover:text-white hover:border-white/25";
+//             }
+
+//             return (
+//               <a
+//                 key={label}
+//                 href={href}
+//                 className={`inline-flex items-center gap-2 rounded-2xl px-4 py-2.5 ${styles}`}
+//               >
+//                 {label} {Icon && <Icon className="h-4 w-4" />}
+//               </a>
+//             );
+//           })}
+//         </div>
+//           {/* Social proof */}
+//           <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-4 text-white/60 text-xs">
+//             <div className="rounded-xl border border-white/10 p-3 text-center">Trusted by founders in BOM · DEL · SF</div>
+//             <div className="rounded-xl border border-white/10 p-3 text-center">MVPs in 2–4 weeks</div>
+//             <div className="rounded-xl border border-white/10 p-3 text-center">Ownership-friendly contracts</div>
+//             <div className="rounded-xl border border-white/10 p-3 text-center">Security & observability built‑in</div>
+//           </div>
+//         </motion.div>
+//       </section>
+     
+//     </div>
+//   );
+// }
+"use client";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { GitBranch} from "lucide-react";
-import Pricing from "@/components/sections/pricing";
-import Services from "@/components/sections/services";
-import Work from "@/components/sections/work";
-import ContactSection from '../components/sections/contact';
 import Navbar from "@/components/layout/navbar";
 import Footer from "@/components/layout/footer";
 import BlogsSection from "@/components/sections/blogs";
+import ContactSection from "@/components/sections/contact";
+import Pricing from "@/components/sections/pricing";
+import Services from "@/components/sections/services";
+import Work from "@/components/sections/work";
 
-
-
+// Vercel‑style minimal rotating variants
 const variants = [
   {
     key: "build-ship-scale",
     eyebrow: "Void Core Technologies",
-    title: (
-      <>
-        Build. Ship. <span className="text-white/90">Scale.</span>
-      </>
-    ),
+    title: "Build. Ship. Scale.",
     subtitle:
-      "Developer-led studio for SaaS, AI agents, and web apps. Clean code, fast delivery, zero fluff.",
-    bullets: ["MVPs in weeks", "AI-native workflows", "Production from day one"],ctas: [
-      {
-        label: "Get Started",
-        href: "#contact",
-        variant: "ghost",
-        icon: "",
-      },
-    ],
-  },
-  {
-    key: "clarity-velocity",
-    eyebrow: "Developer-first studio",
-    title: (
-      <>
-        Engineering clarity. <span className="text-white/90">Shipping velocity.</span>
-      </>
-    ),
-    subtitle:
-      "Next.js · Nest.js · FastAPI · Postgres · Docker — opinionated stack, boringly reliable.",
-    bullets: ["Scalable architecture", "Transparent sprints", "No vendor lock-in"],ctas: [
-      {
-        label: "Try voidcore-cli",
-        href: "https://github.com/abhishekrishna/voidcore_cli",
-        variant: "ghost",
-        icon: GitBranch,
-      },
-    ],
-  },
-  {
-    key: "yaml-to-api",
-    eyebrow: "Automation inside",
-    title: (
-      <>
-        From <span className="text-white/90">YAML</span> to live APIs.
-      </>
-    ),
-    subtitle:
-      "Define your data once → get CRUD, auth, and docs auto-generated across stacks.",
-    bullets: ["Any DB", "Any framework", "Typed SDKs"],ctas: [
-      {
-        label: "Try voidcore-cli",
-        href: "https://github.com/abhishekrishna/voidcore_cli",
-        variant: "ghost",
-        icon: GitBranch,
-      },
-    ],
-  },
-  {
-    key: "ai-native",
-    eyebrow: "RAG + Agents",
-    title: (
-      <>
-        AI‑native builds for <span className="text-white/90">real users.</span>
-      </>
-    ),
-    subtitle:
-      "RAG workflows, evaluators, and automations that move product metrics — not demos.",
-    bullets: ["Eval‑driven", "Secure by design", "Analytics included"],
-    ctas: [
-      // {
-      //   label: "Try voidcore-cli",
-      //   href: "https://github.com/abhishekrishna/voidcore_cli",
-      //   variant: "ghost",
-      //   icon: GitBranch,
-      // },
-    ],
+      "Developer-led studio for SaaS, AI agents, and enterprise-grade web apps.",
   },
   // {
-  //   key: "minimal-maximal",
-  //   eyebrow: "Design x Engineering",
-  //   title: (
-  //     <>
-  //       Minimal design. <span className="text-white/90">Maximal impact.</span>
-  //     </>
-  //   ),
+  //   key: "clarity-velocity",
+  //   eyebrow: "Developer-first studio",
+  //   title: "Engineering clarity. Shipping velocity.",
   //   subtitle:
-  //     "Glassmorphic, gradient-rich UI with a performance budget and lighthouse >95.",
-  //   bullets: ["Next.js + Tailwind", "Motion polish", "CDN + edge cache"],
+  //     "Opinionated stack · Next.js · FastAPI · Postgres · Docker · Clean, reliable delivery.",
   // },
   {
-    key: "on-demand-team",
-    eyebrow: "For founders",
-    title: (
-      <>
-        Your startup’s <span className="text-white/90">on‑demand dev team.</span>
-      </>
-    ),
+    key: "ai-native",
+    eyebrow: "AI-native builds",
+    title: "RAG + Agents that move metrics.",
     subtitle:
-      "Fixed-scope packs: Landing Page in 10 days, AI MVP in 30 — clear pricing, weekly demos.",
-    bullets: ["Fixed scope", "Code ownership", "Post‑launch support"],ctas: [
-      // {
-      //   label: "Try voidcore-cli",
-      //   href: "https://github.com/abhishekrishna/voidcore_cli",
-      //   variant: "ghost",
-      //   icon: GitBranch,
-      // },
-    ],
+      "Eval-driven, secure-by-design automations — not demo‑ware.",
   },
-  
+  {
+    key: "founder-packages",
+    eyebrow: "For founders",
+    title: "Your on-demand engineering team.",
+    subtitle:
+      "Fixed-scope packs · Landing Page in 10 days · AI MVP in 30.",
+  },
 ];
 
-export default function HeroShowcase() {
-  const [active, setActive] = useState(variants[0].key);
-  // const v = variants.find((x) => x.key === active)!;
+export default function HeroModern() {
+  const [active, setActive] = useState(0);
 
   useEffect(() => {
-    const idx = variants.findIndex((x) => x.key === active);
     const interval = setInterval(() => {
-      const nextIdx = (idx + 1) % variants.length;
-      setActive(variants[nextIdx].key);
-    }, 6000);
+      setActive((prev) => (prev + 1) % variants.length);
+    }, 5000);
     return () => clearInterval(interval);
-  }, [active]);
+  }, []);
 
-  const v = variants.find((x) => x.key === active)!;
+  const v = variants[active];
 
   return (
-    <div className="min-h-screen w-full bg-[#0B0B0F] text-white relative overflow-hidden pt-[96px]">
-      {/* Gradient / noise background */}
-      <div className="pointer-events-none absolute inset-0">
-        <div className="absolute -top-40 -left-40 h-96 w-96 rounded-full blur-3xl opacity-30 bg-gradient-to-tr from-fuchsia-500 via-cyan-400 to-indigo-500" />
-        <div className="absolute -bottom-40 -right-20 h-[28rem] w-[28rem] rounded-full blur-3xl opacity-25 bg-gradient-to-br from-emerald-400 via-sky-400 to-violet-500" />
-        <div className="absolute inset-0 mix-blend-soft-light" style={{ backgroundImage: "radial-gradient(transparent 0, rgba(255,255,255,0.05) 1px)", backgroundSize: "24px 24px" }} />
-      </div>
+    <div className="relative min-h-screen w-full bg-black text-white overflow-hidden">
+      <Navbar />
 
-      {/* Top nav stub */}
-      <Navbar/>
-     
+      {/* Background grid */}
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.08),transparent_70%)] opacity-40" />
+      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(transparent_0,rgba(255,255,255,0.03)_1px),linear-gradient(90deg,transparent_0,rgba(255,255,255,0.03)_1px)] bg-[size:48px_48px] opacity-20" />
 
-      {/* Variant switcher */}
-      <div className="mx-auto max-w-7xl px-6 pt-10">
-        <div className="mb-6 flex flex-wrap gap-2">
-          {variants.map((opt) => (
-            <button
-              key={opt.key}
-              onClick={() => setActive(opt.key)}
-              className={`rounded-2xl px-3 py-1.5 text-sm transition border ${
-                active === opt.key
-                  ? "bg-white/10 border-white/20"
-                  : "bg-white/5 border-white/10 hover:bg-white/10"
-              }`}
-            >
-              {opt.eyebrow}
-            </button>
-          ))}
-        </div>
-      </div>
-
-      {/* Hero card */}
-      <section className="mx-auto max-w-7xl px-6 pb-24 pt-6">
-        <motion.div
-          key={active}
-          initial={{ opacity: 0, y: 8 }}
+      {/* Content */}
+      <section className="relative mx-auto max-w-6xl px-6 pt-40 pb-32">
+        {/* Eyebrow */}
+        <motion.p
+          key={v.key + "-eyebrow"}
+          initial={{ opacity: 0, y: 6 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.35, ease: "easeOut" }}
-          className="rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl p-8 md:p-12 shadow-2xl"
+          className="text-sm uppercase tracking-[0.2em] text-white/50 mb-4"
         >
-          <p className="text-sm uppercase tracking-[0.2em] text-white/70 mb-3">{v.eyebrow}</p>
-          <h1 className="text-4xl md:text-6xl font-semibold leading-tight mb-4">
-            {v.title}
-          </h1>
-          <p className="text-lg md:text-xl text-white/80 max-w-3xl mb-8">{v.subtitle}</p>
+          {v.eyebrow}
+        </motion.p>
 
-          {/* Bullets */}
-          <ul className="flex flex-wrap gap-3 mb-8">
-            {v.bullets.map((b) => (
-              <li key={b} className="text-sm text-white/80 rounded-full border border-white/15 bg-white/5 px-3 py-1.5">
-                {b}
-              </li>
-            ))}
-          </ul>
+        {/* Title */}
+        <motion.h1
+          key={v.key + "-title"}
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.45, ease: "easeOut" }}
+          className="text-5xl md:text-7xl font-semibold leading-[1.1] max-w-4xl"
+        >
+          {v.title}
+        </motion.h1>
 
-       {/* CTAs */}
-        <div className="flex flex-wrap items-center gap-3">
-          {v.ctas.map(({ label, href, variant, icon: Icon }) => {
-            let styles = "";
-            if (variant === "primary") {
-              styles =
-                "bg-white text-black font-medium shadow hover:opacity-90";
-            } else if (variant === "secondary") {
-              styles =
-                "bg-white/10 border border-white/15 text-white hover:bg-white/15";
-            } else if (variant === "ghost") {
-              styles =
-                "bg-transparent border border-white/15 text-white/80 hover:text-white hover:border-white/25";
-            }
+        {/* Subtitle */}
+        <motion.p
+          key={v.key + "-subtitle"}
+          initial={{ opacity: 0, y: 8 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.45, ease: "easeOut", delay: 0.05 }}
+          className="mt-6 text-xl md:text-2xl text-white/60 max-w-3xl"
+        >
+          {v.subtitle}
+        </motion.p>
 
-            return (
-              <a
-                key={label}
-                href={href}
-                className={`inline-flex items-center gap-2 rounded-2xl px-4 py-2.5 ${styles}`}
-              >
-                {label} {Icon && <Icon className="h-4 w-4" />}
-              </a>
-            );
-          })}
-        </div>
-          {/* Social proof */}
-          <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-4 text-white/60 text-xs">
-            <div className="rounded-xl border border-white/10 p-3 text-center">Trusted by founders in BOM · DEL · SF</div>
-            <div className="rounded-xl border border-white/10 p-3 text-center">MVPs in 2–4 weeks</div>
-            <div className="rounded-xl border border-white/10 p-3 text-center">Ownership-friendly contracts</div>
-            <div className="rounded-xl border border-white/10 p-3 text-center">Security & observability built‑in</div>
-          </div>
+        {/* CTA */}
+        <motion.div
+          initial={{ opacity: 0, y: 6 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.35, ease: "easeOut", delay: 0.1 }}
+          className="mt-10 flex flex-wrap gap-3"
+        >
+          <a
+            href="#contact"
+            className="px-6 py-3 rounded-xl bg-white text-black text-sm font-medium hover:bg-white/90 transition"
+          >
+            Start a project
+          </a>
+          <a
+            href="https://github.com/abhishekrishna"
+            target="_blank"
+            className="px-6 py-3 rounded-xl border border-white/20 text-white/80 text-sm hover:border-white/40 hover:text-white transition"
+          >
+            GitHub
+          </a>
         </motion.div>
+
+        {/* Minimal social proof */}
+        <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 text-white/40 text-sm">
+          <div>Trusted by founders in BOM · DEL · SF</div>
+          <div>MVPs delivered in 2–4 weeks</div>
+          <div>Full code ownership</div>
+          <div>Secure & observable by design</div>
+        </div>
       </section>
       <Work/>
       <BlogsSection/>
@@ -236,6 +368,7 @@ export default function HeroShowcase() {
       <Pricing/>
       <ContactSection/>
       <Footer/>
+      <Footer />
     </div>
   );
 }

@@ -368,7 +368,6 @@ export default function HeroModern() {
       <Pricing/>
       <ContactSection/>
       <Footer/>
-      <Footer />
     </div>
   );
 }

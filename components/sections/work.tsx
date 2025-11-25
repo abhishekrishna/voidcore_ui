@@ -3,7 +3,7 @@ import React from "react";
 const projects = [
 	{
 		id: 1,
-		title: "📚 Education Analytics Dashboard (Confidential Client)",
+		title: "📚 Sales Analytics Dashboard",
 		description:
 			"📌 AI tool to extract strategic priorities from U.S. school district plans.",
 		image: "edu_proj.webp",

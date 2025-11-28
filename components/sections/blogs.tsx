@@ -21,53 +21,53 @@ const blogs = [
     `,
 		slug: "ai-agents-fastapi-langchain",
 	},
-	{
-		id: 2,
-		title: "Scaling SaaS Apps with Postgres & Docker",
-		date: "2025-07-28",
-		image: "/blog/saas-postgres-docker.png",
-		stack: ["Postgres", "Docker", "Nest.js"],
-		content: `
-      <p>Learn best practices for scaling SaaS applications using Postgres and Docker. We discuss containerization, database optimization, and deployment strategies.</p>
-      <ul>
-        <li>Optimizing Postgres for multi-tenant SaaS</li>
-        <li>Using Docker Compose for local dev</li>
-        <li>CI/CD pipelines for rapid releases</li>
-      </ul>
-    `,
-		slug: "scaling-saas-apps-postgres-docker",
-	},
-	{
-		id: 3,
-		title: "Design Systems for Fast Product Teams",
-		date: "2025-06-10",
-		image: "/blog/design-systems.png",
-		stack: ["Figma", "Tailwind", "React"],
-		content: `
-      <p>How to create and maintain design systems that empower product teams to ship faster. Covers Figma workflows, Tailwind integration, and reusable React components.</p>
-      <ul>
-        <li>Atomic design principles</li>
-        <li>Figma libraries for collaboration</li>
-        <li>Tailwind for rapid prototyping</li>
-      </ul>
-    `,
-		slug: "design-systems-fast-product-teams",
-	},
-	{
-		id: 4,
-		slug: "my-new-blog-post",
-		title: "My New Blog Post",
-		date: "2025-09-05",
-		image: "/blog/my-new-blog.png",
-		stack: ["React", "Next.js"],
-		content: `
-    <p>This is my new blog post. You can write content in HTML here.</p>
-    <ul>
-      <li>Point one</li>
-      <li>Point two</li>
-    </ul>
-  `,
-	},
+// 	{
+// 		id: 2,
+// 		title: "Scaling SaaS Apps with Postgres & Docker",
+// 		date: "2025-07-28",
+// 		image: "/blog/saas-postgres-docker.png",
+// 		stack: ["Postgres", "Docker", "Nest.js"],
+// 		content: `
+//       <p>Learn best practices for scaling SaaS applications using Postgres and Docker. We discuss containerization, database optimization, and deployment strategies.</p>
+//       <ul>
+//         <li>Optimizing Postgres for multi-tenant SaaS</li>
+//         <li>Using Docker Compose for local dev</li>
+//         <li>CI/CD pipelines for rapid releases</li>
+//       </ul>
+//     `,
+// 		slug: "scaling-saas-apps-postgres-docker",
+// 	},
+// 	{
+// 		id: 3,
+// 		title: "Design Systems for Fast Product Teams",
+// 		date: "2025-06-10",
+// 		image: "/blog/design-systems.png",
+// 		stack: ["Figma", "Tailwind", "React"],
+// 		content: `
+//       <p>How to create and maintain design systems that empower product teams to ship faster. Covers Figma workflows, Tailwind integration, and reusable React components.</p>
+//       <ul>
+//         <li>Atomic design principles</li>
+//         <li>Figma libraries for collaboration</li>
+//         <li>Tailwind for rapid prototyping</li>
+//       </ul>
+//     `,
+// 		slug: "design-systems-fast-product-teams",
+// 	},
+// 	{
+// 		id: 4,
+// 		slug: "my-new-blog-post",
+// 		title: "My New Blog Post",
+// 		date: "2025-09-05",
+// 		image: "/blog/my-new-blog.png",
+// 		stack: ["React", "Next.js"],
+// 		content: `
+//     <p>This is my new blog post. You can write content in HTML here.</p>
+//     <ul>
+//       <li>Point one</li>
+//       <li>Point two</li>
+//     </ul>
+//   `,
+// 	},
 ];
 
 export default function BlogsSection() {

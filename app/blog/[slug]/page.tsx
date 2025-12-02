@@ -140,7 +140,7 @@ async def ask_agent(query: Query):
 ];
 
 export default function BlogPage() {
-  const { slug } = useParams(); // ✅ replaces router.query
+  const { slug } = useParams() as { slug: string }; // ✅ replaces router.query
   const router = useRouter();
 
   const blog = blogs.find((b) => b.slug === slug);

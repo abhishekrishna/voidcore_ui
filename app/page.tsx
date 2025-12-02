@@ -365,7 +365,7 @@ export default function HeroModern() {
       <Work/>
       <BlogsSection/>
       <Services/>
-      <Pricing/>
+      {/* <Pricing/> */}
       <ContactSection/>
       <Footer/>
     </div>

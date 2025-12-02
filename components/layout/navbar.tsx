@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { SplinePointer, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import Link from "next/link";
 
 export default function Navbar() {

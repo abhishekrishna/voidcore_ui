@@ -241,7 +241,7 @@ import Navbar from "@/components/layout/navbar";
 import Footer from "@/components/layout/footer";
 import BlogsSection from "@/components/sections/blogs";
 import ContactSection from "@/components/sections/contact";
-import Pricing from "@/components/sections/pricing";
+// import Pricing from "@/components/sections/pricing";
 import Services from "@/components/sections/services";
 import Work from "@/components/sections/work";
 

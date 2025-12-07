@@ -239,7 +239,7 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Navbar from "@/components/layout/navbar";
 import Footer from "@/components/layout/footer";
-import BlogsSection from "@/components/sections/blogs";
+import BlogsSection from "@/components/sections/blogs_card";
 import ContactSection from "@/components/sections/contact";
 // import Pricing from "@/components/sections/pricing";
 import Services from "@/components/sections/services";

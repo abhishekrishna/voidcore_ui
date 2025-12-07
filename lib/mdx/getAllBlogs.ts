@@ -5,17 +5,26 @@
 // const BLOG_DIR = path.join(process.cwd(), "content/blogs");
 
 // export function getAllBlogs() {
-//   return fs
-//     .readdirSync(BLOG_DIR)
-//     .filter((file) => file.endsWith(".mdx"))
-//     .map((file) => {
-//       const content = fs.readFileSync(path.join(BLOG_DIR, file), "utf8");
-//       const { data } = matter(content);
+//   const files = fs.readdirSync(BLOG_DIR);
 
-//       return {
-//         ...data,
-//         slug: file.replace(".mdx", ""),
-//       };
-//     })
-//     .sort((a: any, b: any) => +new Date(b.date) - +new Date(a.date));
+//   return files.map((file) => {
+//     const filePath = path.join(BLOG_DIR, file);
+//     const mdxContent = fs.readFileSync(filePath, "utf-8");
+
+//     const { data } = matter(mdxContent);
+
+//     return {
+//       ...data,
+//       slug: file.replace(".mdx", "")
+//     };
+//   });
+// }
+
+// export function getBlogBySlug(slug: string) {
+//   const filePath = path.join(BLOG_DIR, `${slug}.mdx`);
+//   const mdxContent = fs.readFileSync(filePath, "utf-8");
+
+//   const { content, data } = matter(mdxContent);
+
+//   return { metadata: data, content };
 // }

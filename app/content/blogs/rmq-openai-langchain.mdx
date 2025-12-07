@@ -1,0 +1,66 @@
+# Scaling LLM Workflows Using RabbitMQ, FastAPI & LangChain + OpenAI
+
+*A complete guide to building efficient, fault‑tolerant AI pipelines*
+
+Modern AI apps are hitting a wall. LLMs like GPT‑4 (or any powerful LLM) are incredibly capable — but when you call them synchronously for every request, they become a bottleneck.  
+If hundreds of users bombard your API with embedding or large‑context prompts, your backend lags, queues, or crashes.  
+The solution? Use a **message queue + asynchronous processing**. Enter RabbitMQ — a proven, production‑ready message broker that manages tasks, stability and reliability. 
+
+This guide explains how to combine:
+
+- **RabbitMQ** for task buffering & stability,  
+- **FastAPI** as an async API layer,  
+- **LangChain** as the orchestration & prompt pipeline layer,  
+- **OpenAI** (or any LLM) for inference —  
+
+…to build a scalable, distributed LLM system ready for real-world load.
+
+---
+
+## 🔥 Why RabbitMQ + FastAPI + LangChain is a Game‑Changer
+
+LLM workloads tend to be:
+
+- slow (hundreds of ms to seconds),  
+- variable (token count & context size matter),  
+- rate‑limited,  
+- costly on compute & infra,  
+- unpredictable under load.  
+
+RabbitMQ helps you offload these as **asynchronous jobs**.  
+
+### Key benefits
+
+- **Non‑blocking API responses** — clients don’t wait for OpenAI: request → queued → quick response.  
+- **Smooth load handling** — spikes go into queue, workers process them gradually.  
+- **Reliability & retries** — even if inference fails (timeout/rate limit), tasks survive/retry.  
+- **Horizontal scaling** — add more workers as load grows, without rewriting code.  
+- **Support for long‑running chains** — embeddings, RAG, multi-step reasoning, etc., can run asynchronously.  
+
+This architecture pattern — message queue + async backend + LLM orchestration — is widely adopted for production‑grade AI systems.  [oai_citation:1‡Medium](https://mahdijafaridev.medium.com/building-event-driven-architectures-fastapi-message-queues-rabbitmq-kafka-redis-streams-2ba82926a120?utm_source=chatgpt.com)
+
+---
+
+<br />
+<br />
+
+Architecture Overview
+============================
+
+
+
+
+<br />
+<br />
+
+
+![Architecture Diagram](rmq-openai/arch_diag.png)
+
+User Request --> FastAPI (Producer) --> RabbitMQ Queue --> Worker(s) (LangChain + OpenAI) --> (Optional DB / Post‑processing / Webhook) --> Response stored or forwarded as needed
+
+Producer handles incoming HTTP API requests, pushes tasks into queue.
+Workers consume tasks, run LLM + LangChain logic, optionally store or send results.
+****This**** decoupling enables throughput, resilience, and scale.
+
+⸻
+

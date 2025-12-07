@@ -31,5 +31,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: "yearly",
       priority: 0.8,
-}];
+},    {
+      url: "https://voidcore.in/blog/rabbitmq-langchain-openai",
+      lastModified: new Date(),            // auto-updates on each deploy
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },];
 }

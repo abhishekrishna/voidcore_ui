@@ -26,9 +26,8 @@ export default function BlogsSection() {
 										<Image
 											src={blog.image}
 											alt={blog.title}
-											layout="fill"
-											objectFit="cover"
-											className="rounded-xl bg-black/10"
+											fill
+											className="rounded-xl bg-black/10 object-cover"
 										/>
 									</div>
 						<h3 className="text-xl font-semibold mb-2 text-white">

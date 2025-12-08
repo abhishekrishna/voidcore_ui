@@ -1,13 +1,17 @@
-export const dynamic = "force-static";
-
 import fs from "fs";
 import path from "path";
 import { serialize } from "next-mdx-remote/serialize";
 import MDXClientWrapper from "@/components/mdx-client";
 import { blogs } from "@/data/blogs";
 
-export default async function BlogPage({ params }: any) {
-  const blog = blogs.find((b) => b.slug === params.slug);
+export default async function BlogPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params; // required
+
+  const blog = blogs.find((b) => b.slug === slug);
   if (!blog) return <div>Blog not found</div>;
 
   const filePath = path.join(process.cwd(), "app/content/blogs", blog.file);

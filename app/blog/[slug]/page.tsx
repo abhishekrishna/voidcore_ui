@@ -28,11 +28,8 @@
 //     </div>
 //   );
 // }
-
-
 import NotionPageRenderer from "@/components/notion/notion_renderer";
 import { getPostBySlug } from "@/lib/notion/getPostBySlug";
-
 
 export default async function BlogPage({
   params,
@@ -53,10 +50,20 @@ export default async function BlogPage({
 
   return (
     <div className="max-w-3xl mx-auto py-24 px-6">
-      <h1 className="text-4xl font-bold mb-2">{title}</h1>
-      {date && <p className="opacity-60 mb-8">{date}</p>}
+      <h1 className="text-4xl font-bold mb-2 text-black dark:text-white">
+        {title}
+      </h1>
 
-      <NotionPageRenderer recordMap={post.recordMap} />
+      {date && (
+        <p className="opacity-60 mb-8 text-black dark:text-white">
+          {date}
+        </p>
+      )}
+
+      {/* Notion content */}
+      <div className="mb-8 text-black dark:text-white bg-white dark:bg-[#121212] p-6 rounded-lg shadow">
+        <NotionPageRenderer recordMap={post.recordMap} />
+      </div>
     </div>
   );
 }

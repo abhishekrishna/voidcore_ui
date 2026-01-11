@@ -19,3 +19,4 @@ export async function POST(req: Request) {
     return Response.json({ success: false, error: "Failed to send" }, { status: 500 });
   }
 }
+

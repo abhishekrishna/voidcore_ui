@@ -1,30 +1,61 @@
-import fs from "fs";
-import path from "path";
-import { serialize } from "next-mdx-remote/serialize";
-import MDXClientWrapper from "@/components/mdx-client";
-import { blogs } from "@/data/blogs";
+// import fs from "fs";
+// import path from "path";
+// import { serialize } from "next-mdx-remote/serialize";
+// import MDXClientWrapper from "@/components/mdx-client";
+// import { blogs } from "@/data/blogs";
+
+// export default async function BlogPage({
+//   params,
+// }: {
+//   params: Promise<{ slug: string }>;
+// }) {
+//   const { slug } = await params; // required
+
+//   const blog = blogs.find((b) => b.slug === slug);
+//   if (!blog) return <div>Blog not found</div>;
+
+//   const filePath = path.join(process.cwd(), "app/content/blogs", blog.file);
+//   const fileContent = fs.readFileSync(filePath, "utf8");
+
+//   const mdxSource = await serialize(fileContent);
+
+//   return (
+//     <div className="prose-invert max-w-3xl mx-auto py-24 px-6">
+//       <h1>{blog.title}</h1>
+//       <p className="opacity-60">{blog.date}</p>
+
+//       <MDXClientWrapper source={mdxSource} />
+//     </div>
+//   );
+// }
+
+import { NotionRenderer } from "@/components/notion/notion_renderer";
+import { getPostBySlug } from "@/lib/notion/getPostBySlug";
+
 
 export default async function BlogPage({
   params,
 }: {
   params: Promise<{ slug: string }>;
 }) {
-  const { slug } = await params; // required
+  const post = await getPostBySlug((await params).slug);
 
-  const blog = blogs.find((b) => b.slug === slug);
-  if (!blog) return <div>Blog not found</div>;
+  if (!post) {
+    return <div className="text-center py-24">Blog not found</div>;
+  }
 
-  const filePath = path.join(process.cwd(), "app/content/blogs", blog.file);
-  const fileContent = fs.readFileSync(filePath, "utf8");
+  const title =
+    post.page.properties.Title.title[0]?.plain_text || "Untitled";
 
-  const mdxSource = await serialize(fileContent);
+  const date =
+    post.page.properties.Date?.date?.start || "";
 
   return (
-    <div className="prose-invert max-w-3xl mx-auto py-24 px-6">
-      <h1>{blog.title}</h1>
-      <p className="opacity-60">{blog.date}</p>
+    <div className="max-w-3xl mx-auto py-24 px-6">
+      <h1 className="text-4xl font-bold mb-2">{title}</h1>
+      {date && <p className="opacity-60 mb-8">{date}</p>}
 
-      <MDXClientWrapper source={mdxSource} />
+      <NotionRenderer blocks={post.blocks} />
     </div>
   );
 }

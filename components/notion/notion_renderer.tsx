@@ -10,5 +10,6 @@ interface NotionPageRendererProps {
 }
 
 export default function NotionPageRenderer({ recordMap }: NotionPageRendererProps) {
+  if (!recordMap) return null; // avoid SSR crash
   return <NotionRenderer recordMap={recordMap} fullPage={false} darkMode />;
 }

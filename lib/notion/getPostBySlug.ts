@@ -4,7 +4,7 @@ import { NotionAPI } from "notion-client";
 const notionX = new NotionAPI();
 
 export async function getPostBySlug(slug: string) {
-  const databaseId = process.env.BLOG_INDEX_ID!;
+  // const databaseId = process.env.BLOG_INDEX_ID!;
 
   const response = await notion.search({
     filter: {

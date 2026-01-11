@@ -3,7 +3,12 @@
 import { NotionRenderer } from "react-notion-x";
 import "react-notion-x/src/styles.css";
 import "prismjs/themes/prism-tomorrow.css";
+import type { ExtendedRecordMap } from "notion-types";
 
-export default function NotionPageRenderer({ recordMap }: { recordMap: any }) {
+interface NotionPageRendererProps {
+  recordMap: ExtendedRecordMap;
+}
+
+export default function NotionPageRenderer({ recordMap }: NotionPageRendererProps) {
   return <NotionRenderer recordMap={recordMap} fullPage={false} darkMode />;
 }

@@ -1,6 +1,37 @@
 import { notion } from "./client";
 
-export async function getAllPosts() {
+interface Post {
+  id: string;
+  title: string;
+  slug: string;
+  date: string;
+  description: string;
+  cover?: string;
+}
+
+// Helper type for Notion properties
+interface NotionProperty {
+  title?: { plain_text: string }[];
+  rich_text?: { plain_text: string }[];
+  date?: { start: string };
+  checkbox?: boolean;
+  url?: string;
+}
+
+interface NotionPage {
+  id: string;
+  properties: {
+    Title?: NotionProperty;
+    Slug?: NotionProperty;
+    Date?: NotionProperty;
+    Description?: NotionProperty;
+    Cover?: NotionProperty;
+    Published?: NotionProperty;
+    [key: string]: any;
+  };
+}
+
+export async function getAllPosts(): Promise<Post[]> {
   const response = await notion.search({
     filter: {
       property: "object",
@@ -8,13 +39,12 @@ export async function getAllPosts() {
     },
   });
 
-  const pages = response.results.filter((page: any) => {
+  const pages = (response.results as NotionPage[]).filter((page) => {
     const props = page.properties;
-    if (!props?.Published) return false;
-    return props.Published.checkbox === true;
+    return props?.Published?.checkbox === true;
   });
 
-  return pages.map((page: any) => {
+  return pages.map((page) => {
     const props = page.properties;
 
     return {

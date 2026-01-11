@@ -1,7 +1,9 @@
 import { notion } from "./client";
+import { NotionAPI } from "notion-client";
+
+const notionX = new NotionAPI();
 
 export async function getPostBySlug(slug: string) {
-    console.log("Fetching post for blogid:", process.env.BLOG_INDEX_ID);
   const databaseId = process.env.BLOG_INDEX_ID!;
 
   const response = await notion.search({
@@ -11,28 +13,22 @@ export async function getPostBySlug(slug: string) {
     },
   });
 
-  // Find matching page manually
   const page: any = response.results.find((page: any) => {
-  const props = page.properties;
-  if (!props?.Slug || !props?.Published) return false;
+    const props = page.properties;
+    if (!props?.Slug || !props?.Published) return false;
 
-  const pageSlug = props.Slug.rich_text?.[0]?.plain_text;
-  const published = props.Published.checkbox;
+    const pageSlug = props.Slug.rich_text[0]?.plain_text;
+    const published = props.Published.checkbox;
 
-  console.log("Checking page:", page.id, pageSlug);
-
-  return pageSlug === slug && published === true;
-});
+    return pageSlug === slug && published === true;
+  });
 
   if (!page) return null;
 
-  const blocks = await notion.blocks.children.list({
-    block_id: page.id,
-    page_size: 100,
-  });
+  const recordMap = await notionX.getPage(page.id);
 
   return {
     page,
-    blocks: blocks.results,
+    recordMap,
   };
 }

@@ -29,7 +29,8 @@
 //   );
 // }
 
-import { NotionRenderer } from "@/components/notion/notion_renderer";
+
+import NotionPageRenderer from "@/components/notion/notion_renderer";
 import { getPostBySlug } from "@/lib/notion/getPostBySlug";
 
 
@@ -55,7 +56,7 @@ export default async function BlogPage({
       <h1 className="text-4xl font-bold mb-2">{title}</h1>
       {date && <p className="opacity-60 mb-8">{date}</p>}
 
-      <NotionRenderer blocks={post.blocks} />
+      <NotionPageRenderer recordMap={post.recordMap} />
     </div>
   );
 }

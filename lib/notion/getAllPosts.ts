@@ -1,5 +1,3 @@
-"use client";
-
 import { notion } from "./client";
 
 interface Post {

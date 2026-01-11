@@ -14,13 +14,15 @@ type Blog = {
   cover: string;
 };
 
+const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "";
+
 export default function BlogsSection() {
   const [blogs, setBlogs] = useState<Blog[]>([]);
   const [selectedBlog, setSelectedBlog] = useState<Blog | null>(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("/api/blogs")
+    fetch(`${baseUrl}/api/blogs`)
       .then((res) => res.json())
       .then((data) => {
         setBlogs(data);

@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: " ○● VoidCore Technologies | Software Solutions",
-  description: "Custom SaaS, mobile, and web apps — VoidCore Technologies helps startups and enterprises build secure, scalable software fast.",
+  description: "Custom software, websites, mobile, and web apps — VoidCore Technologies helps startups and enterprises build secure, scalable software fast.",
   alternates: {
     canonical: "https://voidcore.in/",
   },

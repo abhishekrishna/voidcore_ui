@@ -1,3 +1,4 @@
+import BackButton from "@/components/back_button";
 import NotionPageRenderer from "@/components/notion/notion_renderer";
 import { getPostBySlug } from "@/lib/notion/getPostBySlug";
 
@@ -66,6 +67,7 @@ export default async function BlogPage({
 
   return (
     <div className="max-w-3xl mx-auto py-24 px-6">
+      <BackButton />
       <h1 className="text-4xl font-bold mb-2 text-black dark:text-white">
         {title}
       </h1>

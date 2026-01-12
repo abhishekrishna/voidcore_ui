@@ -1,40 +1,24 @@
 import { MetadataRoute } from "next";
+import { getAllPosts } from "@/lib/notion/getAllPosts";
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  return [
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const posts = await getAllPosts();
+
+  const staticPages: MetadataRoute.Sitemap = [
     {
       url: "https://voidcore.in",
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 1.0,
     },
-    {
-      url: "https://voidcore.in/#work",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: "https://voidcore.in/#services",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: "https://voidcore.in/#pricing",
-      lastModified: new Date(),
-      changeFrequency: "yearly",
-      priority: 0.8,
-    },
-    {
-      url: "https://voidcore.in/#contact",
-      lastModified: new Date(),
-      changeFrequency: "yearly",
-      priority: 0.8,
-},    {
-      url: "https://voidcore.in/blog/how-it-started",
-      lastModified: new Date(),            // auto-updates on each deploy
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },];
+  ];
+
+  const blogPages: MetadataRoute.Sitemap = posts.map((post) => ({
+    url: `https://voidcore.in/blog/${post.slug}`,
+    lastModified: new Date(post.date), // ✅ REAL last edit time from Notion
+    changeFrequency: "monthly",
+    priority: 0.9,
+  }));
+
+  return [...staticPages, ...blogPages];
 }

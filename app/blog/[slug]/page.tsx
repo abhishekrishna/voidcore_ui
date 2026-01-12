@@ -14,7 +14,7 @@ export async function generateMetadata({
 
   if (!post) {
     return {
-      title: "Blog not found",
+      title: "",
     };
   }
 

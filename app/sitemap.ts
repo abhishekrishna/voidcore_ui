@@ -32,7 +32,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "yearly",
       priority: 0.8,
 },    {
-      url: "https://voidcore.in/blog/lean-to-code",
+      url: "https://voidcore.in/blog/how-it-started",
       lastModified: new Date(),            // auto-updates on each deploy
       changeFrequency: "monthly",
       priority: 0.9,

@@ -245,6 +245,13 @@ import ContactSection from "@/components/sections/contact";
 import Services from "@/components/sections/services";
 import Work from "@/components/sections/work";
 
+
+export const metadata = {
+  alternates: {
+    canonical: "https://voidcore.in",
+  },
+};
+
 // Vercel‑style minimal rotating variants
 const variants = [
   {

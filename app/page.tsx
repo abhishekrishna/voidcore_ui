@@ -1,4 +1,4 @@
-// 'use client'
+'use client';
 // import { useEffect, useState } from "react";
 // import { motion } from "framer-motion";
 // import { GitBranch} from "lucide-react";
@@ -234,7 +234,7 @@
 //     </div>
 //   );
 // }
-"use client";
+
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Navbar from "@/components/layout/navbar";
@@ -245,12 +245,6 @@ import ContactSection from "@/components/sections/contact";
 import Services from "@/components/sections/services";
 import Work from "@/components/sections/work";
 
-
-export const metadata = {
-  alternates: {
-    canonical: "https://voidcore.in",
-  },
-};
 
 // Vercel‑style minimal rotating variants
 const variants = [

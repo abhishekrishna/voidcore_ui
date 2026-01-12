@@ -17,10 +17,14 @@ export default function NotionPageRenderer({
   if (!recordMap) return null;
 
   return (
-    <NotionRenderer
+    <div className="notion dark:notion-dark">
+      <NotionRenderer
       recordMap={recordMap}
       fullPage={false}
       darkMode={darkMode}
-    />
+      components={{
+        Collection: () => null,
+      }}
+    /></div>
   );
 }

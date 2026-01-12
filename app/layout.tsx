@@ -17,6 +17,11 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: " ○● VoidCore Technologies | Software Solutions",
   description: "Custom SaaS, mobile, and web apps — VoidCore Technologies helps startups and enterprises build secure, scalable software fast.",
+  alternates: {
+    canonical: "https://voidcore.in/",
+  },
+  metadataBase: new URL("https://voidcore.in"),
+
 };
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (

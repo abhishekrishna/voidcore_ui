@@ -1,21 +1,5 @@
 import NotionPageRenderer from "@/components/notion/notion_renderer";
 import { getPostBySlug } from "@/lib/notion/getPostBySlug";
-import { Metadata } from "next";
-
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ slug: string }>;
-}): Promise<Metadata> {
-  const { slug } = await params;
-
-  return {
-    title: "VoidCore Blog",
-    alternates: {
-      canonical: `https://voidcore.in/blog/${slug}`,
-    },
-  };
-}
 
 
 export default async function BlogPage({

@@ -2,6 +2,51 @@ import NotionPageRenderer from "@/components/notion/notion_renderer";
 import { getPostBySlug } from "@/lib/notion/getPostBySlug";
 
 
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+
+  const post = await getPostBySlug(slug);
+
+  if (!post) {
+    return {
+      title: "Blog not found",
+    };
+  }
+
+  const title =
+    post.page.properties.Title.title[0]?.plain_text || "Untitled";
+
+  const description =
+    post.page.properties.Description?.rich_text?.[0]?.plain_text ||
+    "No description available";
+
+  const cover =
+    post.page.cover?.external?.url ||
+    post.page.cover?.file?.url ||
+    "";
+
+  return {
+    title: title,
+    description: description,
+    openGraph: {
+      title: title,
+      description: description,
+      images: [cover],
+      type: "article",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: title,
+      description: description,
+      images: [cover],
+    },
+  };
+}
+
 export default async function BlogPage({
   params,
 }: {

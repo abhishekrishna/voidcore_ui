@@ -30,6 +30,8 @@ export default function Navbar() {
             <a href="#services" className="hover:text-white transition">Services</a>
             <a href="#pricing" className="hover:text-white transition">Pricing</a>
             <a href="#contact" className="hover:text-white transition">Contact</a>
+            <a href="#" className="hover:text-white transition">Studio[Coming Soon]</a>
+
             <Link
               href="https://calendly.com/krishna_abhishek/30min"
               target="_blank"
@@ -56,6 +58,7 @@ export default function Navbar() {
             <a href="#services" onClick={() => setOpen(false)}>Services</a>
             <a href="#pricing" onClick={() => setOpen(false)}>Pricing</a>
             <a href="#contact" onClick={() => setOpen(false)}>Contact</a>
+            <a href="#" onClick={() => setOpen(false)}>Studio[Beta]</a>
             <Link
               href="https://calendly.com/krishna_abhishek/30min"
               target="_blank"

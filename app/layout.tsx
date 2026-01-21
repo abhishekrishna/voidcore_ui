@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: " ○● VoidCore Technologies | Software Solutions",
+  title: " ○● Voidcore Technologies | Software Solutions",
   description: "Custom software, websites, mobile, and web apps — VoidCore Technologies helps startups and enterprises build secure, scalable software fast.",
   metadataBase: new URL("https://voidcore.in"),
   alternates: {

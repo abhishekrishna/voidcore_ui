@@ -57,11 +57,12 @@ const handleSubmit = async (e: React.FormEvent) => {
           {status && <p className="text-white/70">{status}</p>}
         </form>
    <div className="mt-8 flex items-center gap-4">
+  <div className="mt-8 flex items-center gap-4">
   {/* Email */}
   <a
-    href="mailto:krishna_abhishek@outlook.com"
+    href="mailto:krishna@voidcore.in"
     title="Email us"
-    className="group flex items-center justify-center w-12 h-12 rounded-xl bg-white/10 hover:bg-white/20 border border-white/10 transition"
+    className="group flex items-center justify-center w-12 h-12 rounded-xl bg-white/10 hover:bg-white/20 border border-white/10 transition-transform duration-200 hover:scale-110"
   >
     <svg
       className="w-5 h-5 text-white"
@@ -75,11 +76,11 @@ const handleSubmit = async (e: React.FormEvent) => {
 
   {/* WhatsApp */}
   <a
-    href="https://wa.me/+917001865606"
+    href="https://wa.me/919572200808"
     target="_blank"
     rel="noopener noreferrer"
     title="WhatsApp us"
-    className="group flex items-center justify-center w-12 h-12 rounded-xl bg-green-500/20 hover:bg-green-500/30 border border-green-500/30 transition"
+    className="group flex items-center justify-center w-12 h-12 rounded-xl bg-green-500/20 hover:bg-green-500/30 border border-green-500/30 transition-transform duration-200 hover:scale-110"
   >
     <svg
       className="w-5 h-5 text-green-400"
@@ -97,7 +98,7 @@ const handleSubmit = async (e: React.FormEvent) => {
     target="_blank"
     rel="noopener noreferrer"
     title="LinkedIn"
-    className="group flex items-center justify-center w-12 h-12 rounded-xl bg-[#0A66C2]/20 hover:bg-[#0A66C2]/30 border border-[#0A66C2]/30 transition"
+    className="group flex items-center justify-center w-12 h-12 rounded-xl bg-[#0A66C2]/20 hover:bg-[#0A66C2]/30 border border-[#0A66C2]/30 transition-transform duration-200 hover:scale-110"
   >
     <svg
       className="w-5 h-5 text-[#0A66C2]"
@@ -108,5 +109,7 @@ const handleSubmit = async (e: React.FormEvent) => {
       <path d="M20.447 20.452H16.89v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.345V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.368-1.85 3.6 0 4.266 2.37 4.266 5.455v6.286zM5.337 7.433a1.986 1.986 0 1 1 0-3.972 1.986 1.986 0 0 1 0 3.972zM6.814 20.452H3.861V9h2.953v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0z" />
     </svg>
   </a>
+  
+</div>
 </div>
       </section>)}

@@ -28,6 +28,7 @@ export default function Navbar() {
             <a href="#work" className="hover:text-white transition">Work</a>
             <a href="#blog" className="hover:text-white transition">Blog</a>
             <a href="#services" className="hover:text-white transition">Services</a>
+            <Link href="#careers" className="hover:text-white transition">Careers</Link>
             <a href="#pricing" className="hover:text-white transition">Pricing</a>
             <a href="#contact" className="hover:text-white transition">Contact</a>
             <a href="#" className="hover:text-white transition">Studio[Coming Soon]</a>

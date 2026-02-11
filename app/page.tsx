@@ -8,6 +8,7 @@ import ContactSection from "@/components/sections/contact";
 // import Pricing from "@/components/sections/pricing";
 import Services from "@/components/sections/services";
 import Work from "@/components/sections/work";
+import CareersSection from "@/components/careers";
 
 
 // Vercel‑style minimal rotating variants
@@ -123,6 +124,7 @@ export default function HeroModern() {
       <Work/>
       <BlogsSection/>
       <Services/>
+      <CareersSection/>
       {/* <Pricing/> */}
       <ContactSection/>
       <Footer/>

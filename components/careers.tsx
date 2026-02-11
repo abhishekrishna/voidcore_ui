@@ -53,7 +53,7 @@ export default function CareersSection() {
 
   return (
     <section id="careers" className="relative py-24">
-      <div className="mx-auto max-w-7xl px-6 py-24">
+      <div className="mx-auto max-w-7xl px-6">
      <h2 className="text-3xl md:text-5xl font-semibold mb-6">
   Careers
 </h2>

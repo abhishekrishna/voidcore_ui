@@ -58,6 +58,7 @@ export default function Navbar() {
             <a href="#blog" onClick={() => setOpen(false)}>Blog</a>
             <a href="#services" onClick={() => setOpen(false)}>Services</a>
             <a href="#pricing" onClick={() => setOpen(false)}>Pricing</a>
+            <Link href="#careers" className="hover:text-white transition">Careers</Link>
             <a href="#contact" onClick={() => setOpen(false)}>Contact</a>
             <a href="#" onClick={() => setOpen(false)}>Studio[Beta]</a>
             <Link

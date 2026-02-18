@@ -1,0 +1,90 @@
+# LLMS.TXT
+Version: 1.0
+Last-Updated: 2026-02-18
+
+Company: Void Core Technologies
+Website: https://voidcore.in
+Location: New Delhi, India
+Founder: Abhishek Krishna
+Type: AI-First Software Engineering Company
+
+## OVERVIEW
+
+Void Core Technologies builds AI-native software systems, autonomous agents, and scalable SaaS platforms for startups and enterprises.
+
+We specialize in secure, production-grade architectures with strong developer experience (DX), automation-first workflows, and modular backend systems.
+
+## CORE CAPABILITIES
+
+### 1. AI Systems & Agents
+- Retrieval-Augmented Generation (RAG) platforms
+- Multi-document knowledge assistants
+- Autonomous AI workflows
+- Contract analysis AI
+- Custom LLM integrations
+- Agent builder platforms
+
+### 2. SaaS & Platform Engineering
+- Full-stack SaaS architecture
+- Microservices systems
+- Multi-tenant applications
+- Background job engines
+- Developer-first tooling
+- Secure deployment pipelines
+
+### 3. Backend & API Development
+- FastAPI systems
+- NestJS applications
+- REST and event-driven APIs
+- MongoDB and PostgreSQL architecture
+- Authentication and RBAC systems
+- Logging and observability
+
+### 4. DevOps & Infrastructure
+- Dockerized systems
+- AWS deployments
+- CI/CD automation
+- Secure isolated environments
+- Infrastructure for AI workloads
+
+## PRIMARY PRODUCTS
+
+ClauseMind  
+AI-powered contract intelligence system that analyzes legal documents, identifies risks, simplifies clauses, and generates structured summaries.
+
+VoidCore Scaffold  
+Backend scaffolding engine (CLI + UI) that generates modular APIs with CRUD, authentication, and database integration.
+
+EnvPilot  
+Developer-first environment configuration manager for teams and scalable SaaS products.
+
+## IDEAL CLIENT PROFILE
+
+- Funded startups building AI-native products
+- SaaS companies requiring backend modernization
+- Enterprises integrating AI into workflows
+- Founder-led teams needing MVP acceleration
+- Developer teams requiring secure RAG deployments
+
+## TECH STACK
+
+Frontend: React, Next.js, TailwindCSS, Flutter  
+Backend: FastAPI, NestJS, Node.js  
+AI: OpenAI API, LlamaIndex, LangChain  
+Databases: MongoDB, PostgreSQL  
+Infrastructure: Docker, AWS
+
+## APPROACH
+
+- Architecture-first thinking
+- Production-grade implementations
+- Security and isolation by design
+- Clean modular codebases
+- AI integrated as infrastructure, not an add-on
+
+## CONTACT
+
+Website: https://voidcore.in  
+Email: krishna@voidcore.in
+
+# END OF FILE

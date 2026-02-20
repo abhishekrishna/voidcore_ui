@@ -46,7 +46,7 @@ export default function BlogsSection() {
     <section id="blog" className="mx-auto max-w-7xl px-6 py-24">
       <h2 className="text-3xl md:text-5xl font-semibold mb-6">Blog</h2>
       <p className="text-white/70 max-w-2xl mb-12">
-        Insights, guides, and engineering stories from the voidcore team.
+        Technical deep dives on AI systems, scalable architecture, and production engineering.
       </p>
 
       <div className="grid gap-8 md:grid-cols-3">

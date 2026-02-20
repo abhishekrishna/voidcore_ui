@@ -2,31 +2,21 @@ import React from "react";
 
 const services = [
   {
-    name: "MVP Development",
-    description: "Rapid prototyping and launch of your Minimum Viable Product using modern stacks and best practices.",
+    name: "AI Document Intelligence Systems",
+    description:
+      "Design and deployment of production-grade RAG platforms that process contracts, reports, compliance documents, and internal knowledge bases using secure vector pipelines.",
   },
   {
-    name: "AI Agents & RAG",
-    description: "Custom AI agents and Retrieval-Augmented Generation workflows for automation and intelligent data handling.",
+    name: "SaaS Platform Architecture",
+    description:
+      "End-to-end backend and full-stack engineering for scalable SaaS products using NestJS, FastAPI, microservices, and cloud-native infrastructure.",
   },
   {
-    name: "Web & SaaS Apps",
-    description: "Full-stack web and SaaS application development with scalable architecture and secure authentication.",
-  },
-  {
-    name: "Mobile Apps",
-    description: "Cross-platform mobile app development for iOS and Android with seamless user experience.",
-  },
-  {
-    name: "DevOps & Infra",
-    description: "Cloud infrastructure setup, CI/CD pipelines, and DevOps automation for reliable deployments.",
-  },
-  {
-    name: "Design Systems",
-    description: "Design system creation for consistent UI/UX, reusable components, and brand alignment.",
+    name: "Internal Workflow Automation",
+    description:
+      "Custom internal tools and AI-powered dashboards that reduce manual processes, centralize data, and improve operational visibility.",
   },
 ];
-
 /* Services Section */
 
 export default function ServicesSection() {

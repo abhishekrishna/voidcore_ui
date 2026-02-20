@@ -14,25 +14,25 @@ import CareersSection from "@/components/careers";
 // Vercel‑style minimal rotating variants
 const variants = [
   {
-    key: "build-ship-scale",
-    eyebrow: "Void Core Technologies",
-    title: "Build. Ship. Scale.",
+    key: "ai-systems",
+    eyebrow: "AI Systems Engineering Studio",
+    title: "AI-powered internal systems for growing companies.",
     subtitle:
-      "Developer-led studio for SaaS, AI agents, and enterprise-grade web apps.",
+      "We design and build production-grade document intelligence, RAG platforms, and scalable backend architecture — not prototypes.",
   },
   {
-    key: "ai-native",
-    eyebrow: "AI-native builds",
-    title: "RAG + Agents that move metrics.",
+    key: "document-intelligence",
+    eyebrow: "Document Intelligence",
+    title: "Turn complex documents into usable decisions.",
     subtitle:
-      "Eval-driven, secure-by-design automations — not demo‑ware.",
+      "Contracts, compliance files, reports, knowledge bases — processed, indexed, and transformed into structured insights with secure AI pipelines.",
   },
   {
-    key: "founder-packages",
-    eyebrow: "For founders",
-    title: "Your on-demand engineering team.",
+    key: "saas-architecture",
+    eyebrow: "SaaS & Platform Builds",
+    title: "From MVP to scalable architecture.",
     subtitle:
-      "Fixed-scope packs · Landing Page in 10 days · AI MVP in 30.",
+      "NestJS, FastAPI, microservices, vector databases, AWS — built for long-term scale, observability, and ownership.",
   },
 ];
 
@@ -114,12 +114,12 @@ export default function HeroModern() {
         </motion.div>
 
         {/* Minimal social proof */}
-        <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 text-white/40 text-sm">
-          <div>Trusted by founders in BOM · DEL · SF</div>
-          <div>MVPs delivered in 2–4 weeks</div>
-          <div>Full code ownership</div>
-          <div>Secure & observable by design</div>
-        </div>
+      <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 text-white/40 text-sm">
+      <div>RAG & LangChain production deployments</div>
+      <div>Microservices architecture (gRPC · RabbitMQ · AWS · Docker)</div>
+      <div>Vector DBs (pgvector · NeonDB)</div>
+      <div>Full IP & code ownership</div>
+      </div>
       </section>
       <Work/>
       <BlogsSection/>

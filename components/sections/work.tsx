@@ -1,61 +1,34 @@
 import React from "react";
 
 const projects = [
-	{
-		id: 1,
-		title: "📚 Sales Analytics Dashboard",
-		description:
-			"📌 AI tool to extract strategic priorities from U.S. school district plans.",
-		image: "edu_proj.webp",
-	},
-	{
-		id: 2,
-		title: "🤖 GPT-Powered Document Chatbot",
-		description:
-			"📌 Built a Retrieval-Augmented AI chatbot to answer user queries using document context.",
-		image: "aichat_proj.webp",
-	},
-	{
-		id: 3,
-		title: "🎬 Apan Theater – Streaming Platform",
-		description:
-			"📌 Built a subscription-based mobile streaming platform with secure video delivery and scalable backend.",
-		image: "apan_theater.png",
-	},
-	{
-		id: 4,
-		title: "⏰ TimeBloc - Focus & Task Manager",
-		description:
-			"📌 Built a cross-platform app that boosts focus using the Pomodoro Technique with integrated music playback from jiosaavn, YouTube music and smart task tracking.",
-		image: "timeblock.webp",
-	},
-	{
-		id: 5,
-		title: "🎭 CareConnect - Student Performance Tracker",
-		description:
-			"📌 Built a mobile app to track student performance with real-time WhatsApp alerts for parents.",
-		image: "care_con.webp",
-	},
-	{
-		id: 6,
-		title: "💰 Pay All Day – Payments App",
-		description:
-			"📌 Developed an end-to-end payments platform supporting mobile recharges, money transfers, and wallet-based transactions.",
-		image: "payallday_proj.png",
-	},
-	{
-		id: 7,
-		title: "Day✌️Day Grocery - E-commerce App",
-		description:
-			"📌 Built a full-stack eCommerce platform for daily essentials, enabling users to shop online for groceries and household products with seamless order and delivery flows.",
-		image: "grocery_proj.webp",
-	},
-	{
-		id: 8,
-		title: "🧺 Laundry Day - On-Demand Laundry Service",
-		description:  "📌 Developed an on-demand laundry service app with real-time order tracking and secure payments.",
-		image: "laundry_proj.webp"
-	}
+  {
+    id: 1,
+    title: "AI Document Intelligence Platform",
+    description:
+      "Built a production-grade RAG system to process large PDF datasets, extract structured insights, and generate strategic summaries using FastAPI, LangChain, and pgvector.",
+    image: "edu_proj.webp",
+  },
+  {
+    id: 2,
+    title: "Enterprise GPT Knowledge Assistant",
+    description:
+      "Designed and deployed a secure document-aware chatbot with vector search, embeddings, and context-aware responses for internal knowledge workflows.",
+    image: "aichat_proj.webp",
+  },
+  {
+    id: 3,
+    title: "Subscription Streaming Platform",
+    description:
+      "Architected a scalable mobile streaming system with secure content delivery, JWT authentication, and microservices deployed on AWS.",
+    image: "apan_theater.png",
+  },
+  {
+    id: 4,
+    title: "Automated Report Generation System",
+    description:
+      "Developed a backend-driven analytics and automated report generation platform with structured outputs and real-time data processing.",
+    image: "care_con.webp",
+  },
 ];
 
 export default function WorkSection() {

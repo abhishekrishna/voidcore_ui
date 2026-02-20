@@ -1,19 +1,45 @@
-// Make a separate client component
 'use client';
-import { useState, useEffect } from 'react';
+import { createContext, useContext, useState, useEffect } from 'react';
+
+interface ThemeContextType {
+  theme: string;
+  setTheme: (theme: string) => void;
+}
+
+export const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
+
+export function useTheme() {
+  const context = useContext(ThemeContext);
+  if (!context) {
+    throw new Error('useTheme must be used within ThemeProvider');
+  }
+  return context;
+}
 
 export default function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [theme, setTheme] = useState('light');
+  const [theme, setThemeState] = useState('light');
 
   useEffect(() => {
     const stored = localStorage.getItem('theme');
-    if (stored) setTheme(stored);
-    else if (window.matchMedia('(prefers-color-scheme: dark)').matches) setTheme('dark');
+    if (stored) {
+      setThemeState(stored);
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      setThemeState('dark');
+    }
   }, []);
 
   useEffect(() => {
     document.documentElement.className = theme;
+    localStorage.setItem('theme', theme);
   }, [theme]);
 
-  return <>{children}</>;
+  const setTheme = (newTheme: string) => {
+    setThemeState(newTheme);
+  };
+
+  return (
+    <ThemeContext.Provider value={{ theme, setTheme }}>
+      {children}
+    </ThemeContext.Provider>
+  );
 }

@@ -84,7 +84,7 @@ export default function CareersSection() {
           Join as an Early Builder
         </h2>
 
-        <p className="text-white/70 max-w-2xl mb-12">
+        <p className="text-black/70 dark:text-white/70 max-w-2xl mb-12">
           We’re building focused AI-first systems. If you value ownership,
           technical clarity, and shipping real products, apply below.
         </p>

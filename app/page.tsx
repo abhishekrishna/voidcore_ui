@@ -18,7 +18,7 @@ const variants = [
     eyebrow: "AI Systems Engineering Studio",
     title: "AI-powered internal systems for growing companies.",
     subtitle:
-      "We design and build production-grade document intelligence, RAG platforms, and scalable backend architecture — not prototypes.",
+      "We design and build production-grade document intelligence, RAG platforms, and scalable backend architecture.",
   },
   {
     key: "document-intelligence",
@@ -49,12 +49,12 @@ export default function HeroModern() {
   const v = variants[active];
 
   return (
-    <div className="relative min-h-screen w-full bg-black text-white overflow-hidden">
+    <div className="relative min-h-screen w-full bg-white dark:bg-black text-black dark:text-white overflow-hidden transition-colors duration-300">
       <Navbar />
 
       {/* Background grid */}
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.08),transparent_70%)] opacity-40" />
-      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(transparent_0,rgba(255,255,255,0.03)_1px),linear-gradient(90deg,transparent_0,rgba(255,255,255,0.03)_1px)] bg-[size:48px_48px] opacity-20" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,0,0,0.08)_dark:rgba(255,255,255,0.08),transparent_70%)] dark:bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.08),transparent_70%)] opacity-40" />
+      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(transparent_0,rgba(0,0,0,0.03)_dark:rgba(255,255,255,0.03)_1px),linear-gradient(90deg,transparent_0,rgba(0,0,0,0.03)_dark:rgba(255,255,255,0.03)_1px)] dark:bg-[linear-gradient(transparent_0,rgba(255,255,255,0.03)_1px),linear-gradient(90deg,transparent_0,rgba(255,255,255,0.03)_1px)] bg-[size:48px_48px] opacity-20" />
 
       {/* Content */}
       <section className="relative mx-auto max-w-6xl px-6 pt-40 pb-32">
@@ -64,7 +64,7 @@ export default function HeroModern() {
           initial={{ opacity: 0, y: 6 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.35, ease: "easeOut" }}
-          className="text-sm uppercase tracking-[0.2em] text-white/50 mb-4"
+          className="text-sm uppercase tracking-[0.2em] text-black/50 dark:text-white/50 mb-4"
         >
           {v.eyebrow}
         </motion.p>
@@ -86,7 +86,7 @@ export default function HeroModern() {
           initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.45, ease: "easeOut", delay: 0.05 }}
-          className="mt-6 text-xl md:text-2xl text-white/60 max-w-3xl"
+          className="mt-6 text-xl md:text-2xl text-black/60 dark:text-white/60 max-w-3xl"
         >
           {v.subtitle}
         </motion.p>
@@ -100,21 +100,21 @@ export default function HeroModern() {
         >
           <a
             href="#contact"
-            className="px-6 py-3 rounded-xl bg-white text-black text-sm font-medium hover:bg-white/90 transition"
+            className="px-6 py-3 rounded-xl bg-black dark:bg-white text-white dark:text-black text-sm font-medium hover:opacity-90 dark:hover:opacity-90 transition"
           >
             Start a project
           </a>
           <a
             href="https://github.com/abhishekrishna"
             target="_blank"
-            className="px-6 py-3 rounded-xl border border-white/20 text-white/80 text-sm hover:border-white/40 hover:text-white transition"
+            className="px-6 py-3 rounded-xl border border-black/20 dark:border-white/20 text-black/80 dark:text-white/80 text-sm hover:border-black/40 dark:hover:border-white/40 hover:text-black dark:hover:text-white transition"
           >
             GitHub
           </a>
         </motion.div>
 
         {/* Minimal social proof */}
-      <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 text-white/40 text-sm">
+      <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 text-black/40 dark:text-white/40 text-sm">
       <div>RAG & LangChain production deployments</div>
       <div>Microservices architecture (gRPC · RabbitMQ · AWS · Docker)</div>
       <div>Vector DBs (pgvector · NeonDB)</div>

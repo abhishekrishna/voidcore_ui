@@ -62,7 +62,7 @@ export default function ContactSection() {
         Book an Architecture Call
       </h2>
 
-      <p className="text-white/70 max-w-2xl mb-12">
+      <p className="text-black/70 dark:text-white/70 max-w-2xl mb-12">
         We work with founders and teams building AI-powered systems and scalable
         SaaS platforms. Share a brief overview of your use case, current stage,
         and expected outcome.
@@ -74,7 +74,7 @@ export default function ContactSection() {
           value={form.name}
           onChange={handleChange}
           placeholder="Full Name"
-          className="rounded-xl bg-white/5 border border-white/10 px-4 py-3 text-white placeholder:text-white/40"
+          className="rounded-xl bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 px-4 py-3 text-black dark:text-white placeholder:text-black/40 dark:placeholder:text-white/40"
         />
 
         <input
@@ -83,14 +83,14 @@ export default function ContactSection() {
           value={form.email}
           onChange={handleChange}
           placeholder="Work Email"
-          className="rounded-xl bg-white/5 border border-white/10 px-4 py-3 text-white placeholder:text-white/40"
+          className="rounded-xl bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 px-4 py-3 text-black dark:text-white placeholder:text-black/40 dark:placeholder:text-white/40"
         />
 
         <select
           name="projectType"
           value={form.projectType}
           onChange={handleChange}
-          className="rounded-xl bg-white/5 border border-white/10 px-4 py-3 text-white"
+          className="rounded-xl bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 px-4 py-3 text-black dark:text-white"
         >
           <option value="">Select Project Type</option>
           <option value="ai-document-system">AI Document Intelligence System</option>
@@ -105,17 +105,17 @@ export default function ContactSection() {
           onChange={handleChange}
           placeholder="Describe your current system, problem, timeline, and expected outcome."
           rows={5}
-          className="rounded-xl bg-white/5 border border-white/10 px-4 py-3 text-white placeholder:text-white/40"
+          className="rounded-xl bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 px-4 py-3 text-black dark:text-white placeholder:text-black/40 dark:placeholder:text-white/40"
         />
 
         <button
           type="submit"
-          className="rounded-xl bg-white text-black font-medium px-6 py-3 hover:opacity-90"
+          className="rounded-xl bg-black dark:bg-white text-white dark:text-black font-medium px-6 py-3 hover:opacity-90"
         >
           Request Consultation
         </button>
 
-        {status && <p className="text-white/70">{status}</p>}
+        {status && <p className="text-black/70 dark:text-white/70">{status}</p>}
       </form>
 
       {/* Contact Buttons */}
@@ -124,10 +124,10 @@ export default function ContactSection() {
         <a
           href="mailto:krishna@voidcore.in"
           title="Email us"
-          className="group flex items-center justify-center w-12 h-12 rounded-xl bg-white/10 hover:bg-white/20 border border-white/10 transition-transform duration-200 hover:scale-110"
+          className="group flex items-center justify-center w-12 h-12 rounded-xl bg-black/10 dark:bg-white/10 hover:bg-black/20 dark:hover:bg-white/20 border border-black/10 dark:border-white/10 transition-transform duration-200 hover:scale-110"
         >
           <svg
-            className="w-5 h-5 text-white"
+            className="w-5 h-5 text-black dark:text-white"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
             fill="currentColor"

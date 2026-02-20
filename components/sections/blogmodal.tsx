@@ -37,10 +37,10 @@ export default function BlogModal({ open, onClose, blog }: BlogModalProps) {
           {blog.title}
         </h2>
 
-        <div className="text-xs text-white/60 mb-6">{blog.date}</div>
+        <div className="text-xs text-black/60 dark:text-white/60 mb-6">{blog.date}</div>
 
         {/* Content */}
-        <div className="max-w-none text-white">
+        <div className="max-w-none text-black dark:text-white">
           {blog.content}
         </div>
       </div>

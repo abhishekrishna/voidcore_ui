@@ -37,7 +37,7 @@ export default function BlogsSection() {
   if (loading) {
     return (
       <section id="blog" className="mx-auto max-w-7xl px-6 py-24">
-        <p className="text-white/60">Loading blogs...</p>
+        <p className="text-black/60 dark:text-white/60">Loading blogs...</p>
       </section>
     );
   }
@@ -45,7 +45,7 @@ export default function BlogsSection() {
   return (
     <section id="blog" className="mx-auto max-w-7xl px-6 py-24">
       <h2 className="text-3xl md:text-5xl font-semibold mb-6">Blog</h2>
-      <p className="text-white/70 max-w-2xl mb-12">
+      <p className="text-black/70 dark:text-white/70 max-w-2xl mb-12">
         Technical deep dives on AI systems, scalable architecture, and production engineering.
       </p>
 
@@ -53,7 +53,7 @@ export default function BlogsSection() {
         {blogs.map((blog) => (
           <div
             key={blog.id}
-            className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl p-6 hover:bg-white/10 transition flex flex-col"
+            className="rounded-2xl border border-black/10 dark:border-white/10 bg-black/5 dark:bg-white/5 backdrop-blur-xl p-6 hover:bg-black/10 dark:hover:bg-white/10 transition flex flex-col"
           >
             <div className="relative w-full h-40 mb-4">
               <Image
@@ -64,20 +64,20 @@ export default function BlogsSection() {
               />
             </div>
 
-            <h3 className="text-xl font-semibold mb-2 text-white">
+            <h3 className="text-xl font-semibold mb-2 text-black dark:text-white">
               {blog.title}
             </h3>
 
-            <div className="text-xs text-white/60 mb-3">{blog.date}</div>
+            <div className="text-xs text-black/60 dark:text-white/60 mb-3">{blog.date}</div>
 
-            <p className="text-sm text-white/70 mb-4 line-clamp-3">
+            <p className="text-sm text-black/70 dark:text-white/70 mb-4 line-clamp-3">
               {blog.description}
             </p>
 
             <div className="flex gap-3 mt-auto">
               <button
                 onClick={() => setSelectedBlog(blog)}
-                className="text-sm text-white/80 underline hover:text-white text-left"
+                className="text-sm text-black/80 dark:text-white/80 underline hover:text-black dark:hover:text-white text-left"
               >
                 Quick Preview
               </button>

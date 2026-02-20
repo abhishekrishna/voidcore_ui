@@ -37,7 +37,7 @@ export default function WorkSection() {
 			<h2 className="text-3xl md:text-5xl font-semibold mb-6">
 				Selected Work
 			</h2>
-			<p className="text-white/70 max-w-2xl mb-12">
+			<p className="text-black/70 dark:text-white/70 max-w-2xl mb-12">
 				Projects we’ve built with clarity, speed, and reliability for startups
 				and teams worldwide.
 			</p>
@@ -45,7 +45,7 @@ export default function WorkSection() {
 				{projects.map((project) => (
 					<div
 						key={project.id}
-						className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl p-6 hover:bg-white/10 transition flex flex-col"
+						className="rounded-2xl border border-black/10 dark:border-white/10 bg-black/5 dark:bg-white/5 backdrop-blur-xl p-6 hover:bg-black/10 dark:hover:bg-white/10 transition flex flex-col"
 					>
 						<img
 							src={project.image}
@@ -53,10 +53,10 @@ export default function WorkSection() {
 							className="rounded-xl mb-4 w-full h-48 object-cover bg-black/10"
 						/>
 						<h3 className="text-xl font-medium mb-2">{project.title}</h3>
-						<p className="text-white/70 mb-4">{project.description}</p>
-						<a
-							href="#"
-							className="text-sm text-white/80 underline hover:text-white"
+					<p className="text-black/70 dark:text-white/70 mb-4">{project.description}</p>
+					<a
+						href="#"
+						className="text-sm text-black/80 dark:text-white/80 underline hover:text-black dark:hover:text-white"
 						>
 							View case study →
 						</a>

@@ -5,13 +5,11 @@ import Navbar from "@/components/layout/navbar";
 import Footer from "@/components/layout/footer";
 import BlogsSection from "@/components/sections/blogs_card";
 import ContactSection from "@/components/sections/contact";
-// import Pricing from "@/components/sections/pricing";
 import Services from "@/components/sections/services";
 import Work from "@/components/sections/work";
 import CareersSection from "@/components/careers";
+import { ArrowUpRight } from "lucide-react";
 
-
-// Vercel‑style minimal rotating variants
 const variants = [
   {
     key: "ai-systems",
@@ -36,6 +34,13 @@ const variants = [
   },
 ];
 
+const techPills = [
+  "RAG & LangChain production deployments",
+  "Microservices · gRPC · RabbitMQ · AWS · Docker",
+  "Vector DBs · pgvector · NeonDB",
+  "Full IP & code ownership",
+];
+
 export default function HeroModern() {
   const [active, setActive] = useState(0);
 
@@ -49,25 +54,45 @@ export default function HeroModern() {
   const v = variants[active];
 
   return (
-    <div className="relative min-h-screen w-full bg-white dark:bg-black text-black dark:text-white overflow-hidden transition-colors duration-300">
+    <div className="relative min-h-screen w-full bg-white dark:bg-[#0B0B0F] text-black dark:text-white overflow-hidden transition-colors duration-300">
       <Navbar />
 
-      {/* Background grid */}
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,0,0,0.08)_dark:rgba(255,255,255,0.08),transparent_70%)] dark:bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.08),transparent_70%)] opacity-40" />
-      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(transparent_0,rgba(0,0,0,0.03)_dark:rgba(255,255,255,0.03)_1px),linear-gradient(90deg,transparent_0,rgba(0,0,0,0.03)_dark:rgba(255,255,255,0.03)_1px)] dark:bg-[linear-gradient(transparent_0,rgba(255,255,255,0.03)_1px),linear-gradient(90deg,transparent_0,rgba(255,255,255,0.03)_1px)] bg-[size:48px_48px] opacity-20" />
+      {/* ── Ambient background ── */}
+      {/* Radial glow — centre */}
+      <div className="pointer-events-none absolute inset-0 
+                      bg-[radial-gradient(ellipse_80%_50%_at_50%_-10%,rgba(0,0,0,0.06),transparent)]
+                      dark:bg-[radial-gradient(ellipse_80%_50%_at_50%_-10%,rgba(255,255,255,0.07),transparent)]" />
+      {/* Fine grid */}
+      <div className="pointer-events-none absolute inset-0 
+                      bg-[linear-gradient(rgba(0,0,0,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.04)_1px,transparent_1px)]
+                      dark:bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)]
+                      bg-[size:48px_48px] opacity-60" />
+      {/* Soft top-left orb */}
+      <div className="pointer-events-none absolute -top-40 -left-40 h-[600px] w-[600px] 
+                      rounded-full bg-black/[0.03] dark:bg-white/[0.04] blur-3xl" />
+      {/* Soft bottom-right orb */}
+      <div className="pointer-events-none absolute bottom-0 right-0 h-[500px] w-[500px] 
+                      rounded-full bg-black/[0.03] dark:bg-white/[0.03] blur-3xl" />
 
-      {/* Content */}
-      <section className="relative mx-auto max-w-6xl px-6 pt-40 pb-32">
+      {/* ── Hero Content ── */}
+      <section className="relative mx-auto max-w-6xl px-6 pt-44 pb-32">
+
         {/* Eyebrow */}
-        <motion.p
+        <motion.div
           key={v.key + "-eyebrow"}
           initial={{ opacity: 0, y: 6 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.35, ease: "easeOut" }}
-          className="text-sm uppercase tracking-[0.2em] text-black/50 dark:text-white/50 mb-4"
+          className="mb-5"
         >
-          {v.eyebrow}
-        </motion.p>
+          <span className="inline-block text-[10px] uppercase tracking-[0.22em] font-medium
+                           text-black/40 dark:text-white/40
+                           border border-black/10 dark:border-white/10
+                           bg-black/[0.03] dark:bg-white/[0.03]
+                           px-3 py-1.5 rounded-full backdrop-blur-sm">
+            {v.eyebrow}
+          </span>
+        </motion.div>
 
         {/* Title */}
         <motion.h1
@@ -75,7 +100,7 @@ export default function HeroModern() {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.45, ease: "easeOut" }}
-          className="text-5xl md:text-7xl font-semibold leading-[1.1] max-w-4xl"
+          className="text-5xl md:text-[4.5rem] font-semibold leading-[1.08] tracking-tight max-w-4xl"
         >
           {v.title}
         </motion.h1>
@@ -86,7 +111,7 @@ export default function HeroModern() {
           initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.45, ease: "easeOut", delay: 0.05 }}
-          className="mt-6 text-xl md:text-2xl text-black/60 dark:text-white/60 max-w-3xl"
+          className="mt-6 text-lg md:text-xl text-black/55 dark:text-white/55 max-w-2xl leading-relaxed"
         >
           {v.subtitle}
         </motion.p>
@@ -100,34 +125,74 @@ export default function HeroModern() {
         >
           <a
             href="#contact"
-            className="px-6 py-3 rounded-xl bg-black dark:bg-white text-white dark:text-black text-sm font-medium hover:opacity-90 dark:hover:opacity-90 transition"
+            className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl 
+                       bg-black dark:bg-white text-white dark:text-black 
+                       text-sm font-semibold hover:opacity-80 transition-opacity
+                       shadow-lg shadow-black/10 dark:shadow-black/40"
           >
             Start a project
+            <ArrowUpRight className="h-4 w-4" />
           </a>
           <a
             href="https://github.com/abhishekrishna"
             target="_blank"
-            className="px-6 py-3 rounded-xl border border-black/20 dark:border-white/20 text-black/80 dark:text-white/80 text-sm hover:border-black/40 dark:hover:border-white/40 hover:text-black dark:hover:text-white transition"
+            className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl 
+                       border border-black/15 dark:border-white/15 
+                       bg-black/[0.02] dark:bg-white/[0.02]
+                       text-black/75 dark:text-white/75 text-sm font-medium 
+                       hover:border-black/30 dark:hover:border-white/30 
+                       hover:text-black dark:hover:text-white 
+                       backdrop-blur-sm transition-all"
           >
             GitHub
+            <ArrowUpRight className="h-3.5 w-3.5" />
           </a>
         </motion.div>
 
-        {/* Minimal social proof */}
-      <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 text-black/40 dark:text-white/40 text-sm">
-      <div>RAG & LangChain production deployments</div>
-      <div>Microservices architecture (gRPC · RabbitMQ · AWS · Docker)</div>
-      <div>Vector DBs (pgvector · NeonDB)</div>
-      <div>Full IP & code ownership</div>
-      </div>
+        {/* ── Tech proof pills ── */}
+        <motion.div
+          initial={{ opacity: 0, y: 6 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4, ease: "easeOut", delay: 0.2 }}
+          className="mt-20 flex flex-wrap gap-2.5"
+        >
+          {techPills.map((pill) => (
+            <span
+              key={pill}
+              className="text-xs font-medium px-3.5 py-2 rounded-xl
+                         border border-black/10 dark:border-white/10
+                         bg-black/[0.03] dark:bg-white/[0.03]
+                         text-black/50 dark:text-white/50
+                         backdrop-blur-sm"
+            >
+              {pill}
+            </span>
+          ))}
+        </motion.div>
+
+        {/* ── Rotating indicator dots ── */}
+        <div className="mt-12 flex items-center gap-2">
+          {variants.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setActive(i)}
+              className={`h-1.5 rounded-full transition-all duration-300 ${
+                i === active
+                  ? "w-6 bg-black dark:bg-white"
+                  : "w-1.5 bg-black/20 dark:bg-white/20"
+              }`}
+            />
+          ))}
+        </div>
       </section>
-      <Work/>
-      <BlogsSection/>
-      <Services/>
-      <CareersSection/>
-      {/* <Pricing/> */}
-      <ContactSection/>
-      <Footer/>
+
+      {/* ── Sections ── */}
+      <Work />
+      <BlogsSection />
+      <Services />
+      <CareersSection />
+      <ContactSection />
+      <Footer />
     </div>
   );
 }

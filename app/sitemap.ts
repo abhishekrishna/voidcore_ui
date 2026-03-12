@@ -1,5 +1,6 @@
 import { MetadataRoute } from "next";
 import { getAllPosts } from "@/lib/notion/getAllPosts";
+import { solutions } from "@/lib/solution";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const posts = await getAllPosts();
@@ -18,6 +19,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     lastModified: new Date(post.date), // ✅ REAL last edit time from Notion
     changeFrequency: "monthly",
     priority: 0.9,
+  }));
+
+  const solutionPages: MetadataRoute.Sitemap = solutions.map((s) => ({
+    url: `https://voidcore.in/solutions/${s.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly",
+    priority: 0.8,
   }));
 
   return [...staticPages, ...blogPages];

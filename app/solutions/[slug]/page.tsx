@@ -18,7 +18,7 @@ type Solution = {
   stack: string[];
 };
 
-export const solutions: Solution[] = [
+const solutions: Solution[] = [
   {
     slug: "ai-document-intelligence-systems",
     tag: "AI / RAG",

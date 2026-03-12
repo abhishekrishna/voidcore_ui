@@ -28,5 +28,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.8,
   }));
 
-  return [...staticPages, ...blogPages];
+  return [...staticPages, ...blogPages, ...solutionPages];
 }

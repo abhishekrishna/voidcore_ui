@@ -6,7 +6,7 @@ import { ArrowLeft, ArrowUpRight, CheckCircle2 } from "lucide-react";
 
 // ─── Data ────────────────────────────────────────────────────────────────────
 
-export type Solution = {
+type Solution = {
   slug: string;
   tag: string;
   title: string;

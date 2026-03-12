@@ -4,8 +4,6 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { ArrowLeft, ArrowUpRight, CheckCircle2 } from "lucide-react";
 
-// ─── Data ────────────────────────────────────────────────────────────────────
-
 type Solution = {
   slug: string;
   tag: string;
@@ -115,8 +113,6 @@ function getSolutionBySlug(slug: string): Solution | undefined {
   return solutions.find((s) => s.slug === slug);
 }
 
-// ─── Metadata ─────────────────────────────────────────────────────────────────
-
 export async function generateStaticParams() {
   return solutions.map((s) => ({ slug: s.slug }));
 }
@@ -124,9 +120,10 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
-  const s = getSolutionBySlug(params.slug);
+  const { slug } = await params;
+  const s = getSolutionBySlug(slug);
   if (!s) return {};
   return {
     title: `${s.title} | Voidcore`,
@@ -140,14 +137,13 @@ export async function generateMetadata({
   };
 }
 
-// ─── Page ─────────────────────────────────────────────────────────────────────
-
-export default function SolutionPage({
+export default async function SolutionPage({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  const solution = getSolutionBySlug(params.slug);
+  const { slug } = await params;
+  const solution = getSolutionBySlug(slug);
   if (!solution) notFound();
 
   const related = solutions.filter((s) => s.slug !== solution.slug).slice(0, 3);
@@ -188,7 +184,6 @@ export default function SolutionPage({
           </Link>
 
           <div className="grid md:grid-cols-2 gap-16 items-start">
-            {/* Left */}
             <div>
               <span className="inline-block text-[10px] uppercase tracking-[0.2em] font-medium
                                text-black/40 dark:text-white/40
@@ -218,7 +213,6 @@ export default function SolutionPage({
               </Link>
             </div>
 
-            {/* Right — Outcomes */}
             <div className="rounded-2xl border border-black/10 dark:border-white/10
                             bg-black/[0.03] dark:bg-white/[0.03] backdrop-blur-xl p-8
                             shadow-xl shadow-black/5 dark:shadow-black/30">
@@ -239,7 +233,6 @@ export default function SolutionPage({
           </div>
         </section>
 
-        {/* ── Divider ── */}
         <div className="mx-auto max-w-7xl px-6">
           <div className="border-t border-black/10 dark:border-white/10" />
         </div>
@@ -264,12 +257,11 @@ export default function SolutionPage({
           </div>
         </section>
 
-        {/* ── Divider ── */}
         <div className="mx-auto max-w-7xl px-6">
           <div className="border-t border-black/10 dark:border-white/10" />
         </div>
 
-        {/* ── Related Solutions ── */}
+        {/* ── Related ── */}
         <section className="mx-auto max-w-7xl px-6 py-20">
           <p className="text-xs uppercase tracking-[0.18em] text-black/40 dark:text-white/40 mb-8">
             Other solutions
@@ -306,7 +298,7 @@ export default function SolutionPage({
           </div>
         </section>
 
-        {/* ── CTA Strip ── */}
+        {/* ── CTA ── */}
         <section className="mx-auto max-w-7xl px-6 pb-24">
           <div className="rounded-2xl border border-black/10 dark:border-white/10
                           bg-black/[0.03] dark:bg-white/[0.03] backdrop-blur-xl

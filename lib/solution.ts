@@ -1,194 +1,126 @@
 export type Solution = {
-  slug: string
-  title: string
-  description: string
-  industry: string
-  service: string
-  hero: string
-  problem: string
-  solution: string
-  benefits: string[]
-  useCases: string[]
-  body: string
-}
+  slug: string;
+  tag: string;
+  title: string;
+  description: string;
+  longDescription: string;
+  industry: string;
+  service: string;
+  outcomes: string[];
+  stack: string[];
+};
 
 export const solutions: Solution[] = [
   {
+    slug: "ai-document-intelligence-systems",
+    tag: "AI / RAG",
+    title: "AI Document Intelligence Systems",
+    description:
+      "Design and deployment of production-grade RAG platforms that process contracts, reports, compliance documents, and internal knowledge bases using secure vector pipelines.",
+    longDescription:
+      "Most companies sit on mountains of unstructured documents — contracts, compliance reports, internal wikis — and can't surface what they need fast enough. We design and deploy retrieval-augmented generation (RAG) systems that plug directly into your document infrastructure, enabling semantic search, automated summarisation, and Q&A over your private data. Built with enterprise-grade security: no data leaves your perimeter.",
+    industry: "Enterprise / Legal / Finance",
+    service: "AI Document Intelligence",
+    outcomes: [
+      "Semantic search across thousands of internal documents",
+      "Automated contract review and clause extraction",
+      "Secure, on-premise or private-cloud vector pipelines",
+      "Integration with existing tools: Notion, Confluence, SharePoint",
+    ],
+    stack: ["LangChain", "Pinecone", "OpenAI", "FastAPI", "Next.js"],
+  },
+  {
+    slug: "saas-platform-architecture",
+    tag: "Engineering",
+    title: "SaaS Platform Architecture",
+    description:
+      "End-to-end backend and full-stack engineering for scalable SaaS products using NestJS, FastAPI, microservices, and cloud-native infrastructure.",
+    longDescription:
+      "Building a SaaS product that needs to scale is a fundamentally different problem than building an MVP. We architect multi-tenant platforms using NestJS, FastAPI, and cloud-native infrastructure — designed from day one for reliability, observability, and horizontal scale. Whether you're launching or rebuilding a product that's outgrown its foundations, we engineer it right.",
+    industry: "B2B SaaS / Startups",
+    service: "SaaS Engineering",
+    outcomes: [
+      "Multi-tenant architecture with role-based access control",
+      "Microservices or modular monolith — chosen for your scale",
+      "CI/CD pipelines, observability, and zero-downtime deployments",
+      "API-first design for third-party integrations",
+    ],
+    stack: ["NestJS", "FastAPI", "PostgreSQL", "Redis", "AWS / GCP"],
+  },
+  {
+    slug: "internal-workflow-automation",
+    tag: "Automation",
+    title: "Internal Workflow Automation",
+    description:
+      "Custom internal tools and AI-powered dashboards that reduce manual processes, centralize data, and improve operational visibility.",
+    longDescription:
+      "Repetitive internal processes are silent productivity killers. We build custom workflow automation systems and internal dashboards that reduce manual work, centralise your data, and give your team real operational visibility. From approval flows to data pipelines to AI-powered reporting — we automate the work that slows you down.",
+    industry: "Ops / Finance / HR",
+    service: "Workflow Automation",
+    outcomes: [
+      "Automated approval and notification workflows",
+      "Centralised dashboards pulling from multiple data sources",
+      "AI-generated reports and anomaly alerts",
+      "Integration with Slack, Notion, Airtable, and custom APIs",
+    ],
+    stack: ["Next.js", "Python", "n8n", "Postgres", "Vercel"],
+  },
+  {
     slug: "ai-automation-for-startups",
+    tag: "AI / Startups",
     title: "AI Automation for Startups",
     description:
-      "AI automation systems that help startups eliminate repetitive operational work and scale faster.",
+      "We help early-stage startups automate operations with AI agents — cutting costs and shipping faster without enterprise pricing or bloat.",
+    longDescription:
+      "Startups move fast but get bogged down by repetitive tasks that don't need a human. We build AI automation pipelines tailored to your stack — from customer onboarding flows to internal ops. No bloat, no enterprise pricing. Just focused automation that buys your team back hours every week.",
     industry: "Startups",
     service: "AI Automation",
-
-    hero:
-      "Voidcore builds AI automation systems that remove repetitive operations so startups can focus on product and growth.",
-
-    problem:
-      "Early-stage startups often spend engineering time on manual operations such as onboarding flows, reporting pipelines, internal dashboards, and support triage.",
-
-    solution:
-      "We design AI-powered automation pipelines that integrate directly with your stack and execute operational tasks automatically.",
-
-    benefits: [
-      "Reduce operational overhead",
-      "Automate internal workflows",
-      "Ship faster with smaller teams",
-      "AI-driven operational insights",
+    outcomes: [
+      "Onboarding and lead qualification automation",
+      "AI agents for repetitive back-office tasks",
+      "Rapid deployment — production-ready in weeks, not months",
+      "Built to scale as your team grows",
     ],
-
-    useCases: [
-      "Automated onboarding workflows",
-      "AI support triage",
-      "Internal reporting automation",
-      "Operational analytics agents",
-    ],
-
-    body:
-      "Our systems integrate with your existing infrastructure and build automated pipelines that trigger actions, generate insights, and remove manual processes.",
+    stack: ["LangGraph", "OpenAI", "FastAPI", "Postgres", "Vercel"],
   },
-
   {
     slug: "agentic-ai-for-ecommerce",
+    tag: "Agentic AI",
     title: "Agentic AI for Ecommerce",
     description:
-      "Deploy autonomous AI agents that handle customer support, inventory alerts, and personalization for ecommerce platforms.",
-    industry: "Ecommerce",
+      "Deploy autonomous AI agents that handle customer support, inventory alerts, and personalisation for your ecommerce store.",
+    longDescription:
+      "Ecommerce teams are stretched thin across support, inventory, and personalisation. Our agentic AI systems handle the repetitive work autonomously — answering support tickets, flagging low stock, personalising product recommendations — so your team can focus on growth instead of firefighting.",
+    industry: "Ecommerce / D2C",
     service: "Agentic AI",
-
-    hero:
-      "Autonomous AI agents that operate inside your ecommerce stack and handle repetitive operations automatically.",
-
-    problem:
-      "Ecommerce teams spend significant time responding to support queries, monitoring inventory, and optimizing product discovery.",
-
-    solution:
-      "Voidcore deploys AI agents that monitor events across your ecommerce platform and take action automatically.",
-
-    benefits: [
-      "Reduce support workload",
-      "Improve customer experience",
-      "Automate inventory monitoring",
-      "Increase conversion rates",
+    outcomes: [
+      "AI support agent handling 80%+ of tier-1 tickets",
+      "Real-time inventory monitoring and restock alerts",
+      "Personalised product recommendations per user",
+      "Seamless integration with Shopify, WooCommerce, and custom stacks",
     ],
-
-    useCases: [
-      "AI customer support agents",
-      "Inventory monitoring agents",
-      "Product recommendation engines",
-      "Automated marketing triggers",
-    ],
-
-    body:
-      "Our agentic systems operate continuously inside your ecommerce stack and automate operational tasks across support, inventory, and personalization.",
+    stack: ["LangGraph", "OpenAI", "Shopify API", "Redis", "Next.js"],
   },
-
   {
     slug: "ai-powered-crm-solutions",
+    tag: "CRM / AI",
     title: "AI-Powered CRM Solutions",
     description:
-      "Enhance your CRM with AI systems that score leads, generate follow-ups, and detect churn risks automatically.",
-    industry: "B2B SaaS",
+      "Supercharge your CRM with AI that scores leads, drafts follow-ups, and flags churn risk — automatically.",
+    longDescription:
+      "Generic CRMs store data but don't think. Voidcore layers AI onto your existing CRM to prioritise leads automatically, auto-draft personalised outreach, and alert you before deals go cold. Whether you're on HubSpot, Salesforce, or a custom stack, we make your CRM work for you instead of the other way around.",
+    industry: "B2B SaaS / Sales",
     service: "CRM AI",
-
-    hero:
-      "AI systems that transform static CRMs into intelligent sales platforms.",
-
-    problem:
-      "Most CRM systems store data but fail to help teams act on it effectively.",
-
-    solution:
-      "Voidcore integrates AI models with your CRM to analyze activity, prioritize leads, and generate sales actions.",
-
-    benefits: [
-      "Automated lead scoring",
-      "AI-generated follow-ups",
-      "Early churn detection",
-      "Improved sales productivity",
+    outcomes: [
+      "Automated lead scoring based on behaviour and fit",
+      "AI-drafted follow-up emails and call summaries",
+      "Churn prediction and at-risk account alerts",
+      "Works with HubSpot, Salesforce, or custom CRMs",
     ],
-
-    useCases: [
-      "Lead scoring automation",
-      "Sales email drafting",
-      "Churn prediction models",
-      "Deal prioritization agents",
-    ],
-
-    body:
-      "Our AI CRM systems analyze behavioral and engagement data to surface actionable insights for sales teams.",
+    stack: ["OpenAI", "HubSpot API", "Salesforce API", "FastAPI", "Postgres"],
   },
-
-  {
-    slug: "ai-solutions-for-logistics",
-    title: "AI Solutions for Logistics",
-    description:
-      "AI systems for routing optimization, delivery prediction, and dispatch automation.",
-    industry: "Logistics",
-    service: "AI Optimization",
-
-    hero:
-      "Operational AI systems that optimize routing, dispatching, and delivery forecasting.",
-
-    problem:
-      "Logistics operations rely heavily on manual decision-making and fragmented data systems.",
-
-    solution:
-      "Voidcore builds AI optimization systems that analyze operational data and recommend or execute better routing decisions.",
-
-    benefits: [
-      "Lower operational costs",
-      "Improved route efficiency",
-      "Delay prediction systems",
-      "Automated dispatch workflows",
-    ],
-
-    useCases: [
-      "Dynamic routing optimization",
-      "Delivery ETA prediction",
-      "Fleet utilization analysis",
-      "Dispatch automation",
-    ],
-
-    body:
-      "Our systems analyze operational data streams and optimize logistics decisions in real time.",
-  },
-
-  {
-    slug: "generative-ai-for-agencies",
-    title: "Generative AI for Agencies",
-    description:
-      "Generative AI tools embedded directly into creative and marketing agency workflows.",
-    industry: "Agencies",
-    service: "Generative AI",
-
-    hero:
-      "AI tools that help agencies produce more creative output without increasing headcount.",
-
-    problem:
-      "Agencies face increasing pressure to produce more content and campaigns with limited teams.",
-
-    solution:
-      "Voidcore integrates generative AI models into agency workflows to accelerate content creation and campaign production.",
-
-    benefits: [
-      "Faster content production",
-      "Automated campaign ideation",
-      "Improved team productivity",
-      "AI-assisted design workflows",
-    ],
-
-    useCases: [
-      "AI copywriting systems",
-      "Campaign idea generation",
-      "Automated content pipelines",
-      "Creative assistance tools",
-    ],
-
-    body:
-      "We embed generative AI tools into existing agency processes so teams can produce more work with less manual effort.",
-  },
-]
+];
 
 export function getSolutionBySlug(slug: string): Solution | undefined {
-  return solutions.find((s) => s.slug === slug)
+  return solutions.find((s) => s.slug === slug);
 }

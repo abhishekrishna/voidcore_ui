@@ -1,30 +1,8 @@
 import React from "react";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
+import { solutions } from "@/lib/solution";
 
-const services = [
-  {
-    name: "AI Document Intelligence Systems",
-    description:
-      "Design and deployment of production-grade RAG platforms that process contracts, reports, compliance documents, and internal knowledge bases using secure vector pipelines.",
-    slug: "ai-document-intelligence-systems",
-    tag: "AI / RAG",
-  },
-  {
-    name: "SaaS Platform Architecture",
-    description:
-      "End-to-end backend and full-stack engineering for scalable SaaS products using NestJS, FastAPI, microservices, and cloud-native infrastructure.",
-    slug: "saas-platform-architecture",
-    tag: "Engineering",
-  },
-  {
-    name: "Internal Workflow Automation",
-    description:
-      "Custom internal tools and AI-powered dashboards that reduce manual processes, centralize data, and improve operational visibility.",
-    slug: "internal-workflow-automation",
-    tag: "Automation",
-  },
-];
 
 export default function ServicesSection() {
   return (
@@ -42,9 +20,9 @@ export default function ServicesSection() {
       </div>
 
       <div className="grid gap-4 md:grid-cols-3">
-        {services.map((srv, i) => (
+        {solutions.map((srv) => (
           <Link
-            key={srv.name}
+            key={srv.slug}
             href={`/solutions/${srv.slug}`}
             className="group relative rounded-2xl border border-black/10 dark:border-white/10
                        bg-black/[0.03] dark:bg-white/[0.03] backdrop-blur-xl p-7
@@ -53,7 +31,6 @@ export default function ServicesSection() {
                        hover:shadow-xl hover:shadow-black/5 dark:hover:shadow-black/30
                        transition-all duration-300 cursor-pointer overflow-hidden"
           >
-            {/* subtle glow on hover */}
             <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500
                             bg-gradient-to-br from-white/5 to-transparent rounded-2xl pointer-events-none" />
 
@@ -70,7 +47,7 @@ export default function ServicesSection() {
                                        transition-all duration-200" />
             </div>
 
-            <h3 className="text-lg font-medium mb-3 leading-snug">{srv.name}</h3>
+            <h3 className="text-lg font-medium mb-3 leading-snug">{srv.title}</h3>
             <p className="text-black/60 dark:text-white/60 text-sm leading-relaxed">
               {srv.description}
             </p>

@@ -29,7 +29,7 @@ const orgSchema = {
 };
 
 export const metadata: Metadata = {
-  title: " ○● Voidcore Technologies | Software Solutions",
+  title: " ○● Voidcore Technologies | AI Infrastructure & Custom RAG Solutions",
   description: "Custom software, websites, mobile, and web apps — VoidCore Technologies helps startups and enterprises build secure, scalable software fast.",
   metadataBase: new URL("https://voidcore.in"),
   alternates: {

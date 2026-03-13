@@ -123,7 +123,12 @@ export default function BlogsSection() {
       <BlogModal
         open={!!selectedBlog}
         onClose={() => setSelectedBlog(null)}
-        blog={selectedBlog as any}
+        blog={selectedBlog ? {
+          title: selectedBlog.title,
+          date: selectedBlog.date,
+          cover: selectedBlog.cover,
+          description: selectedBlog.description,
+        } : null}
       />
     </section>
   );

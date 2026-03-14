@@ -6,13 +6,13 @@ import Link from "next/link";
 import { useTheme } from "@/components/theme-provider";
 
 const navLinks = [
-  { label: "Work", href: "#work" },
-  { label: "Blog", href: "#blog" },
+  { label: "Work", href: "/#work" },
+  { label: "Blog", href: "/#blog" },
   // { label: "Services", href: "#services" },
-  { label: "Solutions", href: "#services" },
-  { label: "Careers", href: "#careers" },
-  { label: "Pricing", href: "#pricing" },
-  { label: "Contact", href: "#contact" },
+  { label: "Solutions", href: "/#solutions" },
+  { label: "Careers", href: "/#careers" },
+  { label: "Pricing", href: "/#pricing" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 export default function Navbar() {

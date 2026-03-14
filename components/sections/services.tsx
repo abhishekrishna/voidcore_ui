@@ -6,7 +6,7 @@ import { solutions } from "@/lib/solution";
 
 export default function ServicesSection() {
   return (
-    <section id="services" className="mx-auto max-w-7xl px-6 py-24">
+    <section id="solutions" className="mx-auto max-w-7xl px-6 py-24">
       <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-12 gap-4">
         <div>
           <p className="text-xs uppercase tracking-[0.2em] text-black/40 dark:text-white/40 mb-3">

@@ -1,40 +1,10 @@
-import React from "react";
-import { ArrowUpRight } from "lucide-react";
+"use client";
 
-const projects = [
-  {
-    id: 1,
-    title: "AI Document Intelligence Platform",
-    description:
-      "Built a production-grade RAG system to process large PDF datasets, extract structured insights, and generate strategic summaries using FastAPI, LangChain, and pgvector.",
-    image: "edu_proj.webp",
-    tag: "AI / RAG",
-  },
-  {
-    id: 2,
-    title: "Enterprise GPT Knowledge Assistant",
-    description:
-      "Designed and deployed a secure document-aware chatbot with vector search, embeddings, and context-aware responses for internal knowledge workflows.",
-    image: "aichat_proj.webp",
-    tag: "LLM / Search",
-  },
-  {
-    id: 3,
-    title: "Subscription Streaming Platform",
-    description:
-      "Architected a scalable mobile streaming system with secure content delivery, JWT authentication, and microservices deployed on AWS.",
-    image: "apan_theater.png",
-    tag: "SaaS / AWS",
-  },
-  {
-    id: 4,
-    title: "Automated Report Generation System",
-    description:
-      "Developed a backend-driven analytics and automated report generation platform with structured outputs and real-time data processing.",
-    image: "care_con.webp",
-    tag: "Automation",
-  },
-];
+import React from "react";
+import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
+import { projects } from "@/lib/work_data";
+
 
 export default function WorkSection() {
   return (
@@ -51,51 +21,72 @@ export default function WorkSection() {
         </p>
       </div>
 
-      <div className="grid gap-4 md:grid-cols-2">
+      <div className="grid gap-4 md:grid-cols-2 items-start">
         {projects.map((project) => (
-          <div
+          <Link
             key={project.id}
-            className="group relative rounded-2xl border border-black/10 dark:border-white/10
-                       bg-black/[0.03] dark:bg-white/[0.03] backdrop-blur-xl
-                       hover:bg-black/[0.07] dark:hover:bg-white/[0.07]
+            href={`/work/${project.slug}`}
+            className="group flex flex-row h-[200px] rounded-2xl overflow-hidden
+                       border border-black/10 dark:border-white/10
+                       bg-black/[0.03] dark:bg-white/[0.03]
                        hover:border-black/20 dark:hover:border-white/20
+                       hover:bg-black/[0.06] dark:hover:bg-white/[0.06]
                        hover:shadow-xl hover:shadow-black/5 dark:hover:shadow-black/20
-                       transition-all duration-300 overflow-hidden flex flex-col"
+                       transition-all duration-300"
           >
-            {/* Image */}
-            <div className="relative w-full h-52 overflow-hidden">
+            {/* Image — fixed width, clips portrait images naturally */}
+            <div className="relative w-[42%] flex-shrink-0 overflow-hidden">
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500"
+                className="absolute inset-0 w-full h-full object-cover object-top
+                           group-hover:scale-[1.05] transition-transform duration-500 ease-out"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/25 to-transparent" />
-              <span className="absolute top-4 left-4 text-[10px] uppercase tracking-[0.18em] font-medium
-                               text-white/80 border border-white/20 bg-black/30
-                               px-2.5 py-1 rounded-full backdrop-blur-sm">
-                {project.tag}
-              </span>
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent to-black/10 dark:to-black/30" />
             </div>
 
             {/* Body */}
-            <div className="p-6 flex flex-col flex-1">
-              <h3 className="text-lg font-semibold mb-2 leading-snug">{project.title}</h3>
-              <p className="text-sm text-black/55 dark:text-white/55 leading-relaxed mb-6 flex-1">
-                {project.description}
-              </p>
+            <div className="flex flex-col flex-1 p-5 justify-between min-w-0 overflow-hidden">
+              <div>
+                <div className="flex items-center gap-2 mb-3">
+                  <span className="text-[10px] uppercase tracking-[0.16em] font-medium
+                                   text-black/40 dark:text-white/40">
+                    {project.tag}
+                  </span>
+                  <span className="w-1 h-1 rounded-full bg-black/20 dark:bg-white/20 flex-shrink-0" />
+                  <span className="text-[10px] uppercase tracking-[0.16em]
+                                   text-black/30 dark:text-white/30">
+                    {project.year}
+                  </span>
+                </div>
 
-              <a
-                href="#"
-                className="inline-flex items-center gap-1.5 text-xs font-medium
-                           text-black/40 dark:text-white/40
-                           group-hover:text-black/70 dark:group-hover:text-white/70
-                           transition-colors duration-200"
-              >
-                View case study
-                <ArrowUpRight className="h-3.5 w-3.5" />
-              </a>
+                <h3 className="text-sm font-semibold leading-snug mb-2
+                               text-black dark:text-white line-clamp-2">
+                  {project.title}
+                </h3>
+
+                <p className="text-xs text-black/50 dark:text-white/45 leading-relaxed line-clamp-3">
+                  {project.description}
+                </p>
+              </div>
+
+              {/* Footer */}
+              <div className="flex items-center justify-between pt-4
+                              border-t border-black/[0.06] dark:border-white/[0.06]">
+                <span className="text-[11px] font-medium text-black/35 dark:text-white/35
+                                 group-hover:text-black/70 dark:group-hover:text-white/70
+                                 transition-colors duration-200">
+                  View case study
+                </span>
+                <ArrowUpRight
+                  className="h-3.5 w-3.5 flex-shrink-0
+                             text-black/20 dark:text-white/20
+                             group-hover:text-black dark:group-hover:text-white
+                             transition-colors duration-200"
+                />
+              </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </section>

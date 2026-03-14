@@ -88,7 +88,7 @@ export default async function SolutionPage({
                        transition-colors mb-16"
           >
             <ArrowLeft className="h-3.5 w-3.5" />
-            All services
+            ALL SOLUTIONS
           </Link>
 
           {/* Large background tag — decorative */}

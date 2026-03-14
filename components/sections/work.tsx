@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
-import { projects } from "@/lib/work_data";
+import { projects } from "@/lib/work_data/work_data";
 
 
 export default function WorkSection() {

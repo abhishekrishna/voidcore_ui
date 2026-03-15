@@ -113,7 +113,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
     <main className="min-h-screen bg-white dark:bg-[#0D0D12] text-black dark:text-white">
 
       {/* ── Breadcrumb ── */}
-      <nav className="mx-auto max-w-4xl px-6 pt-10">
+      <nav className="mx-auto max-w-4xl px-6 pt-36">
         <Link href="/#work"
           className="inline-flex items-center gap-1.5 text-xs
                      text-black/35 dark:text-white/35

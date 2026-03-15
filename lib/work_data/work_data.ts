@@ -70,98 +70,106 @@ export type Project = {
 
 export const projects: Project[] = [
   // ─── PROJECT 1 ───────────────────────────────────────────────────────────────
-  {
-    id: 1,
-    slug: "ai-document-intelligence",
-    title: "AI Document Intelligence Platform",
-    description: "Built a production-grade RAG system to process large PDF datasets, extract structured insights, and generate strategic summaries using FastAPI, LangChain, and pgvector.",
-    image: "https://res.cloudinary.com/dqzte0i12/image/upload/v1773421447/original-b1834271e042a940a4da9edc316725d1_dmzkd0.webp",
-    tag: "AI / RAG",
-    year: "2024",
-    techStack: ["FastAPI", "LangChain", "pgvector", "PostgreSQL", "OpenAI", "Docker", "AWS S3"],
-    metrics: [
-      { value: "96%", label: "Query Accuracy", sub: "on benchmark set", icon: "Target" },
-      { value: "8 min", label: "Report Time", sub: "down from 3–4 hrs", icon: "Clock" },
-      { value: "500+", label: "Daily Queries", sub: "at sub-2s latency", icon: "Zap" },
-      { value: "3×", label: "Team Expansion", sub: "within 2 months", icon: "TrendingUp" },
-    ],
-    challenge: {
-      heading: "The Challenge",
-      body: "A fast-growing edtech company had over 40,000 PDF documents spread across shared drives with zero searchability. Analysts were spending 3–4 hours per report manually reading and extracting data. Leadership needed a system that could handle high document volumes and return structured, citable answers — without hallucinating.",
-    },
-    built: {
-      heading: "What We Built",
-      body: "We architected a full RAG pipeline using FastAPI for the backend API layer, LangChain for orchestration, and pgvector on PostgreSQL for vector storage. Documents are chunked, embedded, and indexed on upload. At query time, the system retrieves the top-k relevant chunks and passes them to the LLM with a structured prompt that enforces source citation and confidence scoring.",
-    },
-    results: {
-      heading: "Results",
-      body: "Report generation time dropped from 3–4 hours to under 8 minutes. The system now handles 500+ document queries per day with sub-2s average response times. The client expanded the platform to three additional departments within two months, eliminating an estimated 1,200 analyst hours per quarter.",
-    },
-    deepDive: {
-      beforeAfter: {
-        heading: "Before & After",
-        items: [
-          { before: "Analysts spent 3-4 hours manually reading PDFs to produce a single report", after: "Reports generated in under 8 minutes with cited, structured output" },
-          { before: "40,000+ documents were unsearchable across shared drives", after: "Every document instantly queryable with sub-2s response times" },
-          { before: "Answers required senior analysts — a bottleneck on every project", after: "Any team member can query the system independently, 24/7" },
-          { before: "No audit trail — impossible to verify where answers came from", after: "Every answer includes source citations with page-level references" },
-        ],
-      },
-      processSteps: {
-        heading: "How We Built It",
-        body: "We broke the build into four sequential phases, each with a clear deliverable before moving to the next.",
-        steps: [
-          { title: "Data audit & pipeline design", description: "Mapped all 40k documents, assessed quality, and designed the chunking and embedding strategy. Validated pgvector latency targets before committing to the stack." },
-          { title: "Ingestion pipeline", description: "Built the S3 upload flow, PyMuPDF text extraction, 512-token chunking with overlap, and the Celery worker that manages embedding jobs asynchronously." },
-          { title: "Query API & LLM integration", description: "Implemented FastAPI query endpoints, LangChain LCEL pipeline, similarity search via PostgreSQL functions, and structured prompt with citation enforcement." },
-          { title: "Flutter frontend & streaming UI", description: "Built the Flutter Web interface with SSE token streaming, inline citation chips, document upload flow, and query history with exportable report generation." },
-        ],
-      },
-      architecture: {
-        heading: "System Architecture",
-        body: "The system splits into two flows: an async ingestion pipeline and a synchronous query pipeline. Ingestion moves through S3, a Celery worker, and pgvector. Queries are synchronous FastAPI endpoints that hit pgvector, assemble context, and call OpenAI.",
-        layers: [
-          { name: "Ingestion Layer", tech: "S3 + Celery + PyMuPDF", description: "PDFs land in S3. A Celery worker extracts text with PyMuPDF, chunks into 512-token segments with 64-token overlap, and dispatches embedding jobs." },
-          { name: "Embedding Service", tech: "OpenAI text-embedding-3-small", description: "Each chunk is embedded via the OpenAI embeddings API. Embeddings are 1536-dimensional vectors stored with chunk metadata in pgvector." },
-          { name: "Vector Store", tech: "PostgreSQL + pgvector", description: "HNSW index on the embedding column enables approximate nearest-neighbour search at sub-50ms latency across 2M+ vectors." },
-          { name: "Query API", tech: "FastAPI + LangChain LCEL", description: "Receives a user query, embeds it, runs similarity search, assembles top-k chunks into a prompt, and streams the LLM response back to the client." },
-          { name: "LLM Layer", tech: "OpenAI GPT-4o", description: "Receives a structured prompt with retrieved context, a system instruction enforcing citation, and a JSON output schema for structured responses." },
-          { name: "Frontend", tech: "Flutter Web", description: "Streams the response token-by-token using SSE. Renders citations as inline source chips that expand to show the original document chunk." },
-        ],
-      },
-      techCategories: [
-        { category: "Backend", items: ["FastAPI", "Python", "LangChain", "Celery"] },
-        { category: "AI / ML", items: ["OpenAI GPT-4o", "text-embedding-3-small", "pgvector"] },
-        { category: "Database", items: ["PostgreSQL", "Redis"] },
-        { category: "Infrastructure", items: ["AWS S3", "Docker", "AWS ECS"] },
-        { category: "Frontend", items: ["Flutter Web", "Dart"] },
+  // ─── PROJECT 1 ───────────────────────────────────────────────────────────────
+{
+  id: 1,
+  slug: "ai-document-intelligence",
+  title: "AI Document Intelligence Platform",
+  description: "Built a production-grade multi-step RAG system to process city-level healthcare distribution reports, distill them into ranked priority signals, and surface expansion recommendations through a role-based dashboard — helping regional teams decide where to push next.",
+  image: "https://res.cloudinary.com/dqzte0i12/image/upload/v1773421447/original-b1834271e042a940a4da9edc316725d1_dmzkd0.webp",
+  tag: "AI / RAG",
+  year: "2024",
+  techStack: ["FastAPI", "LangChain", "pgvector", "PostgreSQL", "OpenAI", "Docker", "AWS S3", "Next.js", "shadcn/ui", "Tailwind CSS"],
+  metrics: [
+    { value: "96%", label: "Signal Accuracy", sub: "on benchmark set", icon: "Target" },
+    { value: "8 min", label: "Analysis Time", sub: "down from 3–4 hrs", icon: "Clock" },
+    { value: "500+", label: "Daily Queries", sub: "at sub-2s latency", icon: "Zap" },
+    { value: "3×", label: "Team Expansion", sub: "within 2 months", icon: "TrendingUp" },
+  ],
+  challenge: {
+    heading: "The Challenge",
+    body: "A mid-sized pharma distribution company was expanding into new cities across India. Their strategy team had commissioned hundreds of city-level market reports — hospital density, chemist network coverage, competitor presence, demographic data — all locked inside PDFs across shared drives. Regional managers were spending 3–4 hours per city manually reading through reports to judge whether to push distribution there. Leadership needed a system that could reason across all of it and tell the team which cities to prioritise — with a clear, auditable signal instead of a gut call.",
+  },
+  built: {
+    heading: "What We Built",
+    body: "We built a multi-step RAG pipeline where city-level documents are chunked, embedded, and stored in pgvector. At query time we run a three-stage LangChain LCEL chain rather than a single LLM call: the first prompt extracts key market signals from retrieved chunks, the second reasons across those signals to produce a structured city assessment, and a final distillation prompt collapses everything into a 4-word priority label — 'Expand Now', 'High Potential', 'Needs Nurturing', or 'Deprioritise'. These labels populate a sortable priority table on the dashboard. Role-based auth ensures each company sees only their own city data, and regional leads can flag cities and assign them to field reps directly from the table.",
+  },
+  results: {
+    heading: "Results",
+    body: "City analysis time dropped from 3–4 hours to under 8 minutes. The pipeline handles 500+ queries daily at sub-2s latency. Within two months the client rolled the dashboard out to three regional teams, replacing spreadsheet-based tracking entirely and giving leadership a live view of expansion priorities across 200+ cities.",
+  },
+  deepDive: {
+    beforeAfter: {
+      heading: "Before & After",
+      items: [
+        { before: "Regional managers spent 3–4 hours per city reading PDFs to assess expansion potential", after: "Each city analysed and labelled in under 8 minutes with a cited 4-word priority signal" },
+        { before: "Hundreds of city reports were unsearchable across shared drives", after: "Every report instantly queryable with sub-2s response times" },
+        { before: "Prioritisation depended on whoever had read the reports most recently", after: "Any team member can query the system independently, 24/7, with consistent output" },
+        { before: "No audit trail — impossible to verify why a city was flagged as high priority", after: "Every label traces back to source citations with document and page references" },
       ],
-      approach: {
-        heading: "How We Approached the Problem",
-        body: "Before writing code we mapped the full data lifecycle: parse, chunk, embed, store, retrieve. Each stage had its own failure modes. We ran a two-day spike to validate pgvector latency targets before committing — it passed, saving infrastructure cost and operational complexity.",
-        rejected: [
-          { option: "Pinecone as vector store", reason: "Added an external dependency and egress cost. pgvector on the existing Postgres instance met p95 latency targets at a fraction of the price." },
-          { option: "LlamaIndex instead of LangChain", reason: "LlamaIndex had better document loaders but weaker chain composition. LangChain LCEL made it easier to build testable, swappable pipeline steps." },
-          { option: "Async queue for every query", reason: "Queries needed to feel synchronous in the UI. We reserved the queue only for ingestion, keeping query paths as fast synchronous endpoints." },
-        ],
-      },
-      dataModel: {
-        heading: "Data Modelling",
-        body: "Two core tables: documents (metadata and processing status) and document_chunks (text segments with vector embeddings). Keeping them separate means we can re-embed all chunks for a document if the embedding model changes without touching metadata.",
-        code: {
-          title: "Database Schema",
-          file: "schema.sql",
-          language: "sql",
-          description: "Core tables with pgvector extension. The HNSW index on the embedding column is the performance-critical piece — without it, similarity search degrades to a full table scan.",
-          code: `CREATE EXTENSION IF NOT EXISTS vector;
+    },
+    processSteps: {
+      heading: "How We Built It",
+      body: "We broke the build into four sequential phases, each with a clear deliverable before moving to the next.",
+      steps: [
+        { title: "Data audit & pipeline design", description: "Catalogued all city reports, assessed quality and structure variance across different report formats, and designed the chunking strategy. Validated pgvector latency targets before committing to the stack." },
+        { title: "Ingestion pipeline", description: "Built the S3 upload flow, PyMuPDF text extraction, 512-token chunking with 64-token overlap, and the Celery worker that manages embedding jobs asynchronously across hundreds of documents." },
+        { title: "Multi-step query chain", description: "Implemented the three-stage LangChain LCEL chain — signal extraction, structured city reasoning, and 4-word priority distillation — with citation enforcement at every step so every label is traceable." },
+        { title: "Next.js dashboard & role-based auth", description: "Built the Next.js frontend with shadcn/ui and Tailwind CSS featuring a sortable priority table, SSE token streaming for city deep-dives, expandable citation chips, and role-based access so each company sees only their own regional data." },
+      ],
+    },
+    architecture: {
+      heading: "System Architecture",
+      body: "The system splits into two flows: an async ingestion pipeline and a synchronous multi-step query pipeline. Ingestion moves through S3, a Celery worker, and pgvector. Queries are synchronous FastAPI endpoints that run a three-stage LangChain chain and stream the final output back to the dashboard.",
+      layers: [
+        { name: "Ingestion Layer", tech: "S3 + Celery + PyMuPDF", description: "City reports land in S3. A Celery worker extracts text with PyMuPDF, chunks into 512-token segments with 64-token overlap, and dispatches embedding jobs." },
+        { name: "Embedding Service", tech: "OpenAI text-embedding-3-small", description: "Each chunk is embedded via the OpenAI embeddings API. Embeddings are 1536-dimensional vectors stored with chunk metadata in pgvector." },
+        { name: "Vector Store", tech: "PostgreSQL + pgvector", description: "HNSW index on the embedding column enables approximate nearest-neighbour search at sub-50ms latency across millions of vectors." },
+        { name: "Multi-Step Query Chain", tech: "FastAPI + LangChain LCEL", description: "Three chained prompts run in sequence: (1) extract market signals from retrieved chunks, (2) reason across signals into a structured city assessment, (3) distil the assessment into a 4-word priority label with confidence score." },
+        { name: "LLM Layer", tech: "OpenAI GPT-4o", description: "Each prompt stage uses GPT-4o with a structured output schema. The final stage is constrained to four possible labels to eliminate hallucinated verdicts." },
+        { name: "Frontend", tech: "Next.js + shadcn/ui + Tailwind CSS", description: "Streams city assessment tokens via SSE. Renders the distilled priority label in a sortable table. Citation chips built with shadcn Badge and Popover expand to show the original document chunk each signal was drawn from." },
+      ],
+    },
+    techCategories: [
+      { category: "Backend", items: ["FastAPI", "Python", "LangChain", "Celery"] },
+      { category: "AI / ML", items: ["OpenAI GPT-4o", "text-embedding-3-small", "pgvector"] },
+      { category: "Database", items: ["PostgreSQL", "Redis"] },
+      { category: "Infrastructure", items: ["AWS S3", "Docker", "AWS ECS"] },
+      { category: "Frontend", items: ["Next.js", "shadcn/ui", "Tailwind CSS", "TypeScript"] },
+    ],
+    approach: {
+      heading: "How We Approached the Problem",
+      body: "Before writing code we mapped the full reasoning chain the system needed to replicate: what signals matter for a city, how those signals combine into a judgement, and what the final output needs to look like for a field rep to act on it immediately. We deliberately chose a three-stage chain over a single large prompt — each stage is independently testable and the intermediate outputs are logged, making it easy to debug where the chain goes wrong on edge-case cities.",
+      rejected: [
+        { option: "Single-shot prompt for the full analysis", reason: "A single prompt asking for extraction, reasoning, and distillation in one pass produced inconsistent label quality. Breaking it into three stages with intermediate validation improved accuracy significantly." },
+        { option: "Pinecone as vector store", reason: "Added an external dependency and egress cost. pgvector on the existing Postgres instance met p95 latency targets at a fraction of the price." },
+        { option: "LlamaIndex instead of LangChain", reason: "LlamaIndex had better document loaders but weaker chain composition. LangChain LCEL made it easier to build testable, swappable pipeline steps across the three prompt stages." },
+      ],
+    },
+    dataModel: {
+      heading: "Data Modelling",
+      body: "Three core tables: companies (RBAC anchor), documents (city report metadata per company), and document_chunks (text segments with embeddings). Keeping company_id on both documents and chunks means every similarity search is automatically scoped — no application-layer filtering needed.",
+      code: {
+        title: "Database Schema",
+        file: "schema.sql",
+        language: "sql",
+        description: "Core tables with pgvector extension and company-scoped access. The HNSW index on the embedding column is the performance-critical piece — without it, similarity search degrades to a full table scan.",
+        code: `CREATE EXTENSION IF NOT EXISTS vector;
+
+CREATE TABLE companies (
+  id         UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  name       TEXT NOT NULL,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT now()
+);
 
 CREATE TABLE documents (
   id          UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  company_id  UUID NOT NULL REFERENCES companies(id),
+  city        TEXT NOT NULL,
   filename    TEXT NOT NULL,
   s3_key      TEXT NOT NULL UNIQUE,
   status      TEXT NOT NULL DEFAULT 'pending',
   page_count  INT,
-  org_id      UUID NOT NULL REFERENCES organisations(id),
   uploaded_by UUID NOT NULL REFERENCES users(id),
   created_at  TIMESTAMPTZ NOT NULL DEFAULT now(),
   indexed_at  TIMESTAMPTZ
@@ -170,6 +178,7 @@ CREATE TABLE documents (
 CREATE TABLE document_chunks (
   id          UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   document_id UUID NOT NULL REFERENCES documents(id) ON DELETE CASCADE,
+  company_id  UUID NOT NULL REFERENCES companies(id),
   chunk_index INT NOT NULL,
   content     TEXT NOT NULL,
   embedding   vector(1536),
@@ -183,84 +192,105 @@ CREATE INDEX idx_chunks_embedding
   USING hnsw (embedding vector_cosine_ops)
   WITH (m = 16, ef_construction = 64);
 
-CREATE INDEX idx_documents_org ON documents (org_id, status);`,
-        },
+CREATE INDEX idx_chunks_company ON document_chunks (company_id);
+CREATE INDEX idx_documents_company ON documents (company_id, city, status);`,
       },
-      apiLayer: {
-        heading: "API Layer",
-        body: "FastAPI handles document upload (async) and query (synchronous streaming). LangChain LCEL composes the query pipeline as typed, testable steps — embed → retrieve → prompt → stream.",
-        code: {
-          title: "Query Pipeline",
-          file: "query_service.py",
-          language: "python",
-          description: "The full query pipeline as a LangChain LCEL chain. Each step is a Runnable — easily swappable and independently testable.",
-          code: `from langchain_core.runnables import RunnablePassthrough, RunnableLambda
+    },
+    apiLayer: {
+      heading: "API Layer",
+      body: "The query endpoint runs a three-stage LangChain LCEL chain. Each stage is a typed Runnable — independently testable and swappable. The final stage is constrained to four labels via an enum in the output schema, eliminating free-text hallucinations in the priority signal.",
+      code: {
+        title: "Multi-Step Query Chain",
+        file: "query_service.py",
+        language: "python",
+        description: "Three chained prompts: extract signals → reason into assessment → distil to 4-word priority label. Each stage passes its output as context to the next.",
+        code: `from langchain_core.runnables import RunnablePassthrough, RunnableLambda
 from langchain_core.output_parsers import JsonOutputParser
 from langchain_openai import ChatOpenAI, OpenAIEmbeddings
 from langchain_postgres import PGVector
 from pydantic import BaseModel
-from typing import List
+from typing import Literal
 
-class QueryResponse(BaseModel):
-    answer: str
-    citations: List[dict]
+class MarketSignals(BaseModel):
+    signals: list[str]
+    competitors: list[str]
+    opportunities: list[str]
+
+class CityAssessment(BaseModel):
+    summary: str
+    strength_score: float
+    risk_score: float
+    rationale: str
+
+class PriorityLabel(BaseModel):
+    label: Literal["Expand Now", "High Potential", "Needs Nurturing", "Deprioritise"]
     confidence: float
+    one_line: str
 
+llm = ChatOpenAI(model="gpt-4o", temperature=0)
 embeddings = OpenAIEmbeddings(model="text-embedding-3-small")
 vector_store = PGVector(
     embeddings=embeddings,
     collection_name="document_chunks",
     connection=settings.DATABASE_URL,
 )
-retriever = vector_store.as_retriever(
-    search_type="similarity",
-    search_kwargs={"k": 6},
-)
 
-SYSTEM_PROMPT = """You are a precise document analyst.
-Answer using ONLY the provided context.
-Always cite sources as [doc_id:page].
-Return valid JSON matching the schema."""
-
-def build_prompt(inputs: dict) -> str:
-    context = "\n\n".join(
-        f"[{d.metadata['doc_id']}:p{d.metadata['page']}] {d.page_content}"
-        for d in inputs["context"]
+def scoped_retriever(company_id: str):
+    return vector_store.as_retriever(
+        search_type="similarity",
+        search_kwargs={"k": 6, "filter": {"company_id": company_id}},
     )
-    return f"{SYSTEM_PROMPT}\n\nContext:\n{context}\n\nQuestion: {inputs['question']}"
 
-query_chain = (
-    {"context": retriever, "question": RunnablePassthrough()}
-    | RunnableLambda(build_prompt)
-    | ChatOpenAI(model="gpt-4o", temperature=0)
-    | JsonOutputParser(pydantic_object=QueryResponse)
+# Stage 1 — extract raw market signals from retrieved chunks
+extract_chain = (
+    RunnableLambda(lambda x: format_chunks(x["context"]))
+    | llm.with_structured_output(MarketSignals)
 )
 
-@router.post("/query")
-async def query_documents(body: QueryRequest):
+# Stage 2 — reason across signals into a structured city assessment
+assess_chain = (
+    RunnableLambda(lambda x: build_assessment_prompt(x))
+    | llm.with_structured_output(CityAssessment)
+)
+
+# Stage 3 — distil assessment into a 4-word priority label
+distil_chain = (
+    RunnableLambda(lambda x: build_distil_prompt(x))
+    | llm.with_structured_output(PriorityLabel)
+)
+
+@router.post("/query/{city}")
+async def analyse_city(city: str, body: QueryRequest, company_id: str = Depends(get_company_id)):
+    retriever = scoped_retriever(company_id)
+    context = await retriever.ainvoke(city)
+    signals = await extract_chain.ainvoke({"context": context})
+    assessment = await assess_chain.ainvoke({"signals": signals, "city": city})
+    priority = await distil_chain.ainvoke({"assessment": assessment})
     return StreamingResponse(
-        query_chain.astream(body.question),
+        stream_result(signals, assessment, priority),
         media_type="text/event-stream",
     )`,
-        },
       },
-      dbFunctions: {
-        heading: "Database Functions",
-        body: "Similarity search and chunk retrieval moved into PostgreSQL functions rather than application code. This keeps heavy lifting close to the data and makes org-level filtering easy without touching application logic.",
-        code: {
-          title: "Similarity Search Function",
-          file: "functions.sql",
-          language: "sql",
-          description: "A single PostgreSQL function wraps vector similarity search, org-level filtering, and chunk hydration in one call.",
-          code: `CREATE OR REPLACE FUNCTION match_chunks(
+    },
+    dbFunctions: {
+      heading: "Database Functions",
+      body: "Similarity search is scoped to the calling company at the SQL level — not in application code. This means even if a bug bypasses the application auth layer, cross-company data leakage is structurally impossible.",
+      code: {
+        title: "Company-Scoped Similarity Search",
+        file: "functions.sql",
+        language: "sql",
+        description: "A single PostgreSQL function wraps vector similarity search with hard company_id scoping. Cross-company leakage is impossible at the query level.",
+        code: `CREATE OR REPLACE FUNCTION match_chunks(
   query_embedding  vector(1536),
-  org_id           UUID,
-  match_count      INT     DEFAULT 6,
-  similarity_floor FLOAT   DEFAULT 0.70
+  company_id       UUID,
+  city_filter      TEXT     DEFAULT NULL,
+  match_count      INT      DEFAULT 6,
+  similarity_floor FLOAT    DEFAULT 0.70
 )
 RETURNS TABLE (
   chunk_id    UUID,
   document_id UUID,
+  city        TEXT,
   content     TEXT,
   page_number INT,
   similarity  FLOAT
@@ -271,84 +301,97 @@ BEGIN
   SELECT
     c.id,
     c.document_id,
+    d.city,
     c.content,
     c.page_number,
     1 - (c.embedding <=> query_embedding) AS similarity
   FROM document_chunks c
   JOIN documents d ON d.id = c.document_id
   WHERE
-    d.org_id = match_chunks.org_id
+    c.company_id = match_chunks.company_id
     AND d.status = 'indexed'
+    AND (city_filter IS NULL OR d.city = city_filter)
     AND 1 - (c.embedding <=> query_embedding) >= similarity_floor
   ORDER BY c.embedding <=> query_embedding
   LIMIT match_count;
 END;
 $$;`,
-        },
-      },
-      frontendConnection: {
-        heading: "Frontend Connection",
-        body: "All network logic lives in a DocumentRepository class injected via Riverpod. The streamQuery method returns a Stream<String> — the widget listens and appends tokens as they arrive.",
-        code: {
-          title: "Document Repository + Streaming Query",
-          file: "document_repository.dart",
-          language: "dart",
-          description: "The repository pattern keeps all API knowledge in one place. Stream<String> from streamQuery lets the widget render tokens progressively.",
-          code: `import 'dart:convert';
-import 'package:http/http.dart' as http;
-import 'package:riverpod_annotation/riverpod_annotation.dart';
-
-part 'document_repository.g.dart';
-
-class DocumentRepository {
-  DocumentRepository({required this.baseUrl, required this.authToken});
-  final String baseUrl;
-  final String authToken;
-
-  Future<String> uploadDocument(List<int> bytes, String filename) async {
-    final request = http.MultipartRequest('POST', Uri.parse('$baseUrl/documents/upload'));
-    request.headers['Authorization'] = 'Bearer $authToken';
-    request.files.add(http.MultipartFile.fromBytes('file', bytes, filename: filename));
-    final response = await request.send();
-    final body = jsonDecode(await response.stream.bytesToString());
-    return body['job_id'] as String;
-  }
-
-  Stream<String> streamQuery(String question) async* {
-    final request = http.Request('POST', Uri.parse('$baseUrl/query'))
-      ..headers['Authorization'] = 'Bearer $authToken'
-      ..headers['Content-Type'] = 'application/json'
-      ..body = jsonEncode({'question': question});
-
-    final response = await http.Client().send(request);
-    await for (final chunk in response.stream.transform(utf8.decoder)) {
-      for (final line in chunk.split('\n')) {
-        if (line.startsWith('data: ')) yield line.substring(6);
-      }
-    }
-  }
-}
-
-@riverpod
-DocumentRepository documentRepository(DocumentRepositoryRef ref) {
-  return DocumentRepository(
-    baseUrl: AppConfig.apiBaseUrl,
-    authToken: ref.watch(authTokenProvider),
-  );
-}`,
-        },
-      },
-      lessons: {
-        heading: "Lessons Learned",
-        items: [
-          { title: "Chunk overlap matters more than chunk size", body: "512 tokens with no overlap left answers that spanned chunk boundaries incomplete. Adding 64-token overlap improved completeness measurably with negligible storage cost." },
-          { title: "Validate the embedding model before you build", body: "Switching from ada-002 to text-embedding-3-small mid-project required re-embedding 2M+ chunks. A model evaluation spike upfront would have saved two days." },
-          { title: "PostgreSQL functions beat ORM for vector ops", body: "Moving similarity search into a SQL function was significantly faster than composing through SQLAlchemy, which generated suboptimal query plans that bypassed the HNSW index." },
-          { title: "Stream everything LLM-related to the client", body: "A 4-second blank screen waiting for the full response felt like an error. SSE streaming with a typing indicator transformed perceived responsiveness even though total latency was identical." },
-        ],
       },
     },
+    frontendConnection: {
+      heading: "Frontend Connection",
+      body: "A custom hook manages the SSE stream and assembles the three-stage chain output as it arrives. The priority table updates optimistically — the label renders as soon as the distillation stage streams back, without waiting for the full response to complete.",
+      code: {
+        title: "City Analysis Hook",
+        file: "use-city-analysis.ts",
+        language: "typescript",
+        description: "Handles SSE streaming across all three chain stages. The priority label and citation chips render progressively as each stage completes.",
+        code: `import { useState, useCallback } from "react"
+
+type PriorityLabel = "Expand Now" | "High Potential" | "Needs Nurturing" | "Deprioritise"
+
+interface CityAnalysis {
+  signals: string[]
+  assessment: { summary: string; strengthScore: number; riskScore: number }
+  priority: { label: PriorityLabel; confidence: number; oneLine: string } | null
+  citations: { docId: string; page: number; chunk: string }[]
+  status: "idle" | "extracting" | "assessing" | "distilling" | "done" | "error"
+}
+
+export function useCityAnalysis(apiBase: string) {
+  const [state, setState] = useState<CityAnalysis>({
+    signals: [],
+    assessment: { summary: "", strengthScore: 0, riskScore: 0 },
+    priority: null,
+    citations: [],
+    status: "idle",
+  })
+
+  const analyseCity = useCallback(async (city: string) => {
+    setState(s => ({ ...s, status: "extracting" }))
+
+    const response = await fetch(\`\${apiBase}/query/\${encodeURIComponent(city)}\`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+    })
+
+    const reader = response.body!.getReader()
+    const decoder = new TextDecoder()
+
+    while (true) {
+      const { done, value } = await reader.read()
+      if (done) break
+
+      for (const line of decoder.decode(value).split("\n")) {
+        if (!line.startsWith("data: ")) continue
+        const data = JSON.parse(line.slice(6))
+
+        if (data.stage === "signals") {
+          setState(s => ({ ...s, signals: data.signals, citations: data.citations, status: "assessing" }))
+        } else if (data.stage === "assessment") {
+          setState(s => ({ ...s, assessment: data.assessment, status: "distilling" }))
+        } else if (data.stage === "priority") {
+          setState(s => ({ ...s, priority: data.priority, status: "done" }))
+        }
+      }
+    }
+  }, [apiBase])
+
+  return { ...state, analyseCity }
+}`,
+      },
+    },
+    lessons: {
+      heading: "Lessons Learned",
+      items: [
+        { title: "Single-shot prompts break on complex reasoning", body: "Asking one prompt to extract signals, reason across them, and produce a label in one pass gave inconsistent results on edge-case cities. Breaking it into three stages with typed intermediate outputs fixed accuracy and made debugging trivial." },
+        { title: "Constrain the final output to an enum", body: "Leaving the priority label as free text produced creative variations like 'Expand Cautiously' that broke the frontend sort logic. Enforcing a Literal type in the Pydantic schema eliminated this entirely." },
+        { title: "Scope at the database level, not just the application", body: "Putting company_id filtering inside a SQL function means cross-company data leakage is structurally impossible — not just dependent on application code being correct." },
+        { title: "Stream intermediate stages, not just the final answer", body: "Showing 'Extracting signals... Assessing city... Distilling priority...' as each stage completed made a 6-second chain feel fast. A blank screen for the same duration felt broken." },
+      ],
+    },
   },
+},
   // ─── PROJECT 2 ───────────────────────────────────────────────────────────────
   {
     id: 2,
@@ -721,7 +764,7 @@ export function useChatStream(conversationId: string, token: string) {
         rejected: [
         { option: "Single monolithic NestJS app", reason: "Content delivery and billing have very different scaling profiles. Separating them with gRPC service-to-service calls meant we could scale the content and download services independently during peak hours." },
         { option: "Kafka instead of RabbitMQ", reason: "Kafka is the right choice for high-throughput event streaming at Spotify scale. At our volume, RabbitMQ's per-queue routing, dead-letter handling, and simpler ops story were a better fit. We can migrate to Kafka if the client hits 100k+ concurrent users." },
-        { option: "REST for inter-service communication", reason: "With 5 services calling each other, REST would have meant HTTP overhead on every internal call and no compile-time contract enforcement. gRPC with .proto files gave us typed contracts, bidirectional streaming for media ops, and ~7x faster serialisation than JSON." },
+        { option: "REST for inter-service communication", reason: "With 5 services calling each other, REST would have meant HTTP overhead on every internal call and no compile-time contract enforcement. gRPC with .proto files gave us typed contracts, bidirectional streaming for media ops, and ~7x faster serialization than JSON." },
         { option: "React Native instead of Flutter", reason: "The client had an existing Flutter codebase for a separate product. Reusing the same framework and Dart developers was faster than switching ecosystems." },
       ],
       },

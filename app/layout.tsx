@@ -4,7 +4,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import ThemeProvider from "@/components/theme-provider";
 
-const geistSans = Geist({
+const geistSans = Geist_Mono({
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
@@ -29,11 +29,58 @@ const orgSchema = {
 };
 
 export const metadata: Metadata = {
-  title: " ○● Voidcore Technologies | AI Infrastructure & Custom RAG Solutions",
-  description: "Custom software, websites, mobile, and web apps — VoidCore Technologies helps startups and enterprises build secure, scalable software fast.",
+  title: "Voidcore Technologies — AI Systems Engineering Studio | RAG & Document Intelligence",
+  description:
+    "Voidcore builds production-grade AI systems for growing companies — custom RAG pipelines, document intelligence platforms, and scalable SaaS backends using NestJS, FastAPI, LangChain, pgvector, and AWS. Based in India. Full IP ownership guaranteed.",
   metadataBase: new URL("https://voidcore.in"),
   alternates: {
     canonical: "https://voidcore.in/",
+  },
+  keywords: [
+    "RAG platform development",
+    "document intelligence AI",
+    "AI systems engineering studio",
+    "LangChain production deployment",
+    "pgvector NeonDB",
+    "NestJS FastAPI backend",
+    "custom AI development India",
+    "SaaS architecture consulting",
+    "vector database integration",
+    "enterprise AI pipelines",
+  ],
+  openGraph: {
+    title: "Voidcore Technologies — AI Systems Engineering Studio",
+    description:
+      "Production-grade RAG pipelines, document intelligence, and SaaS architecture for growing companies. Full IP ownership. Built in India.",
+    url: "https://voidcore.in",
+    siteName: "Voidcore Technologies",
+    locale: "en_IN",
+    type: "website",
+    images: [
+      {
+        url: "https://voidcore.in/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Voidcore Technologies — AI Systems Engineering Studio",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Voidcore Technologies — AI Systems Engineering Studio",
+    description:
+      "Production-grade RAG pipelines, document intelligence, and SaaS architecture. Full IP ownership.",
+    images: ["https://voidcore.in/og-image.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 };
 
@@ -41,6 +88,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <head>
+        <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}

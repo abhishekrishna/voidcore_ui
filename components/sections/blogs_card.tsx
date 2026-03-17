@@ -38,7 +38,7 @@ export default function BlogsSection() {
           </p>
           <h2 className="text-3xl md:text-5xl font-semibold">Blog</h2>
         </div>
-        <p className="text-black/55 dark:text-white/55 max-w-sm text-sm leading-relaxed">
+        <p className="color: var(--vc-ink2 max-w-sm text-sm leading-relaxed">
           Technical deep dives on AI systems, scalable architecture, and production engineering.
         </p>
       </div>
@@ -48,7 +48,7 @@ export default function BlogsSection() {
           {[...Array(3)].map((_, i) => (
             <div
               key={i}
-              className="rounded-2xl border border-black/10 dark:border-white/10
+              className="rounded-2xl border border-color: var(--vc-border)
                          bg-black/[0.03] dark:bg-white/[0.03] h-80 animate-pulse"
             />
           ))}
@@ -58,7 +58,7 @@ export default function BlogsSection() {
           {blogs.map((blog) => (
             <div
               key={blog.id}
-              className="group rounded-2xl border border-black/10 dark:border-white/10
+              className="group rounded-2xl border border-color: var(--vc-border)
                          bg-black/[0.03] dark:bg-white/[0.03] backdrop-blur-xl
                          hover:bg-black/[0.07] dark:hover:bg-white/[0.07]
                          hover:border-black/20 dark:hover:border-white/20
@@ -87,7 +87,7 @@ export default function BlogsSection() {
                   {blog.title}
                 </h3>
 
-                <p className="text-sm text-black/55 dark:text-white/55 leading-relaxed line-clamp-3 mb-6">
+                <p className="text-sm color: var(--vc-ink2 leading-relaxed line-clamp-3 mb-6">
                   {blog.description}
                 </p>
 
@@ -96,7 +96,7 @@ export default function BlogsSection() {
                     onClick={() => setSelectedBlog(blog)}
                     className="text-xs font-medium text-black/40 dark:text-white/40
                                hover:text-black dark:hover:text-white
-                               border border-black/10 dark:border-white/10
+                               border border-color: var(--vc-border)
                                px-3 py-1.5 rounded-lg
                                hover:border-black/20 dark:hover:border-white/20
                                transition-all"

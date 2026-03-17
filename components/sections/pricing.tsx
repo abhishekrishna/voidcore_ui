@@ -32,7 +32,7 @@ export default function PricingSection() {
           </p>
           <h2 className="text-3xl md:text-5xl font-semibold">Pricing</h2>
         </div>
-        <p className="text-black/55 dark:text-white/55 max-w-sm text-sm leading-relaxed">
+        <p className="color: var(--vc-ink2 max-w-sm text-sm leading-relaxed">
           Transparent, fixed-scope packs designed to match founder speed.
         </p>
       </div>
@@ -46,7 +46,7 @@ export default function PricingSection() {
               hover:shadow-xl hover:shadow-black/5 dark:hover:shadow-black/30
               ${pack.featured
                 ? "border-black/20 dark:border-white/20 bg-black/[0.06] dark:bg-white/[0.06] hover:bg-black/[0.09] dark:hover:bg-white/[0.09]"
-                : "border-black/10 dark:border-white/10 bg-black/[0.03] dark:bg-white/[0.03] hover:bg-black/[0.07] dark:hover:bg-white/[0.07] hover:border-black/20 dark:hover:border-white/20"
+                : "border-color: var(--vc-border) bg-black/[0.03] dark:bg-white/[0.03] hover:bg-black/[0.07] dark:hover:bg-white/[0.07] hover:border-black/20 dark:hover:border-white/20"
               }`}
           >
             {pack.featured && (
@@ -62,7 +62,7 @@ export default function PricingSection() {
                 {pack.name}
               </p>
               <p className="text-4xl font-semibold tracking-tight mb-2">{pack.price}</p>
-              <p className="text-sm text-black/55 dark:text-white/55 leading-relaxed">{pack.desc}</p>
+              <p className="text-sm color: var(--vc-ink2 leading-relaxed">{pack.desc}</p>
             </div>
 
             <ul className="space-y-2.5 mb-8 flex-1">
@@ -81,7 +81,7 @@ export default function PricingSection() {
                          transition-opacity hover:opacity-80
                          ${pack.featured
                            ? "bg-black dark:bg-white text-white dark:text-black shadow-lg shadow-black/10 dark:shadow-black/30"
-                           : "border border-black/10 dark:border-white/10 text-black/75 dark:text-white/75 hover:border-black/25 dark:hover:border-white/25"
+                           : "border border-color: var(--vc-border) text-black/75 dark:text-white/75 hover:border-black/25 dark:hover:border-white/25"
                          }`}
             >
               Start with {pack.name}

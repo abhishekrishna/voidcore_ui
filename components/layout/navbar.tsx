@@ -27,7 +27,7 @@ export default function Navbar() {
         {/* ── Main bar ── */}
         <div className="flex items-center justify-between py-3.5
                         backdrop-blur-xl bg-white/60 dark:bg-[#0B0B0F]/50
-                        border border-black/10 dark:border-white/10
+                        border border-color: var(--vc-border)
                         rounded-2xl mt-4 shadow-lg shadow-black/5 dark:shadow-black/20
                         transition-colors duration-200">
 
@@ -46,7 +46,7 @@ export default function Navbar() {
               <Link
                 key={link.label}
                 href={link.href}
-                className="px-3 py-2 rounded-lg text-black/55 dark:text-white/55
+                className="px-3 py-2 rounded-lg color: var(--vc-ink2
                            hover:text-black dark:hover:text-white
                            hover:bg-black/[0.05] dark:hover:bg-white/[0.05]
                            transition-all duration-150"
@@ -59,7 +59,7 @@ export default function Navbar() {
 
             {/* Studio pill */}
             <span className="px-3 py-2 text-black/30 dark:text-white/30 text-xs
-                             border border-black/10 dark:border-white/10
+                             border border-color: var(--vc-border)
                              rounded-lg cursor-default select-none">
               Studio — soon
             </span>
@@ -69,7 +69,7 @@ export default function Navbar() {
               onClick={toggleTheme}
               className="ml-1 p-2 rounded-lg
                          bg-black/[0.05] dark:bg-white/[0.05]
-                         border border-black/10 dark:border-white/10
+                         border border-color: var(--vc-border)
                          hover:bg-black/10 dark:hover:bg-white/10
                          text-black/60 dark:text-white/60
                          hover:text-black dark:hover:text-white
@@ -100,7 +100,7 @@ export default function Navbar() {
             <button
               onClick={toggleTheme}
               className="p-2 rounded-lg bg-black/[0.05] dark:bg-white/[0.05]
-                         border border-black/10 dark:border-white/10
+                         border border-color: var(--vc-border)
                          text-black/60 dark:text-white/60 transition-all"
             >
               {theme === "light" ? <Moon className="h-4 w-4" /> : <Sun className="h-4 w-4" />}
@@ -108,7 +108,7 @@ export default function Navbar() {
             <button
               onClick={() => setOpen(!open)}
               className="p-2 rounded-lg bg-black/[0.05] dark:bg-white/[0.05]
-                         border border-black/10 dark:border-white/10
+                         border border-color: var(--vc-border)
                          text-black dark:text-white transition-all"
             >
               {open ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
@@ -120,7 +120,7 @@ export default function Navbar() {
         {open && (
           <div className="md:hidden mt-2 px-5 py-5 rounded-2xl
                           bg-white/90 dark:bg-[#0B0B0F]/95
-                          border border-black/10 dark:border-white/10
+                          border border-color: var(--vc-border)
                           shadow-xl shadow-black/10 dark:shadow-black/30
                           backdrop-blur-xl
                           flex flex-col gap-1 transition-colors duration-200">
@@ -139,7 +139,7 @@ export default function Navbar() {
               </Link>
             ))}
 
-            <div className="border-t border-black/10 dark:border-white/10 my-2" />
+            <div className="border-t border-color: var(--vc-border) my-2" />
 
             <Link
               href="https://calendly.com/krishna_abhishek/30min"

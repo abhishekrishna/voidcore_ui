@@ -38,7 +38,7 @@ export default function ContactSection() {
 
   const inputClass = `w-full rounded-xl px-4 py-3.5 text-sm
     bg-black/[0.03] dark:bg-white/[0.03]
-    border border-black/10 dark:border-white/10
+    border border-color: var(--vc-border)
     text-black dark:text-white
     placeholder:text-black/35 dark:placeholder:text-white/35
     focus:outline-none focus:border-black/30 dark:focus:border-white/30
@@ -55,7 +55,7 @@ export default function ContactSection() {
           </p>
           <h2 className="text-3xl md:text-5xl font-semibold">Book an Architecture Call</h2>
         </div>
-        <p className="text-black/55 dark:text-white/55 max-w-sm text-sm leading-relaxed">
+        <p className="color: var(--vc-ink2 max-w-sm text-sm leading-relaxed">
           We work with founders and teams building AI-powered systems and scalable SaaS platforms.
         </p>
       </div>
@@ -63,7 +63,7 @@ export default function ContactSection() {
       <div className="grid md:grid-cols-2 gap-8 items-start">
 
         {/* ── Form ── */}
-        <div className="rounded-2xl border border-black/10 dark:border-white/10
+        <div className="rounded-2xl border border-color: var(--vc-border)
                         bg-black/[0.02] dark:bg-white/[0.02] backdrop-blur-xl
                         p-7 shadow-xl shadow-black/5 dark:shadow-black/20">
           <form onSubmit={handleSubmit} className="grid gap-4">
@@ -153,7 +153,7 @@ export default function ContactSection() {
               target={item.href.startsWith("http") ? "_blank" : undefined}
               rel="noopener noreferrer"
               className="group flex items-center gap-4 p-5 rounded-2xl
-                         border border-black/10 dark:border-white/10
+                         border border-color: var(--vc-border)
                          bg-black/[0.03] dark:bg-white/[0.03] backdrop-blur-xl
                          hover:bg-black/[0.07] dark:hover:bg-white/[0.07]
                          hover:border-black/20 dark:hover:border-white/20
@@ -161,7 +161,7 @@ export default function ContactSection() {
                          transition-all duration-300"
             >
               <div className="flex items-center justify-center w-9 h-9 rounded-xl
-                              border border-black/10 dark:border-white/10
+                              border border-color: var(--vc-border)
                               bg-black/[0.05] dark:bg-white/[0.05]
                               text-black/60 dark:text-white/60">
                 {item.icon}
@@ -186,7 +186,7 @@ export default function ContactSection() {
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2 mt-2
-                       w-full rounded-xl border border-black/10 dark:border-white/10
+                       w-full rounded-xl border border-color: var(--vc-border)
                        bg-black/[0.03] dark:bg-white/[0.03]
                        text-black/70 dark:text-white/70 text-sm font-medium
                        px-6 py-3.5

@@ -5,7 +5,7 @@ import { ArrowUpRight } from "lucide-react";
 
 const inputClass = `w-full rounded-xl px-4 py-3 text-sm
   bg-black/[0.03] dark:bg-white/[0.03]
-  border border-black/10 dark:border-white/10
+  border border-color: var(--vc-border)
   text-black dark:text-white
   placeholder:text-black/35 dark:placeholder:text-white/35
   focus:outline-none focus:border-black/30 dark:focus:border-white/30

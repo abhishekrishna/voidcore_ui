@@ -2,7 +2,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  pageExtensions: ["ts", "tsx", "js", "jsx", "/\.mdx?$/"], // remove mdx here for now
+  pageExtensions: ["ts", "tsx", "js", "jsx"], // remove mdx here for now
     images: {
     remotePatterns: [
       {
@@ -13,6 +13,7 @@ const nextConfig: NextConfig = {
       //   protocol: "https",
       //   hostname: "images.unsplash.com",
       // },
+      ///\.mdx?$/
       // {
       //   protocol: "https",
       //   hostname: "images.pexels.com",

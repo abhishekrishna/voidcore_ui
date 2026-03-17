@@ -76,6 +76,17 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+  /* Voidcore brand tokens — light */
+  --vc-accent:      #7C6FCD;
+  --vc-accent-bg:   rgba(124,111,205,0.06);
+  --vc-accent-br:   rgba(124,111,205,0.22);
+  --vc-accent-sh:   0 8px 24px rgba(124,111,205,0.28);
+  --vc-accent-glow: rgba(124,111,205,0.08);
+  --vc-ink:         #0D0D0D;
+  --vc-ink2:        rgba(0,0,0,0.55);
+  --vc-ink3:        rgba(0,0,0,0.40);
+  --vc-border:      rgba(0,0,0,0.10);
+--vc-surface:     rgba(0,0,0,0.03);
 }
 
 /* Improved dark mode contrast */
@@ -111,6 +122,17 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
+  /* Voidcore brand tokens — dark */
+  --vc-accent:      #9D93D8;
+  --vc-accent-bg:   rgba(157,147,216,0.07);
+  --vc-accent-br:   rgba(157,147,216,0.20);
+  --vc-accent-sh:   0 8px 24px rgba(157,147,216,0.20);
+  --vc-accent-glow: rgba(157,147,216,0.10);
+  --vc-ink:         #FFFFFF;
+  --vc-ink2:        rgba(255,255,255,0.55);
+  --vc-ink3:        rgba(255,255,255,0.40);
+  --vc-border:      rgba(255,255,255,0.10);
+  --vc-surface:     rgba(255,255,255,0.03);                 
 }
 
 @layer base {

@@ -17,7 +17,7 @@ const socials = [
 
 export default function Footer() {
   return (
-    <footer className="border-t border-black/10 dark:border-white/10 transition-colors duration-300">
+    <footer className="border-t border-color: var(--vc-border) transition-colors duration-300">
       <div className="mx-auto max-w-7xl px-6 py-14">
 
         {/* ── Top row ── */}
@@ -67,7 +67,7 @@ export default function Footer() {
         </div>
 
         {/* ── Divider ── */}
-        <div className="border-t border-black/10 dark:border-white/10 mb-6" />
+        <div className="border-t border-color: var(--vc-border) mb-6" />
 
         {/* ── Bottom row ── */}
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-3

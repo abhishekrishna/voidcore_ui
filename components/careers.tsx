@@ -16,7 +16,7 @@ const MAX_FILE_SIZE = 5 * 1024 * 1024;
 
 const inputClass = `w-full rounded-xl px-4 py-3.5 text-sm
   bg-black/[0.03] dark:bg-white/[0.03]
-  border border-black/10 dark:border-white/10
+  border border-color: var(--vc-border)
   text-black dark:text-white
   placeholder:text-black/35 dark:placeholder:text-white/35
   focus:outline-none focus:border-black/30 dark:focus:border-white/30
@@ -72,7 +72,7 @@ export default function CareersSection() {
           </p>
           <h2 className="text-3xl md:text-5xl font-semibold">Join as an Early Builder</h2>
         </div>
-        <p className="text-black/55 dark:text-white/55 max-w-sm text-sm leading-relaxed">
+        <p className="color: var(--vc-ink2 max-w-sm text-sm leading-relaxed">
           We value ownership, technical clarity, and shipping real products.
         </p>
       </div>
@@ -88,7 +88,7 @@ export default function CareersSection() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.4 }}
-              className="rounded-2xl border border-black/10 dark:border-white/10
+              className="rounded-2xl border border-color: var(--vc-border)
                          bg-black/[0.03] dark:bg-white/[0.03] backdrop-blur-xl
                          p-10 flex flex-col items-center justify-center text-center gap-4
                          shadow-xl shadow-black/5 dark:shadow-black/20 min-h-[320px]"
@@ -105,7 +105,7 @@ export default function CareersSection() {
               onSubmit={handleSubmit}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              className="rounded-2xl border border-black/10 dark:border-white/10
+              className="rounded-2xl border border-color: var(--vc-border)
                          bg-black/[0.02] dark:bg-white/[0.02] backdrop-blur-xl
                          p-7 space-y-4 shadow-xl shadow-black/5 dark:shadow-black/20"
             >
@@ -136,7 +136,7 @@ export default function CareersSection() {
                   accept="application/pdf"
                   className={`w-full rounded-xl px-4 py-3 text-sm cursor-pointer
                     bg-black/[0.03] dark:bg-white/[0.03]
-                    border border-black/10 dark:border-white/10
+                    border border-color: var(--vc-border)
                     text-black/60 dark:text-white/60
                     file:mr-4 file:rounded-lg file:border-0
                     file:bg-black/10 dark:file:bg-white/10
@@ -185,7 +185,7 @@ export default function CareersSection() {
           ].map((item) => (
             <div
               key={item.role}
-              className="rounded-2xl border border-black/10 dark:border-white/10
+              className="rounded-2xl border border-color: var(--vc-border)
                          bg-black/[0.03] dark:bg-white/[0.03] backdrop-blur-xl
                          p-6 hover:bg-black/[0.06] dark:hover:bg-white/[0.06]
                          hover:border-black/20 dark:hover:border-white/20
@@ -196,7 +196,7 @@ export default function CareersSection() {
                 <h3 className="text-base font-semibold">{item.role}</h3>
                 <span className="text-[10px] uppercase tracking-[0.15em] font-medium
                                  text-black/40 dark:text-white/40
-                                 border border-black/10 dark:border-white/10
+                                 border border-color: var(--vc-border)
                                  px-2.5 py-1 rounded-full shrink-0 ml-3">
                   Open
                 </span>
@@ -204,7 +204,7 @@ export default function CareersSection() {
               <p className="text-[10px] uppercase tracking-[0.15em] text-black/35 dark:text-white/35 mb-2">
                 {item.type}
               </p>
-              <p className="text-sm text-black/55 dark:text-white/55 leading-relaxed">{item.desc}</p>
+              <p className="text-sm color: var(--vc-ink2 leading-relaxed">{item.desc}</p>
             </div>
           ))}
         </div>

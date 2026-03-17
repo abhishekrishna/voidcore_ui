@@ -104,7 +104,7 @@ export default async function SolutionPage({
               <div className="flex items-center gap-3 mb-7">
                 <span className="text-[10px] uppercase tracking-[0.22em] font-medium
                                  text-black/40 dark:text-white/40
-                                 border border-black/10 dark:border-white/10
+                                 border border-color: var(--vc-border)
                                  bg-black/[0.03] dark:bg-white/[0.03]
                                  px-3 py-1.5 rounded-full">
                   {solution.tag}
@@ -118,7 +118,7 @@ export default async function SolutionPage({
                 {solution.title}
               </h1>
 
-              <p className="text-black/55 dark:text-white/55 text-lg leading-relaxed max-w-xl mb-10">
+              <p className="color: var(--vc-ink2 text-lg leading-relaxed max-w-xl mb-10">
                 {solution.longDescription}
               </p>
 
@@ -150,7 +150,7 @@ export default async function SolutionPage({
             <div className="relative">
               {/* Glow behind card */}
               <div className="absolute -inset-4 bg-black/[0.02] dark:bg-white/[0.04] rounded-3xl blur-2xl" />
-              <div className="relative rounded-2xl border border-black/10 dark:border-white/10
+              <div className="relative rounded-2xl border border-color: var(--vc-border)
                               bg-white/80 dark:bg-[#0B0B0F]/80 backdrop-blur-xl p-8
                               shadow-2xl shadow-black/8 dark:shadow-black/40">
                 <p className="text-[10px] uppercase tracking-[0.22em] text-black/35 dark:text-white/35 mb-7">
@@ -180,7 +180,7 @@ export default async function SolutionPage({
                         className="text-xs px-2.5 py-1 rounded-lg
                                    border border-black/8 dark:border-white/8
                                    bg-black/[0.03] dark:bg-white/[0.03]
-                                   text-black/55 dark:text-white/55">
+                                   color: var(--vc-ink2">
                         {tech}
                       </span>
                     ))}
@@ -209,7 +209,7 @@ export default async function SolutionPage({
 
             {solution.process.map((p, i) => (
               <div key={p.step} className="relative group">
-                <div className="rounded-2xl border border-black/10 dark:border-white/10
+                <div className="rounded-2xl border border-color: var(--vc-border)
                                 bg-black/[0.02] dark:bg-white/[0.02] backdrop-blur-sm
                                 p-7 h-full
                                 hover:border-black/20 dark:hover:border-white/20
@@ -241,7 +241,7 @@ export default async function SolutionPage({
           <div className="grid lg:grid-cols-2 gap-6">
 
             {/* Problems */}
-            <div className="rounded-2xl border border-black/10 dark:border-white/10
+            <div className="rounded-2xl border border-color: var(--vc-border)
                             bg-black/[0.02] dark:bg-white/[0.02] backdrop-blur-xl p-8">
               <p className="text-[10px] uppercase tracking-[0.22em] text-black/35 dark:text-white/35 mb-2">
                 Challenges
@@ -271,7 +271,7 @@ export default async function SolutionPage({
             </div>
 
             {/* Who it's for */}
-            <div className="rounded-2xl border border-black/10 dark:border-white/10
+            <div className="rounded-2xl border border-color: var(--vc-border)
                             bg-black/[0.02] dark:bg-white/[0.02] backdrop-blur-xl p-8">
               <p className="text-[10px] uppercase tracking-[0.22em] text-black/35 dark:text-white/35 mb-2">
                 Best fit
@@ -314,7 +314,7 @@ export default async function SolutionPage({
             <div className="space-y-3">
               {solution.faqs.map((faq, i) => (
                 <div key={i}
-                  className="rounded-2xl border border-black/10 dark:border-white/10
+                  className="rounded-2xl border border-color: var(--vc-border)
                              bg-black/[0.02] dark:bg-white/[0.02] backdrop-blur-xl
                              p-7 hover:border-black/20 dark:hover:border-white/20
                              hover:bg-black/[0.05] dark:hover:bg-white/[0.05]
@@ -342,7 +342,7 @@ export default async function SolutionPage({
               <Link
                 key={s.slug}
                 href={`/solutions/${s.slug}`}
-                className="group relative rounded-2xl border border-black/10 dark:border-white/10
+                className="group relative rounded-2xl border border-color: var(--vc-border)
                            bg-black/[0.02] dark:bg-white/[0.02] backdrop-blur-xl p-7 overflow-hidden
                            hover:border-black/20 dark:hover:border-white/20
                            hover:bg-black/[0.06] dark:hover:bg-white/[0.06]
@@ -354,7 +354,7 @@ export default async function SolutionPage({
                 <div className="flex items-start justify-between mb-5">
                   <span className="text-[10px] uppercase tracking-[0.18em] font-medium
                                    text-black/35 dark:text-white/35
-                                   border border-black/10 dark:border-white/10
+                                   border border-color: var(--vc-border)
                                    px-2.5 py-1 rounded-full">
                     {s.tag}
                   </span>
@@ -372,7 +372,7 @@ export default async function SolutionPage({
 
         {/* ── CTA + Form ── */}
         <section id="contact-form" className="mx-auto max-w-7xl px-6 py-24">
-          <div className="relative rounded-3xl border border-black/10 dark:border-white/10 overflow-hidden">
+          <div className="relative rounded-3xl border border-color: var(--vc-border) overflow-hidden">
             {/* Background texture */}
             <div className="absolute inset-0 bg-black/[0.025] dark:bg-white/[0.025]" />
             <div className="absolute inset-0 

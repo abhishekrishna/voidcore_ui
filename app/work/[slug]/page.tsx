@@ -127,7 +127,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
       <section className="mx-auto max-w-4xl px-6 pt-12 pb-16">
         <div className="flex items-center gap-3 mb-7">
           <span className="text-[10px] uppercase tracking-[0.2em] font-medium
-                           border border-black/10 dark:border-white/10
+                           border border-color: var(--vc-border)
                            text-black/50 dark:text-white/50 rounded-full px-3 py-1">
             {project.tag}
           </span>
@@ -487,8 +487,8 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
               <Link href="/#work"
                 className="inline-flex items-center justify-center
                            px-5 py-2.5 rounded-xl
-                           border border-black/10 dark:border-white/10
-                           text-sm font-medium text-black/55 dark:text-white/55
+                           border border-color: var(--vc-border)
+                           text-sm font-medium color: var(--vc-ink2
                            hover:border-black/20 dark:hover:border-white/20
                            hover:text-black dark:hover:text-white transition-all">
                 All work

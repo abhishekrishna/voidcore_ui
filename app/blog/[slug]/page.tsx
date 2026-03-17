@@ -87,17 +87,17 @@ export default async function BlogPage({
           </h1>
 
           {description && (
-            <p className="text-lg text-black/55 dark:text-white/55 leading-relaxed mb-10 max-w-2xl">
+            <p className="text-lg color: var(--vc-ink2 leading-relaxed mb-10 max-w-2xl">
               {description}
             </p>
           )}
 
-          <div className="border-t border-black/10 dark:border-white/10 mb-14" />
+          <div className="border-t border-color: var(--vc-border) mb-14" />
         </div>
 
         {/* ── Article body ── */}
         <div className="max-w-3xl mx-auto pb-32">
-          <div className="rounded-2xl border border-black/10 dark:border-white/10
+          <div className="rounded-2xl border border-color: var(--vc-border)
                           bg-white dark:bg-[#111113]
                           p-8 md:p-12
                           shadow-xl shadow-black/5 dark:shadow-black/30

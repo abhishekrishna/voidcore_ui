@@ -16,7 +16,7 @@ export default function WorkSection() {
           </p>
           <h2 className="text-3xl md:text-5xl font-semibold">Selected Work</h2>
         </div>
-        <p className="text-black/55 dark:text-white/55 max-w-sm text-sm leading-relaxed">
+        <p className="color: var(--vc-ink2 max-w-sm text-sm leading-relaxed">
           Projects built with clarity, speed, and reliability for startups and teams worldwide.
         </p>
       </div>
@@ -27,7 +27,7 @@ export default function WorkSection() {
             key={project.id}
             href={`/work/${project.slug}`}
             className="group flex flex-row h-[200px] rounded-2xl overflow-hidden
-                       border border-black/10 dark:border-white/10
+                       border border-color: var(--vc-border)
                        bg-black/[0.03] dark:bg-white/[0.03]
                        hover:border-black/20 dark:hover:border-white/20
                        hover:bg-black/[0.06] dark:hover:bg-white/[0.06]

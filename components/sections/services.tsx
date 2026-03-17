@@ -24,7 +24,7 @@ export default function ServicesSection() {
           <Link
             key={srv.slug}
             href={`/solutions/${srv.slug}`}
-            className="group relative rounded-2xl border border-black/10 dark:border-white/10
+            className="group relative rounded-2xl border border-color: var(--vc-border)
                        bg-black/[0.03] dark:bg-white/[0.03] backdrop-blur-xl p-7
                        hover:bg-black/[0.07] dark:hover:bg-white/[0.07]
                        hover:border-black/20 dark:hover:border-white/20
@@ -37,7 +37,7 @@ export default function ServicesSection() {
             <div className="flex items-start justify-between mb-5">
               <span className="text-[10px] uppercase tracking-[0.18em] font-medium
                                text-black/40 dark:text-white/40
-                               border border-black/10 dark:border-white/10
+                               border border-color: var(--vc-border)
                                px-2.5 py-1 rounded-full">
                 {srv.tag}
               </span>

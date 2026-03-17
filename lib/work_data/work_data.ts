@@ -73,8 +73,8 @@ export const projects: Project[] = [
   // ─── PROJECT 1 ───────────────────────────────────────────────────────────────
 {
   id: 1,
-  slug: "ai-document-intelligence",
-  title: "AI Document Intelligence Platform",
+  slug: "ai-sales-intelligence",
+  title: "AI Sales Intelligence Platform",
   description: "Built a production-grade multi-step RAG system to process city-level healthcare distribution reports, distill them into ranked priority signals, and surface expansion recommendations through a role-based dashboard — helping regional teams decide where to push next.",
   image: "https://res.cloudinary.com/dqzte0i12/image/upload/v1773421447/original-b1834271e042a940a4da9edc316725d1_dmzkd0.webp",
   tag: "AI / RAG",

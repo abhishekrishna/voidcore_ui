@@ -167,11 +167,11 @@ export default function HeroModern() {
             <ArrowUpRight className="h-4 w-4" />
           </a>
           <a
-            href="/#work"
-            // target="_blank"
+            href="https://github.com/abhishekrishna"
+            target="_blank"
             className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl border border-black/15 dark:border-white/15 bg-black/[0.02] dark:bg-white/[0.02] text-black/75 dark:text-white/75 text-sm font-medium hover:border-black/30 dark:hover:border-white/30 hover:text-black dark:hover:text-white backdrop-blur-sm transition-all"
           >
-            Selected Work
+            GitHub
             <ArrowUpRight className="h-3.5 w-3.5" />
           </a>
         </motion.div>

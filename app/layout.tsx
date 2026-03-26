@@ -29,7 +29,7 @@ const orgSchema = {
 };
 
 export const metadata: Metadata = {
-  title: "Voidcore Technologies — AI Systems Engineering Studio | RAG & Document Intelligence",
+  title: " ○● Voidcore Technologies — AI Systems Engineering Studio | RAG & Document Intelligence",
   description:
     "Voidcore builds production-grade AI systems for growing companies — custom RAG pipelines, document intelligence platforms, and scalable SaaS backends using NestJS, FastAPI, LangChain, pgvector, and AWS. Based in India. Full IP ownership guaranteed.",
   metadataBase: new URL("https://voidcore.in"),

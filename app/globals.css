@@ -76,63 +76,90 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
-  /* Voidcore brand tokens — light */
-  --vc-accent:      #7C6FCD;
-  --vc-accent-bg:   rgba(124,111,205,0.06);
-  --vc-accent-br:   rgba(124,111,205,0.22);
-  --vc-accent-sh:   0 8px 24px rgba(124,111,205,0.28);
-  --vc-accent-glow: rgba(124,111,205,0.08);
-  --vc-ink:         #0D0D0D;
-  --vc-ink2:        rgba(0,0,0,0.55);
-  --vc-ink3:        rgba(0,0,0,0.40);
-  --vc-border:      rgba(0,0,0,0.10);
---vc-surface:     rgba(0,0,0,0.03);
+
+  /* ── Voidcore · Abyss palette · light ─────────────────────────────────── */
+  /* Base: #0A0A0F  Surface: #1A1A2E  Text: #E2E2F0  Muted: #6C6C9A  Accent: #C8FF00 */
+
+  /* Accent — acid green */
+  --vc-accent:      #C8FF00;
+  --vc-accent-bg:   rgba(200, 255, 0, 0.06);
+  --vc-accent-br:   rgba(200, 255, 0, 0.22);
+  --vc-accent-sh:   0 8px 24px rgba(200, 255, 0, 0.18);
+  --vc-accent-glow: rgba(200, 255, 0, 0.08);
+
+  /* Ink — light mode uses near-black base */
+  --vc-ink:         #0A0A0F;
+  --vc-ink2:        rgba(10, 10, 15, 0.55);
+  --vc-ink3:        rgba(10, 10, 15, 0.40);
+
+  /* Structure */
+  --vc-border:      rgba(10, 10, 15, 0.10);
+  --vc-surface:     rgba(26, 26, 46, 0.04);
+
+  /* Extra Abyss tokens */
+  --vc-base:        #0A0A0F;
+  --vc-layer:       #1A1A2E;
+  --vc-text:        #E2E2F0;
+  --vc-muted:       #6C6C9A;
 }
 
-/* Improved dark mode contrast */
+/* ── Dark mode ─────────────────────────────────────────────────────────── */
 .dark {
-  --background: #000;
-  --foreground: #fff;
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
+  --background: #0A0A0F;
+  --foreground: #E2E2F0;
+  --card: #1A1A2E;
+  --card-foreground: #E2E2F0;
+  --popover: #1A1A2E;
+  --popover-foreground: #E2E2F0;
+  --primary: #C8FF00;
+  --primary-foreground: #0A0A0F;
+  --secondary: #1A1A2E;
+  --secondary-foreground: #E2E2F0;
+  --muted: #1A1A2E;
+  --muted-foreground: #6C6C9A;
+  --accent: #1A1A2E;
+  --accent-foreground: #E2E2F0;
   --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
+  --border: rgba(226, 226, 240, 0.08);
+  --input: rgba(226, 226, 240, 0.10);
+  --ring: #6C6C9A;
   --chart-1: oklch(0.488 0.243 264.376);
   --chart-2: oklch(0.696 0.17 162.48);
   --chart-3: oklch(0.769 0.188 70.08);
   --chart-4: oklch(0.627 0.265 303.9);
   --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
-  /* Voidcore brand tokens — dark */
-  --vc-accent:      #9D93D8;
-  --vc-accent-bg:   rgba(157,147,216,0.07);
-  --vc-accent-br:   rgba(157,147,216,0.20);
-  --vc-accent-sh:   0 8px 24px rgba(157,147,216,0.20);
-  --vc-accent-glow: rgba(157,147,216,0.10);
-  --vc-ink:         #FFFFFF;
-  --vc-ink2:        rgba(255,255,255,0.55);
-  --vc-ink3:        rgba(255,255,255,0.40);
-  --vc-border:      rgba(255,255,255,0.10);
-  --vc-surface:     rgba(255,255,255,0.03);                 
+  --sidebar: #1A1A2E;
+  --sidebar-foreground: #E2E2F0;
+  --sidebar-primary: #C8FF00;
+  --sidebar-primary-foreground: #0A0A0F;
+  --sidebar-accent: rgba(226, 226, 240, 0.05);
+  --sidebar-accent-foreground: #E2E2F0;
+  --sidebar-border: rgba(226, 226, 240, 0.08);
+  --sidebar-ring: #6C6C9A;
+
+  /* ── Voidcore · Abyss palette · dark ──────────────────────────────────── */
+
+  /* Accent — acid green (same hue, slightly pulled back for dark comfort) */
+  --vc-accent:      #C8FF00;
+  --vc-accent-bg:   rgba(200, 255, 0, 0.07);
+  --vc-accent-br:   rgba(200, 255, 0, 0.20);
+  --vc-accent-sh:   0 8px 24px rgba(200, 255, 0, 0.14);
+  --vc-accent-glow: rgba(200, 255, 0, 0.10);
+
+  /* Ink — dark mode uses off-white text */
+  --vc-ink:         #E2E2F0;
+  --vc-ink2:        rgba(226, 226, 240, 0.55);
+  --vc-ink3:        rgba(226, 226, 240, 0.38);
+
+  /* Structure */
+  --vc-border:      rgba(226, 226, 240, 0.08);
+  --vc-surface:     rgba(226, 226, 240, 0.03);
+
+  /* Extra Abyss tokens */
+  --vc-base:        #0A0A0F;
+  --vc-layer:       #1A1A2E;
+  --vc-text:        #E2E2F0;
+  --vc-muted:       #6C6C9A;
 }
 
 @layer base {

@@ -130,7 +130,7 @@ export default function HeroModern() {
           }}
         >
           {v.title}{" "}
-          <span style={{ color: "#7C6FCD" }}>{v.titleAccent}</span>
+          <span style={{ color: "#var(--vc-accent)" }}>{v.titleAccent}</span>
         </motion.h1>
 
         {/* Subtitle */}
@@ -157,10 +157,10 @@ export default function HeroModern() {
         >
           <a
             href="#contact"
-            className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-white text-sm font-semibold hover:opacity-90 transition-opacity"
+            className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-sm font-semibold hover:opacity-90 transition-opacity border border-color: var(--vc-border) bg-"
             style={{
-              background: "#7C6FCD",
-              boxShadow: "var(--vc-accent-sh)",
+              background: "#var(--vc-accent)",
+              // boxShadow: "var(--vc-accent-sh)",
             }}
           >
             Start a project
@@ -239,7 +239,7 @@ export default function HeroModern() {
             >
               <div
                 className="text-[28px] font-semibold tracking-tight"
-                style={{ color: "#7C6FCD" }}
+                style={{ color: "#var(--vc-accent)" }}
               >
                 {s.num}
               </div>

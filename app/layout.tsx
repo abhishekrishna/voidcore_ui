@@ -82,6 +82,12 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+  icons: {
+  icon: [
+    { url: "favicon.svg", media: "(prefers-color-scheme: light)" },
+    { url: "favicon-outline.svg", media: "(prefers-color-scheme: dark)" },
+  ],
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

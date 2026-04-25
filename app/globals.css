@@ -157,9 +157,12 @@
 
   /* Extra Abyss tokens */
   --vc-base:        #0A0A0F;
-  --vc-layer:       #1A1A2E;
+  /* --vc-layer:       #1A1A2E; */
   --vc-text:        #E2E2F0;
-  --vc-muted:       #6C6C9A;
+  /* --vc-muted:       #6C6C9A; */
+  --vc-layer:  #0F1117;   /* colder surface, kills purple warmth */
+  --vc-muted:  #4A4A5E;   /* steel grey, not lavender */
+  --vc-accent: #CCFF00;   /* very slightly sharper green */
 }
 
 @layer base {

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Menu, X, Moon, Sun } from "lucide-react";
+import { Menu, X, Moon, Sun, FileSearch } from "lucide-react";
 import Link from "next/link";
 import { useTheme } from "@/components/theme-provider";
 
@@ -46,7 +46,7 @@ export default function Navbar() {
               <Link
                 key={link.label}
                 href={link.href}
-                className="px-3 py-2 rounded-lg color: var(--vc-ink2
+                className="px-3 py-2 rounded-lg color: var(--vc-ink2)
                            hover:text-black dark:hover:text-white
                            hover:bg-black/[0.05] dark:hover:bg-white/[0.05]
                            transition-all duration-150"
@@ -57,12 +57,28 @@ export default function Navbar() {
 
             <span className="mx-1 text-black/15 dark:text-white/15 text-xs select-none">|</span>
 
-            {/* Studio pill */}
-            <span className="px-3 py-2 text-black/30 dark:text-white/30 text-xs
-                             border border-color: var(--vc-border)
-                             rounded-lg cursor-default select-none">
-              Studio — soon
-            </span>
+            {/* Studio pill — now with "New" badge */}
+            <Link
+              href="https://studio.voidcore.com"
+              target="_blank"
+              className="relative flex items-center gap-1.5 px-3 py-2
+                         text-black/70 dark:text-white/70 text-xs
+                         border border-black/10 dark:border-white/10
+                         rounded-lg hover:bg-black/[0.05] dark:hover:bg-white/[0.05]
+                         transition-all group"
+            >
+              <FileSearch className="h-3.5 w-3.5 text-black/40 dark:text-white/40 group-hover:text-black dark:group-hover:text-white transition-colors" />
+              Studio
+              {/* "New" badge */}
+              <span className="absolute -top-2 -right-2
+                               bg-black dark:bg-white
+                               text-white dark:text-black
+                               text-[9px] font-bold leading-none
+                               px-1.5 py-0.5 rounded-full
+                               shadow-sm">
+                NEW
+              </span>
+            </Link>
 
             {/* Theme toggle */}
             <button
@@ -140,6 +156,29 @@ export default function Navbar() {
             ))}
 
             <div className="border-t border-color: var(--vc-border) my-2" />
+
+            {/* Studio entry in mobile menu */}
+            <Link
+              href="https://docu-mind-rose.vercel.app/"
+              target="_blank"
+              onClick={() => setOpen(false)}
+              className="flex items-center justify-between px-3 py-2.5 rounded-xl
+                         border border-black/10 dark:border-white/10
+                         hover:bg-black/[0.05] dark:hover:bg-white/[0.05]
+                         transition-all"
+            >
+              <div className="flex items-center gap-2">
+                <FileSearch className="h-4 w-4 text-black/40 dark:text-white/40" />
+                <span className="text-sm text-black/70 dark:text-white/70">Studio</span>
+                <span className="text-[10px] font-semibold text-black/40 dark:text-white/40 leading-none">
+                  — upload & query docs
+                </span>
+              </div>
+              <span className="bg-black dark:bg-white text-white dark:text-black
+                               text-[9px] font-bold px-1.5 py-0.5 rounded-full">
+                NEW
+              </span>
+            </Link>
 
             <Link
               href="https://calendly.com/krishna_abhishek/30min"

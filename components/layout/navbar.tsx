@@ -59,7 +59,7 @@ export default function Navbar() {
 
             {/* Studio pill — now with "New" badge */}
             <Link
-              href="https://studio.voidcore.com"
+              href="https://docu-mind-rose.vercel.app/"
               target="_blank"
               className="relative flex items-center gap-1.5 px-3 py-2
                          text-black/70 dark:text-white/70 text-xs

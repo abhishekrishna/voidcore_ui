@@ -91,7 +91,7 @@ export default function HeroModern() {
       <section className="relative mx-auto max-w-6xl px-6 pt-44 pb-32">
 
         {/* Eyebrow */}
-        <motion.div
+        {/* <motion.div
           key={v.key + "-eyebrow"}
           initial={{ opacity: 0, y: 6 }}
           animate={{ opacity: 1, y: 0 }}
@@ -114,7 +114,7 @@ export default function HeroModern() {
             />
             {v.eyebrow}
           </span>
-        </motion.div>
+        </motion.div> */}
 
         {/* Title */}
         <motion.h1

@@ -12,41 +12,58 @@ import { ArrowUpRight } from "lucide-react";
 
 const variants = [
   {
-    key: "ai-systems",
-    eyebrow: "AI Systems Engineering Studio",
-    title: "AI-powered internal systems for",
-    titleAccent: "growing companies.",
+    key: "core",
+    eyebrow: "AI Systems Studio · India",
+    title: "Your business runs on information.",
+    titleAccent: "Yours should too.",
     subtitle:
-      "We design and build production-grade document intelligence, RAG platforms, and scalable backend architecture.",
+      "We build AI systems that plug into what your team already has — emails, calls, documents, records — and make it instantly queryable, structured, and useful.",
   },
   {
-    key: "document-intelligence",
+    key: "memory",
+    eyebrow: "Institutional Memory",
+    title: "Three years of data.",
+    titleAccent: "One question away.",
+    subtitle:
+      "Who attended which event. Which vendor quoted what. Which candidate came through which deal. Stop digging through folders — ask your data directly.",
+  },
+  {
+    key: "voice",
+    eyebrow: "Voice & Call Intelligence",
+    title: "Your team talks.",
+    titleAccent: "Your systems should listen.",
+    subtitle:
+      "Sales calls, field updates, vendor negotiations — automatically transcribed, extracted, and pushed into your CRM, inventory, or ops tools as structured records.",
+  },
+  {
+    key: "documents",
     eyebrow: "Document Intelligence",
-    title: "Turn complex documents into",
-    titleAccent: "usable decisions.",
+    title: "Stop reading documents.",
+    titleAccent: "Start querying them.",
     subtitle:
-      "Contracts, compliance files, reports, knowledge bases — processed, indexed, and transformed into structured insights with secure AI pipelines.",
+      "Contracts, compliance reports, knowledge bases — indexed and connected so your team gets ranked answers and risk flags instead of 40-page PDFs to skim.",
   },
   {
-    key: "saas-architecture",
-    eyebrow: "SaaS & Platform Builds",
-    title: "From MVP to",
-    titleAccent: "scalable architecture.",
+    key: "build",
+    eyebrow: "SaaS & Platform Engineering",
+    title: "Built right the first time.",
+    titleAccent: "Scales when you do.",
     subtitle:
-      "NestJS, FastAPI, microservices, vector databases, AWS — built for long-term scale, observability, and ownership.",
+      "Full stack engineering with NestJS, FastAPI, and AWS — microservices architecture, vector databases, and complete IP ownership from day one. No vendor lock-in, ever.",
   },
 ];
 
 const techPills = [
-  "RAG & LangChain production deployments",
-  "Microservices · gRPC · RabbitMQ · AWS · Docker",
+  "RAG & LangChain · production-grade",
+  "NestJS · FastAPI · Microservices · AWS · Docker",
   "Vector DBs · pgvector · NeonDB",
-  "Full IP & code ownership",
+  "Voice → Transcript → Structured JSON pipelines",
+  "Full IP & code ownership, always",
 ];
 
 const stats = [
-  { num: "12+", label: "Production deployments" },
-  { num: "RAG", label: "Core specialisation" },
+  { num: "15+", label: "Production deployments" },
+  { num: "Zero", label: "Off-the-shelf wrappers. Ever." },
   { num: "100%", label: "IP ownership, always" },
 ];
 
@@ -57,7 +74,7 @@ export default function HeroModern() {
   useEffect(() => {
     const interval = setInterval(() => {
       handleSwitch((active + 1) % variants.length);
-    }, 5000);
+    }, 10000);
     return () => clearInterval(interval);
   }, [active]);
 

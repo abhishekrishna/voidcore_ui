@@ -15,7 +15,7 @@ const variants = [
     key: "core",
     eyebrow: "AI Systems Studio · India",
     title: "Your business runs on information.",
-    titleAccent: "Yours should too.",
+    titleAccent: "Almost none of it is structured.",
     subtitle:
       "We build AI systems that plug into what your team already has — emails, calls, documents, records — and make it instantly queryable, structured, and useful.",
   },

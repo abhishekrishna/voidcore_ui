@@ -76,7 +76,7 @@ export default function Navbar() {
                                text-[9px] font-bold leading-none
                                px-1.5 py-0.5 rounded-full
                                shadow-sm">
-                NEW
+                alpha0.1
               </span>
             </Link>
 

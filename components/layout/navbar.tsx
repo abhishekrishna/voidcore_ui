@@ -59,7 +59,7 @@ export default function Navbar() {
 
             {/* Studio pill — now with "New" badge */}
             <Link
-              href="https://frontend-two-virid-34.vercel.app/"
+              href="https://app.voidcore.in/"
               target="_blank"
               className="relative flex items-center gap-1.5 px-3 py-2
                          text-black/70 dark:text-white/70 text-xs

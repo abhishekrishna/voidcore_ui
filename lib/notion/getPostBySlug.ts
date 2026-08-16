@@ -1,7 +1,9 @@
 import { notion } from "./client";
 import { NotionAPI } from "notion-client";
 
-const notionX = new NotionAPI();
+const notionX = new NotionAPI({
+  apiBaseUrl: "https://app.notion.com/api/v3"
+});
 
 export async function getPostBySlug(slug: string) {
   // const databaseId = process.env.BLOG_INDEX_ID!;

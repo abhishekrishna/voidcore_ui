@@ -56,14 +56,15 @@ export default function BlogsSection() {
       ) : (
         <div className="grid gap-4 md:grid-cols-3">
           {blogs.map((blog) => (
-            <div
+            <Link
               key={blog.id}
+              href={`/blog/${blog.slug}`}
               className="group rounded-2xl border border-color: var(--vc-border)
                          bg-black/[0.03] dark:bg-white/[0.03] backdrop-blur-xl
                          hover:bg-black/[0.07] dark:hover:bg-white/[0.07]
                          hover:border-black/20 dark:hover:border-white/20
                          hover:shadow-xl hover:shadow-black/5 dark:hover:shadow-black/20
-                         transition-all duration-300 flex flex-col overflow-hidden"
+                         transition-all duration-300 flex flex-col overflow-hidden cursor-pointer"
             >
               {/* Cover */}
               <div className="relative w-full h-44 overflow-hidden">
@@ -93,7 +94,11 @@ export default function BlogsSection() {
 
                 <div className="flex items-center gap-4 mt-auto">
                   <button
-                    onClick={() => setSelectedBlog(blog)}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      e.stopPropagation();
+                      setSelectedBlog(blog);
+                    }}
                     className="text-xs font-medium text-black/40 dark:text-white/40
                                hover:text-black dark:hover:text-white
                                border border-color: var(--vc-border)
@@ -103,19 +108,18 @@ export default function BlogsSection() {
                   >
                     Quick preview
                   </button>
-                  <Link
-                    href={`/blog/${blog.slug}`}
+                  <span
                     className="inline-flex items-center gap-1 text-xs font-medium
                                text-black/70 dark:text-white/70
-                               hover:text-black dark:hover:text-white
+                               group-hover:text-black dark:group-hover:text-white
                                transition-colors ml-auto"
                   >
                     Read full
                     <ArrowUpRight className="h-3.5 w-3.5" />
-                  </Link>
+                  </span>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       )}

@@ -99,7 +99,7 @@ export default function Navbar() {
 
             {/* CTA */}
             <Link
-              href="https://calendly.com/krishna_abhishek/30min"
+              href="https://calendly.com/abhishekrishna/15min"
               target="_blank"
               className="ml-2 px-5 h-9 flex items-center justify-center
                          bg-black dark:bg-white text-white dark:text-black
@@ -180,7 +180,7 @@ export default function Navbar() {
             </Link>
 
             <Link
-              href="https://calendly.com/krishna_abhishek/30min"
+              href="https://calendly.com/abhishekrishna/15min"
               target="_blank"
               onClick={() => setOpen(false)}
               className="w-full text-center bg-black dark:bg-white

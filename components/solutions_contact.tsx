@@ -84,7 +84,7 @@ export default function SolutionContactForm({ service }: { service: string }) {
           {status !== "submitting" && <ArrowUpRight className="h-4 w-4" />}
         </button>
         <a
-          href="https://calendly.com/krishna_abhishek/30min"
+          href="https://calendly.com/abhishekrishna/15min"
           target="_blank"
           rel="noopener noreferrer"
           className="text-xs text-black/40 dark:text-white/40

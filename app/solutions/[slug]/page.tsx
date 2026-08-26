@@ -139,7 +139,7 @@ export default async function SolutionPage({
                   <ArrowUpRight className="h-4 w-4" />
                 </Link>
                 <Link
-                  href="https://calendly.com/krishna_abhishek/30min"
+                  href="https://calendly.com/abhishekrishna/15min"
                   target="_blank"
                   className={`inline-flex items-center gap-2 text-sm font-medium
                              text-black/50 dark:text-white/50

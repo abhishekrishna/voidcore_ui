@@ -62,8 +62,7 @@ const techPills = [
 ];
 
 const stats = [
-  { num: "15+", label: "Production deployments" },
-  { num: "Zero", label: "Off-the-shelf wrappers. Ever." },
+  { num: "35+", label: "Production deployments" },
   { num: "100%", label: "IP ownership, always" },
 ];
 

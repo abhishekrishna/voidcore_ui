@@ -16,6 +16,8 @@ const display = Manrope({ subsets: ["latin"], weight: ["600", "700"] });
 
 const CALENDLY = "https://calendly.com/abhishekrishna/15min";
 
+const STUDIO_URL = "https://app.voidcore.in/";
+
 // TODO: add your photo link here (e.g. "/abhishek.jpg" in /public, or a full URL).
 // Leave empty to show the "A" initial instead.
 const PHOTO_URL = "";
@@ -159,9 +161,9 @@ export default function HeroModern() {
                 A
               </div>
             )}
-            <p className="text-sm text-black/60 dark:text-white/60 leading-snug">
-              I'm Abhishek, founder of Voidcore. I read every message myself.
-            </p>
+            {/* <p className="text-sm text-black/60 dark:text-white/60 leading-snug">
+              I'm Krishna, Your message comes to me, not the sales team.
+            </p> */}
           </div>
         </div>
 
@@ -270,7 +272,7 @@ export default function HeroModern() {
       <Work />
       <BlogsSection />
       <Services />
-      <CareersSection />
+      {/* <CareersSection /> */}
       <ContactSection />
       <Footer />
     </div>

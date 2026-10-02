@@ -1,6 +1,6 @@
 'use client';
-import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { useState } from "react";
+import { motion, useReducedMotion } from "framer-motion";
 import Navbar from "@/components/layout/navbar";
 import Footer from "@/components/layout/footer";
 import BlogsSection from "@/components/sections/blogs_card";
@@ -8,261 +8,260 @@ import ContactSection from "@/components/sections/contact";
 import Services from "@/components/sections/services";
 import Work from "@/components/sections/work";
 import CareersSection from "@/components/careers";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, ArrowDown } from "lucide-react";
+import { Manrope } from "next/font/google";
 
-const variants = [
+// Headline + number font. Swap Manrope for any other next/font/google family.
+const display = Manrope({ subsets: ["latin"], weight: ["600", "700"] });
+
+const CALENDLY = "https://calendly.com/abhishekrishna/15min";
+
+// TODO: add your photo link here (e.g. "/abhishek.jpg" in /public, or a full URL).
+// Leave empty to show the "A" initial instead.
+const PHOTO_URL = "";
+
+// TODO: PLACEHOLDER quotes. Replace with real, approved client quotes
+// (anonymised attribution is fine) or delete this array before publishing.
+const quotes = [
   {
-    key: "core",
-    eyebrow: "AI Systems Studio · India",
-    title: "Your business runs on information.",
-    titleAccent: "Almost none of it is structured.",
-    subtitle:
-      "We build AI systems that plug into what your team already has — emails, calls, documents, records — and make it instantly queryable, structured, and useful.",
+    text: "Field updates now land in the CRM before the rep is home.",
+    by: "Head of Sales, distribution company",
   },
   {
-    key: "memory",
-    eyebrow: "Institutional Memory",
-    title: "Three years of data.",
-    titleAccent: "One question away.",
-    subtitle:
-      "Who attended which event. Which vendor quoted what. Which candidate came through which deal. Stop digging through folders — ask your data directly.",
+    text: "Contract renewals used to surprise us. They don't anymore.",
+    by: "Operations lead, logistics firm",
+  },
+];
+
+// Demo examples: messy input in, clean record out.
+const examples = [
+  {
+    key: "messages",
+    tab: "Messages",
+    source: "WhatsApp · Amit (field team)",
+    meta: "6:42 pm",
+    text: "met raj at sharma traders today. wants 40 cartons of the large pack by thursday. payment next week not now. also asking if the new pack comes in blue",
+    status: "Saved to CRM",
+    rows: [
+      { label: "Account", value: "Sharma Traders" },
+      { label: "Contact", value: "Raj" },
+      { label: "Order", value: "40 cartons, large pack" },
+      { label: "Needed by", value: "Thursday" },
+      { label: "Payment", value: "Next week" },
+      { label: "Follow up", value: "New pack in blue?" },
+    ],
   },
   {
-    key: "voice",
-    eyebrow: "Voice & Call Intelligence",
-    title: "Your team talks.",
-    titleAccent: "Your systems should listen.",
-    subtitle:
-      "Sales calls, field updates, vendor negotiations — automatically transcribed, extracted, and pushed into your CRM, inventory, or ops tools as structured records.",
+    key: "calls",
+    tab: "Calls",
+    source: "Sales call · Neha",
+    meta: "4 min",
+    text: "Spoke to Kabir at Apex Logistics. They're rolling out to the Pune team first, about 25 seats. Budget sits with Meera, who's back on the 12th. He wants pricing before then.",
+    status: "Saved to CRM",
+    rows: [
+      { label: "Account", value: "Apex Logistics" },
+      { label: "Contact", value: "Kabir" },
+      { label: "Deal size", value: "25 seats, Pune team" },
+      { label: "Decision maker", value: "Meera" },
+      { label: "Available", value: "From the 12th" },
+      { label: "Next step", value: "Send pricing before then" },
+    ],
   },
   {
     key: "documents",
-    eyebrow: "Document Intelligence",
-    title: "Stop reading documents.",
-    titleAccent: "Start querying them.",
-    subtitle:
-      "Contracts, compliance reports, knowledge bases — indexed and connected so your team gets ranked answers and risk flags instead of 40-page PDFs to skim.",
-  },
-  {
-    key: "build",
-    eyebrow: "SaaS & Platform Engineering",
-    title: "Built right the first time.",
-    titleAccent: "Scales when you do.",
-    subtitle:
-      "Full stack engineering with NestJS, FastAPI, and AWS — microservices architecture, vector databases, and complete IP ownership from day one. No vendor lock-in, ever.",
+    tab: "Documents",
+    source: "Vendor agreement",
+    meta: "Page 14 of 40",
+    text: "Either party may terminate on 60 days' written notice. This agreement renews automatically for successive one-year terms unless notice is given 90 days before expiry. Fees may be increased by up to 10% on renewal.",
+    status: "Flagged for review",
+    rows: [
+      { label: "Document", value: "Vendor agreement" },
+      { label: "Term", value: "1 year, auto-renews" },
+      { label: "Exit notice", value: "60 days" },
+      { label: "Renewal notice", value: "90 days before expiry" },
+      { label: "Price rise", value: "Up to 10%" },
+      { label: "Flag", value: "Cancel window is easy to miss" },
+    ],
   },
 ];
 
-const techPills = [
-  "RAG & LangChain · production-grade",
-  "NestJS · FastAPI · Microservices · AWS · Docker",
-  "Vector DBs · pgvector · NeonDB",
-  "Voice → Transcript → Structured JSON pipelines",
-  "Full IP & code ownership, always",
-];
-
-const stats = [
-  { num: "35+", label: "Production deployments" },
-  { num: "100%", label: "IP ownership, always" },
+const proof = [
+  { num: "35+", label: "Systems running in production" },
+  { num: "100%", label: "Of the code is yours" },
+  { num: "1 day", label: "Typical reply time" },
 ];
 
 export default function HeroModern() {
+  const reduce = useReducedMotion();
   const [active, setActive] = useState(0);
-  const [fading, setFading] = useState(false);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      handleSwitch((active + 1) % variants.length);
-    }, 10000);
-    return () => clearInterval(interval);
-  }, [active]);
-
-  const handleSwitch = (i: number) => {
-    if (i === active) return;
-    setFading(true);
-    setTimeout(() => {
-      setActive(i);
-      setFading(false);
-    }, 280);
-  };
-
-  const v = variants[active];
+  const ex = examples[active];
 
   return (
     <div className="relative min-h-screen w-full bg-white dark:bg-[#0B0B0F] text-black dark:text-white overflow-hidden transition-colors duration-300">
       <Navbar />
 
-      {/* Ambient background */}
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-10%,rgba(0,0,0,0.06),transparent)] dark:bg-[radial-gradient(ellipse_80%_50%_at_50%_-10%,rgba(255,255,255,0.07),transparent)]" />
-      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.04)_1px,transparent_1px)] dark:bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:48px_48px] opacity-60" />
-      <div className="pointer-events-none absolute -top-40 -left-40 h-[600px] w-[600px] rounded-full bg-black/[0.03] dark:bg-white/[0.04] blur-3xl" />
-      <div className="pointer-events-none absolute bottom-0 right-0 h-[500px] w-[500px] rounded-full bg-black/[0.03] dark:bg-white/[0.03] blur-3xl" />
-      {/* Violet glow top-right */}
-      <div
-        className="pointer-events-none absolute -top-20 -right-20 h-[500px] w-[500px] rounded-full blur-3xl"
-        style={{ background: "radial-gradient(ellipse at center, var(--vc-accent-glow), transparent)", }}
-      />
+      <section className="mx-auto max-w-6xl px-6 pt-28 md:pt-40 pb-20 grid gap-16 lg:grid-cols-[1.1fr_0.9fr] lg:gap-14 items-center">
+        {/* Left */}
+        <div>
+          <p className="text-sm font-medium text-indigo-600 dark:text-indigo-400">
+            AI Systems Studio
+          </p>
 
-      {/* Hero Content */}
-      <section className="relative mx-auto max-w-6xl px-6 pt-44 pb-32">
+          <h1 className={`${display.className} mt-4 text-4xl md:text-[3.5rem] font-semibold leading-[1.08] tracking-[-0.02em] max-w-xl text-balance`}>
+            Your business runs on information. Almost none of it is structured.
+          </h1>
 
-        {/* Eyebrow */}
-        {/* <motion.div
-          key={v.key + "-eyebrow"}
-          initial={{ opacity: 0, y: 6 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.35, ease: "easeOut" }}
-          className="mb-5"
-        >
-          <span
-            className="inline-flex items-center gap-2 text-[10px] uppercase tracking-[0.22em] font-medium px-3 py-1.5 rounded-full backdrop-blur-sm border"
-            style={{
-              color: "rgba(124,111,205,0.9)",
-              borderColor: "rgba(124,111,205,0.25)",
-              background: "var(--vc-accent-bg)",
-              transition: "opacity 0.28s",
-              opacity: fading ? 0 : 1,
-            }}
-          >
-            <span
-              className="w-1.5 h-1.5 rounded-full animate-pulse"
-              style={{ background: "var(--vc-accent)" }}
-            />
-            {v.eyebrow}
-          </span>
-        </motion.div> */}
+          <p className="mt-6 text-lg text-black/65 dark:text-white/65 max-w-md leading-relaxed">
+            Emails, calls, documents. We turn them into something your team can
+            search and use.
+          </p>
 
-        {/* Title */}
-        <motion.h1
-          key={v.key + "-title"}
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.45, ease: "easeOut" }}
-          className="text-5xl md:text-[4.5rem] font-semibold leading-[1.08] tracking-tight max-w-4xl"
-          style={{
-            transition: "opacity 0.28s ease, transform 0.28s ease",
-            opacity: fading ? 0 : 1,
-            transform: fading ? "translateY(8px)" : "translateY(0)",
-          }}
-        >
-          {v.title}{" "}
-          <span style={{ color: "#var(--vc-accent)" }}>{v.titleAccent}</span>
-        </motion.h1>
-
-        {/* Subtitle */}
-        <motion.p
-          key={v.key + "-subtitle"}
-          initial={{ opacity: 0, y: 8 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.45, ease: "easeOut", delay: 0.05 }}
-          className="mt-6 text-lg md:text-xl color: var(--vc-ink2 max-w-2xl leading-relaxed"
-          style={{
-            transition: "opacity 0.28s ease",
-            opacity: fading ? 0 : 1,
-          }}
-        >
-          {v.subtitle}
-        </motion.p>
-
-        {/* CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 6 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.35, ease: "easeOut", delay: 0.1 }}
-          className="mt-10 flex flex-wrap gap-3"
-        >
-          <a
-            href="#contact"
-            className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-sm font-semibold hover:opacity-90 transition-opacity border border-color: var(--vc-border) bg-"
-            style={{
-              background: "#var(--vc-accent)",
-              // boxShadow: "var(--vc-accent-sh)",
-            }}
-          >
-            Start a project
-            <ArrowUpRight className="h-4 w-4" />
-          </a>
-          <a
-            href="https://github.com/abhishekrishna"
-            target="_blank"
-            className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl border border-black/15 dark:border-white/15 bg-black/[0.02] dark:bg-white/[0.02] text-black/75 dark:text-white/75 text-sm font-medium hover:border-black/30 dark:hover:border-white/30 hover:text-black dark:hover:text-white backdrop-blur-sm transition-all"
-          >
-            GitHub
-            <ArrowUpRight className="h-3.5 w-3.5" />
-          </a>
-        </motion.div>
-
-        {/* Tech proof pills */}
-        <motion.div
-          initial={{ opacity: 0, y: 6 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4, ease: "easeOut", delay: 0.2 }}
-          className="mt-20 flex flex-wrap gap-2.5"
-        >
-          {techPills.map((pill) => (
-            <span
-              key={pill}
-              className="text-xs font-medium px-3.5 py-2 rounded-xl border border-color: var(--vc-border) bg-black/[0.03] dark:bg-white/[0.03] text-black/50 dark:text-white/50 backdrop-blur-sm"
+          <div className="mt-9 flex flex-wrap items-center gap-x-6 gap-y-4">
+            <a
+              href={CALENDLY}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-sm font-semibold bg-indigo-600 text-white hover:bg-indigo-500 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
             >
-              {pill}
-            </span>
-          ))}
-        </motion.div>
+              See it on your own data
+              <ArrowUpRight className="h-4 w-4" />
+            </a>
+            <a
+              href="#work"
+              className="text-sm font-medium text-black/65 dark:text-white/65 underline underline-offset-4 decoration-black/20 dark:decoration-white/20 hover:text-black dark:hover:text-white"
+            >
+              See what we've built
+            </a>
+          </div>
 
-        {/* Rotating indicator dots */}
-        <div className="mt-12 flex items-center gap-2">
-          {variants.map((_, i) => (
-            <button
-              key={i}
-              onClick={() => handleSwitch(i)}
-              className="h-1.5 rounded-full transition-all duration-300"
-              style={{
-                width: i === active ? "24px" : "6px",
-                background:
-                  i === active
-                    ? "#7C6FCD"
-                    : "rgba(0,0,0,0.15)",
-              }}
-            />
-          ))}
+          <p className="mt-5 text-sm text-black/60 dark:text-white/60">
+            Not ready for a call?{" "}
+            <a href="#contact" className="underline underline-offset-4 decoration-black/25 dark:decoration-white/25 hover:text-black dark:hover:text-white">
+              Send us a messy one.
+            </a>
+          </p>
+
+          {/* Founder note */}
+          <div className="mt-12 flex items-center gap-3 max-w-md">
+            {PHOTO_URL ? (
+              // TODO: set PHOTO_URL at the top of this file
+              // eslint-disable-next-line @next/next/no-img-element
+              <img
+                src={PHOTO_URL}
+                alt="Abhishek, founder of Voidcore"
+                className="h-10 w-10 shrink-0 rounded-full object-cover"
+              />
+            ) : (
+              <div
+                className="h-10 w-10 shrink-0 rounded-full grid place-items-center text-sm font-semibold bg-black/10 text-black dark:bg-white/15 dark:text-white"
+                aria-hidden
+              >
+                A
+              </div>
+            )}
+            <p className="text-sm text-black/60 dark:text-white/60 leading-snug">
+              I'm Abhishek, founder of Voidcore. I read every message myself.
+            </p>
+          </div>
+        </div>
+
+        {/* Right: the demo */}
+        <div
+          className="w-full max-w-md lg:ml-auto"
+          aria-label="Example: a messy input turned into a structured record"
+        >
+          {/* Tabs */}
+          <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
+          <div role="tablist" className="inline-flex rounded-full border border-black/10 dark:border-white/10 p-1 text-sm">
+            {examples.map((e, i) => (
+              <button
+                key={e.key}
+                role="tab"
+                aria-selected={i === active}
+                onClick={() => setActive(i)}
+                className={
+                  "px-4 py-1.5 rounded-full font-medium transition-colors " +
+                  (i === active
+                    ? "bg-black/[0.06] dark:bg-white/10 text-black dark:text-white"
+                    : "text-black/60 dark:text-white/60 hover:text-black dark:hover:text-white")
+                }
+              >
+                {e.tab}
+              </button>
+            ))}
+          </div>
+          <span className="text-xs text-black/60 dark:text-white/60">Example</span>
+          </div>
+
+          {/* Input */}
+          <div className="rounded-2xl border border-black/10 dark:border-white/10 bg-black/[0.02] dark:bg-white/[0.04] p-5">
+            <div className="flex items-center justify-between text-xs text-black/60 dark:text-white/60">
+              <span>{ex.source}</span>
+              <span>{ex.meta}</span>
+            </div>
+            <p className="mt-3 min-h-[7.5rem] text-[15px] leading-relaxed text-black/80 dark:text-white/80">
+              {ex.text}
+            </p>
+          </div>
+
+          {/* Connector */}
+          <div className="flex justify-center py-2.5" aria-hidden>
+            <span className="h-8 w-8 rounded-full grid place-items-center border border-black/10 dark:border-white/15 text-black/60 dark:text-white/60 bg-white dark:bg-[#0B0B0F]">
+              <ArrowDown className="h-4 w-4" />
+            </span>
+          </div>
+
+          {/* Output */}
+          <div className="rounded-2xl border border-black/10 dark:border-white/15 bg-white dark:bg-[#15151C] p-5 shadow-[0_8px_30px_rgba(0,0,0,0.06)]">
+            <div className="flex items-center justify-between">
+              <p className="text-xs font-medium text-black/65 dark:text-white/65">
+                What your team sees
+              </p>
+              <span className="inline-flex items-center gap-1.5 text-xs font-medium text-indigo-600 dark:text-indigo-400">
+                <span className="h-1.5 w-1.5 rounded-full bg-indigo-600 dark:bg-indigo-400" />
+                {ex.status}
+              </span>
+            </div>
+            <dl className="mt-4 space-y-2.5">
+              {ex.rows.map((r, i) => (
+                <motion.div
+                  key={ex.key + r.label}
+                  initial={reduce ? false : { opacity: 0, y: 4 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.3, delay: 0.25 + i * 0.12 }}
+                  className="flex items-baseline justify-between gap-4 border-b border-black/5 dark:border-white/10 pb-2.5 last:border-0 last:pb-0"
+                >
+                  <dt className="text-sm text-black/60 dark:text-white/60">{r.label}</dt>
+                  <dd className="text-sm font-medium text-right">{r.value}</dd>
+                </motion.div>
+              ))}
+            </dl>
+          </div>
         </div>
       </section>
 
-      {/* Divider */}
-      <div
-        className="h-px"
-        style={{
-          background:
-            "linear-gradient(90deg, transparent 0%, rgba(124,111,205,0.15) 30%, rgba(124,111,205,0.35) 50%, rgba(124,111,205,0.15) 70%, transparent 100%)",
-        }}
-      />
-
-      {/* Stats row — same max-w-6xl px-6 as hero so left edges align */}
-      <div className="mx-auto max-w-6xl px-6">
-        <div className="flex border-b border-color: var(--vc-border)">
-          {stats.map((s, i) => (
-            <div
-              key={s.label}
-              className="flex-1 py-8"
-              style={{
-                paddingLeft: i === 0 ? "0" : "2.5rem",
-                paddingRight: i === stats.length - 1 ? "0" : "2.5rem",
-                borderRight:
-                  i < stats.length - 1
-                    ? "0.5px solid rgba(152, 163, 84, 0.15)"
-                    : "none",
-              }}
-            >
-              <div
-                className="text-[28px] font-semibold tracking-tight"
-                style={{ color: "#var(--vc-accent)" }}
-              >
-                {s.num}
-              </div>
-              <div className="mt-1 text-[11px] uppercase tracking-[0.06em] text-black/40 dark:text-white/40">
-                {s.label}
-              </div>
+      {/* Proof */}
+      <div className="mx-auto max-w-6xl px-6 pb-20">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 border-t border-black/10 dark:border-white/10 pt-8">
+          {proof.map((s) => (
+            <div key={s.label}>
+              <div className={`${display.className} text-2xl font-semibold tracking-tight`}>{s.num}</div>
+              <div className="mt-1 text-sm text-black/65 dark:text-white/65">{s.label}</div>
             </div>
+          ))}
+        </div>
+
+        {/* TODO: placeholder quotes, see top of file */}
+        <div className="mt-12 grid gap-8 sm:grid-cols-2 border-t border-black/10 dark:border-white/10 pt-8">
+          {quotes.map((q) => (
+            <figure key={q.by}>
+              <blockquote className="text-lg leading-snug text-black/85 dark:text-white/85">
+                {q.text}
+              </blockquote>
+              <figcaption className="mt-3 text-sm text-black/60 dark:text-white/60">
+                {q.by}
+              </figcaption>
+            </figure>
           ))}
         </div>
       </div>
